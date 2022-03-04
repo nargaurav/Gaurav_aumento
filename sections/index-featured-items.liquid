@@ -1,0 +1,51 @@
+<div class="featured-items">
+  <div class="Container">
+  	<div class="featured-items__container">
+  	  {% for block in section.blocks %}
+        <a href="{{ block.settings.link }}">
+          <div class="featured-items__product">
+            {% include 'lazy-image' image: block.settings.image %}
+            <h3>{{ block.settings.title }}</h3>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Featured Items",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Items",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

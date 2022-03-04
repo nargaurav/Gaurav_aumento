@@ -1,0 +1,19 @@
+<!-- Begin Smart Wishlist Callback -->
+<script type="text/javascript">
+$("#wishlist_share_modal").find(".modal-footer").prepend('<button type="button" class="btn btn-info btn-info-modal" id="copyclipboard" style="background-color:blue;border-color:blue;color:#fff">Copy URL to clipboard</button>');
+
+$("body").on("click","#copyclipboard", function(){	
+	var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($("#wishlist_url").text()).select();
+    var temp_share_button_title=$(this).html();
+    $(this).html("URL Copied!"); //text to be displayed after URL copied
+    setTimeout(function() {
+    $(this).html(temp_share_button_title);
+	},1000);
+    navigator.clipboard.writeText($temp.val())
+    .catch((error) => { alert(`Copy failed! ${error}`) })
+    $temp.remove();
+});
+</script>
+<!-- End Smart Wishlist Callback -->

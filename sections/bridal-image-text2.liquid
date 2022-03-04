@@ -1,0 +1,66 @@
+<div class="bridal2 about image-text page__container">
+  <div class="Container">
+    <div class="image-text__container">
+      <div class="text" data-aos="fade-right" data-aos-duration="1000">
+        {% if section.settings.text_header != blank %}
+        <h4>{{ section.settings.text_header }}</h4>
+        {% endif %}
+        <p>{{ section.settings.text }}</p>
+        <div class="logo-box">
+          <img class="img_for_dsk" src="{{ section.settings.small_img | img_url:'300x' }}"/>
+          <img class="img_for_mob" src="{{ section.settings.small_img_mob | img_url:'300x' }}"/>
+        </div>
+      </div>
+      <div class="image" data-aos="fade-left" data-aos-duration="1000">
+        {% if section.settings.small_img_dsk != blank %}
+        <img class="ring" src="{{ section.settings.small_img_dsk | img_url:'300x' }}"/>
+        {% endif %}
+        {% include 'lazy-image' image: section.settings.image, fade: true %}
+      </div>
+      <div class="text-after" data-aos="fade-right" data-aos-duration="1000">
+        <img class="img_for_mob" src="{{ section.settings.small_img | img_url:'300x' }}"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image + Text",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "text_header",
+        "label": "Text Header"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+	  {
+        "type": "image_picker",
+        "id": "small_img",
+        "label": "Small Image"
+      },
+	  {
+        "type": "image_picker",
+        "id": "small_img_mob",
+        "label": "Small Image Mobile"
+      }	,
+	{
+        "type": "image_picker",
+        "id": "small_img_dsk",
+        "label": "Small Image"
+      }
+    ],
+    "blocks": [
+
+    ]
+  }
+{% endschema %}

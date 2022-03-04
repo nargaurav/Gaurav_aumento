@@ -1,0 +1,19 @@
+<div class="richtext Container">
+  <p>{{ section.settings.text }}</p>
+</div>
+
+{% schema %}
+  {
+    "name": "Richtext",
+    "settings": [
+	  {
+        "type": "textarea",
+        "id": "text",
+        "label": "Richtext"
+      }
+    ],
+    "blocks": [
+
+    ]
+  }
+{% endschema %}

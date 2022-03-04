@@ -1,0 +1,106 @@
+<div class="book-appt-wrap">
+    <div class="heading">
+        <h3 class="book-heading">showroom appointments</h3>
+    </div>
+    <div class="book-form">
+        <center>
+            <form method="post" id="cartform" action="/cart/add">
+                <input type="hidden" name="id" data-productid="6093118210242" value="37637732761794">
+                <div id="sesami__buttonWrapper" data-sesami-product-id="6093118210242" data-sesami-variant-id="37637732761794"></div>
+                <center>
+                    <p class="line-item-property__field" style="margin-top:30px;">
+                        <label class="book-label">Total number of guests in your party?</label><br>
+                        <select required class="required" id="total-number-guests" name="properties[Total number of guests in your party]">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p> 
+                    <button type="submit" value="Book Now" class="Button Button--primary book_btn">Book Appointment</button>
+                </center>
+            </form>
+        </center>
+    </div>
+</div>
+
+{%- comment -%}
+<div class="showroom__content">
+    <header class="PageHeader">
+        <div class="SectionHeader SectionHeader--center">
+            <form method="post" id="cartform" action="/cart/add">
+                <input type="hidden" name="id" data-productid="6093118210242" value="37637732761794">
+                <h1 id="sesami__buttonWrapper" data-sesami-product-id="6093118210242" data-sesami-variant-id="37637732761794"></h1>
+                <center>
+                    <p class="line-item-property__field" style="margin-top:30px;">
+                        <label>Total number of guests in your party?</label><br>
+                        <select required class="required" id="total-number-guests" name="properties[Total number of guests in your party]">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+                </center>
+                <div class="btn_book--wrapper"><a class="Button Button--primary btn_book">Book Appointment</a></div>
+            </form>
+        </div>
+    </header>
+</div>
+{%- endcomment -%}
+
+<script>
+  $(document).ready(function() {
+    $(".btn_book").click(function() {
+      $(".sesami__button").trigger('click');
+    });
+  });
+</script>
+
+<style>
+  .book-heading {
+    font-family: HandWriting;
+    text-align: center;
+    font-size: 70px;
+  }
+  .button{
+    font-family: sofia-pro,sans-serif;
+    font-size: 22px;
+    letter-spacing: .02em;
+    color: #000;
+    border: 2;
+  }
+  .button.btn.sesami__button {
+    background-color: #000;
+    padding: 12px 20px 15px;
+    display: flex;
+    margin: 80px auto 0;
+    line-height: unset;
+    color: #fff;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+
+  select {
+
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+
+  p .book-label {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: #000;
+    letter-spacing: .02em;
+  }
+</style>

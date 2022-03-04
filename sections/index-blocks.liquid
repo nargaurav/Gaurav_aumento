@@ -1,0 +1,74 @@
+<div class="blocks">
+  {% for block in section.blocks %}
+    {% if block.type == 'half' %}
+      <div class="blocks__item blocks__half" {% if forloop.index == 1 %}data-aos="fade-right"{% elsif forloop.index == 2 %}data-aos="fade-left"{% endif %} data-aos-duration="1500">
+        <a href="{{ block.settings.link }}">
+		  {% include 'lazy-image' image: block.settings.image, fade: true %}
+          <h2>{{ block.settings.title }}</h2>
+        </a>
+      </div>
+  {% elsif block.type == 'whole' %}
+  <a href="{{ block.settings.link }}" class="blocks__item blocks__whole" style="background-image: url('{{ block.settings.image | img_url: '1600x' }}')">
+    <h2>{{ block.settings.title }}</h2>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Blocks",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "half",
+        "name": "Half",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      },
+      {
+        "type": "whole",
+        "name": "Whole",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Blocks",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

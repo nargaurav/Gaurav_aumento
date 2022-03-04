@@ -1,0 +1,51 @@
+<div class="collection-grid">
+  <div class="collection-grid__container">
+    {% for block in section.blocks %}
+    
+      {% assign collection = collections[block.settings.collection] %}
+      <a href="{{ collection.url }}">
+        <div class="collection-grid__item"{% if forloop.index == 1 %}data-aos="fade-right"{% elsif forloop.index == 3 %}data-aos="fade-left"{% endif %} data-aos-duration="1500">
+          {% include 'lazy-image' image: block.settings.image %}
+          <h2>{{ block.settings.title }}</h2>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collections",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collections",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

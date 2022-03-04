@@ -1,0 +1,93 @@
+{% include 'breadcrumb' %}
+
+<h1>{{ page.title }}</h1>
+
+<div class="grid-uniform" id="wishlisthtml">  
+  <p><img src="https://cdn.shopify.com/s/files/1/1503/9840/t/185/assets/loadding-page.gif" /> </p>
+</div>
+<script>
+  //define this function for fetching express wishlist ID from cookie
+  function getWishlistId(){for(var i=decodeURIComponent(document.cookie).split(";"),t=0;t<i.length;t++){for(var n=i[t];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf("wishlist_id="))return n.substring("wishlist_id=".length,n.length)}}
+
+  $(function() {
+
+    {% if customer %}
+    query_url="/a/wishlist?type=api&customerid="+{{customer.id}}+"&version=1";
+    {% else %}
+    query_url="/a/wishlist?type=api&wishlistid="+getWishlistId()+"&version=1";
+    {% endif %}
+
+    var gridhtml="";
+
+    $.ajax({
+      url: query_url,
+      dataType: "json",
+      cache:false,
+      success: function(data) {
+        if(parseInt(data.count)>0)
+        {
+          $.each(data.items,function(key,value){
+            var product_url="/products/"+value.handle;
+            var product_title=value.title;
+            var product_image=value.image;
+            var product_id=value.id;
+            var variant_id=value.variant_id;
+
+            var variant_title=value.variant_title;
+            var variant_price=value.variant_price;
+
+            // NOTE: This grid HTML has been optimized for Supply theme. For other themes, you need to modify it for best experience.
+            gridhtml+='<div class="grid-item small--one-half medium--one-quarter large--one-quarter"> <a href="'+product_url+'" class="product-grid-item"> <div class="product-grid-image" style="height: 312px;"> <div class="product-grid-image--centered"> <img src="'+product_image+'"> </div></div><p>'+product_title+'</p><div class="product-item--price"> <span class="h1 medium--left"> <span class="visually-hidden">Regular price</span><small aria-hidden="true">'+variant_price+'</small></span> </div></a> <div class="actions"><a role="button" tabindex="0" href="#" aria-label="Add to Shopping Cart" class="addtocartbutton" data-productid="'+product_id+'" data-variantid="'+variant_id+'">Add to cart</a></div></div>';		
+          }); 
+
+          $("#wishlisthtml").html(gridhtml);				
+        }
+        else
+        {
+          gridhtml='<p style="text-align: center;">There are no items in the Wishlist.</p>';	
+        }
+      },
+      complete: function(){
+        $("#wishlisthtml").html(gridhtml);
+      } 
+    });
+
+    $(document.body).on('click','.addtocartbutton', function(e) {
+      e.preventDefault();	 
+      var variantid=$(this).data("variantid");
+      $.ajax({url:"/cart/add.js",
+              data: {quantity:1,id:variantid},
+              dataType: 'json',
+              error: function(data){alert(data.responseJSON.description)},
+              success:function(data){location.reload()}});	
+    });
+
+  });
+</script>  
+<style>
+  .addtocartbutton {
+    background-color: #ffffff;
+    border: 1px solid #0e20f9;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    border-radius: 3px;
+    display: inline-block !important;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #3075f9 !important;
+    letter-spacing: 1px;
+    width: 50%;
+  }  
+  .actions {
+    text-align: center;
+    margin-top: 10px;
+  }  
+</style>  

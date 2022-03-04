@@ -1,0 +1,82 @@
+{%comment%}
+<div class="full-width-slider">
+  <div class="full-width__slider">
+    {% for block in section.blocks %}
+    <div class="slider-image">
+      <img src="{{ block.settings.image | img_url: '800x' }}" />
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{%endcomment%}
+<style>
+  #shopify-section-about-richtext .Container p,
+  #shopify-section-about-richtext-bottom .Container p{
+    font-size: 22px;
+  }  
+  @media screen and (max-width:1140px){
+    #shopify-section-about-richtext .Container p,
+    #shopify-section-about-richtext-bottom .Container p{
+      font-size: 17px;
+      line-height: 25px;
+    }    
+    h4 {
+      font-size: 17px;
+    }
+    .variable-height-slider__item  h4{font-size: 10px!important;}
+    .quote-box {
+      margin-bottom: 20px;
+    }
+    .image-text__container .text .quote-box {
+      padding: 10px 25px 15px 15px;
+      width: 92%;
+    }    
+  }
+</style>
+<div class="full-width-slider-about" data-flickity='{ "imagesLoaded": true, "autoPlay": true, "wrapAround": true, "prevNextButtons": false, "pageDots": false, "bgLazyLoad": true, "adaptiveHeight": false }'>
+  {% for block in section.blocks %}
+  <div class="carousel-cell">
+    <img class="desktop_img" src="{{ block.settings.image | img_url: 'master' }}" />
+    <img class="mob_img" src="{{ block.settings.mobile_image | img_url: 'master' }}" />
+  </div>
+  {% endfor %}
+</div>
+<script>
+  let time2 = `{{ section.settings.slider_speed}}`;
+  //console.log(time)
+  window.autoplayTime = parseInt(time2) * 1000; 
+</script>
+{% schema %}
+{
+"name": "Full width without slider",
+"settings": [
+{
+"type": "range",
+"id": "slider_speed",
+"min": 1,
+"max": 8,
+"step": 1,
+"label": "Slider Auto Play",
+"default": 1
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": "Image",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Desktop Image"
+},
+{
+"type": "image_picker",
+"id": "mobile_image",
+"label": "Mobile Image"
+}
+]
+}
+]
+}
+{% endschema %}

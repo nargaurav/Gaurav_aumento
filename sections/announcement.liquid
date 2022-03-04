@@ -1,0 +1,156 @@
+<style>
+
+
+  #shopify-section-announcement {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index:999;
+    top:0;
+  }
+</style>
+<script>
+  $( document ).ready(function() {
+    var heightAnnouncementBar=$("#section-announcement").height();
+    $("#shopify-section-header").css("top",heightAnnouncementBar);
+    $(window).scroll(function() {
+      var heightAnnouncementBar=$("#section-announcement").height();
+      $("#shopify-section-header").css("top",heightAnnouncementBar);
+    })
+  });
+
+</script>
+{%- if section.settings.enable_bar -%}
+{%- unless section.settings.home_page_only and template != 'index' -%}
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+  <div class="AnnouncementBar"  style="background: {{section.settings.background}}; color:{{section.settings.text_color}};">
+    <div class="AnnouncementBar__Wrapper">
+      {% for block in section.blocks %}
+      <style>
+        .block--{{ block.id }} {
+          background: {{ block.settings.background }};
+          color: {{ block.settings.text_color }};
+        }
+      </style>
+
+      {% if block.settings.enable_announcement %}
+      <p class="AnnouncementBar__Content hide-mobile block--{{block.id}}">
+        <marquee behavior="scroll" direction="left">
+          {%- if block.settings.link -%}
+          <a href="{{ block.settings.link }}">{{ block.settings.content }}</a>
+          {%- else -%}
+          {{ block.settings.content }}
+          {%- endif -%}
+        </marquee>
+      </p>
+      {% endif %}
+      {%- endfor -%}
+      {% for block in section.blocks %}
+      <style>
+        .block--{{ block.id }} {
+          background: {{ block.settings.background }};
+          color: {{ block.settings.text_color }};
+        }
+      </style>
+      {% if block.settings.enable_announcement %}
+      <p class="AnnouncementBar__Content hide-desktop block--{{block.id}}">
+        <marquee behavior="scroll" direction="left">
+          {%- if block.settings.link -%}
+          <a href="{{ block.settings.link }}">{% if block.settings.content_mobile != blank %}{{ block.settings.content_mobile }}{% else %}{{ block.settings.content}}{% endif %}</a>
+          {%- else -%}
+          {% if block.settings.content_mobile != blank %}{{ block.settings.content_mobile }}{% else %}{{ block.settings.content}}{% endif %}
+          {%- endif -%}
+        </marquee>
+      </p>
+      {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-{{ section.id }} {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
+<script>
+  document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+</script>
+{%- endunless -%}
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "Announcement bar",
+    "limit": 2,
+    "settings": [
+    {
+        "type": "checkbox",
+        "id": "enable_bar",
+        "label": "Enable bar",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#000000"
+    }],
+    "blocks": [
+    {
+        "type": "announcement",
+        "name": "Announcement bar",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "enable_announcement",
+                "label": "Enable Announcement",
+                "default": true
+            },
+
+            {
+                "type": "checkbox",
+                "id": "home_page_only",
+                "label": "Home page only",
+                "default": false
+            },
+
+            {
+                "type": "text",
+                "id": "content",
+                "label": "Text",
+                "default": "Announce something here"
+            },
+            {
+                "type": "text",
+                "id": "content_mobile",
+                "label": "Mobile Text",
+                "default": "Announce something here"
+            },
+
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "header",
+                "content": "Announcement bar Color"
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Background",
+                "default": "#000000"
+            },
+            {
+                "type": "color",
+                "id": "text_color",
+                "label": "Text",
+                "default": "#ffffff"
+            }
+        ]
+    }]
+}
+{% endschema %}

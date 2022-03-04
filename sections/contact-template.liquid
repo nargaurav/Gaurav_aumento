@@ -1,0 +1,387 @@
+<style>
+.MT40{margin-top: 40px;}
+.contact__container {
+	left: 0;
+}
+.contact__container {
+      padding-left: 0px;
+} 
+  
+.contact__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.ContainerContact {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding:0 60px;
+}
+
+.contact__container--main {
+  margin-left: 0px;
+  margin-right: auto;
+}
+  
+.contact__container--secondary {
+  margin-left: auto;
+  margin-right: 0px;
+}
+  
+.onlyDesk{display:block;}
+.onlyMobile{display:none;}
+
+
+
+
+  @media (max-width: 767px){
+    .onlyDesk{display:none;}
+    .onlyMobile{display:block;}
+
+    .contact__container {
+      align-items: end;
+      text-align: left;
+      padding-left: 220px;
+      /*margin-top: -226px;*/
+      top: 235px;
+      left: -180px;
+      position: absolute;
+
+    }
+
+    .contact__container.contact__container--left {
+      align-items: flex-start;
+    }
+
+    .contact__containerMobile.contact__container--right {
+      padding-right: 140px;
+      padding-left: 0px;
+      align-items: end;
+    }
+
+    .contact__containerMobile {
+      align-items: end;
+      text-align: right;
+      padding-left: 210px;
+      margin: 0 auto;
+      top: 980px;
+      right: -33%;
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      position: absolute;
+    }
+
+    .contact__containerMobile .contact__field {
+      margin-bottom: 50px;
+      display: block;
+      width: 100%;
+      float:right;
+    }
+
+    .contact .Container {
+      padding-bottom: 1500px;
+
+    }
+
+    .contact__container .contact__field h4, 
+    .contact__container .contact__field p,
+    .contact__containerMobile .contact__field h4,
+    .contact__containerMobile .contact__field p{
+      font-size:17px!important;
+    }
+
+    .contact h1{
+      font-size:100px;
+    }
+    .contact__containerMobile,.contact__container {
+      width: 700px;
+      height: 700px;
+    }
+
+    .contact__field,
+    .contact__field h4,
+    .contact__field div{font-size:17px;}
+    .contact .Container{
+      overflow-x:hidden !important;
+    }
+    /*.contact__containerMobile.contact__container--right{
+    max-width:500px;
+  }*/
+    .template-page{
+      overflow-x:hidden;
+    }
+  }
+
+  @media (max-width: 600px){
+    .contact__containerMobile {
+      padding-left: 75px;
+    }
+    .contact__containerMobile, .contact__container {
+      max-width:500px;
+      height: 500px;
+    }
+
+  }
+  
+  @media screen and (max-width: 600px){
+    .contact__containerMobile {
+      padding-left: 80px;
+      top: 550px;
+      right: -50% !important;
+
+    }
+    .contact__containerMobile, .contact__container {
+      width:500px;
+      height: 500px;
+    }
+
+    .contact .Container {
+      padding-bottom: 990px;
+      position:relative;
+      overflow:hidden !important;
+
+    }
+    .contact__containerMobile.contact__container--right{
+      right:0 !important;
+    }
+    .contact__containerMobile, .contact__container{
+      width:440px;
+      height:440px;
+    }
+    .contact .Container{
+      padding-bottom:990px;
+
+    }
+    .contact__container{
+      top:125px;
+    }
+	.onlyMobile.contact__container--right {
+      top: auto;
+      bottom: 0;
+    }
+    .onlymobile_inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 490px){
+    .contact__container {
+      top: 90px;
+    }
+    
+    .contact__container {
+      width: 320px;
+      height: 320px;
+      left:0;
+      right:0;
+      padding-left:0;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .contact__container .contact__field{
+      width:100%;
+    }
+    .onlyMobile.contact__container--secondary{
+      left:0;
+      right:0 !important
+    }
+    .contact__containerMobile .contact__field{
+      float:left;
+      text-align:center;
+      margin-bottom: 20px;
+    }
+    .contact__containerMobile.contact__container--right{
+      width: 320px;
+      height: 320px;
+      padding-right:0;
+      left:0;
+    }
+    .contact__field, .contact__field h4, .contact__field div{
+      font-size:14px !important;
+    }
+    .contact__container .contact__field h4, 
+    .contact__container .contact__field p,
+    .contact__containerMobile .contact__field h4,
+    .contact__containerMobile .contact__field p{
+      font-size:14px !important;
+    }
+    .contact__containerMobile{
+      top:390px;
+    }
+    .contact .Container {
+      padding-bottom: 680px;
+    }
+  }
+
+  @media (max-width: 360px){
+/*     .contact__containerMobile, .contact__container {
+      width:440px;
+      height: 440px;
+    }
+
+    .contact__containerMobile.contact__container--right {
+      padding-right: 140px;
+      right: -32%;
+    }   */
+
+    .onlyDesk{display:none;}
+    .onlyMobile{display:block;}
+
+/*     .contact__containerMobile {
+      padding-left: 30px;
+      margin: 0 auto;
+      right: -53%;
+    } */
+	
+    .contact__container {
+      width: 300px;
+      height: 300px;
+    }
+    .contact__containerMobile.contact__container--right{
+      width: 300px;
+      height: 300px;
+    }
+
+  }
+</style>
+<div class="contact page__container">
+  <div class="Container">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <h1>{{ section.settings.title }}</h1>
+      </div>
+    </header>
+<!--     <div style="display:block">--</div> -->
+    <div class="ContainerContact">
+        <div class="contact__container contact__container--left contact__container--main" data-aos="fade-right" data-aos-duration="1500" style="background-color: {{ section.settings.circle_color }};">
+          {% for block in section.blocks %}
+            {%if block.type == "block" %}
+              <div class="contact__field">
+                <h4>{{ block.settings.contact_field }}</h4>
+                {{ block.settings.email }}
+              </div>
+            {%endif%}
+          {% endfor %}
+        </div>
+        <div class="onlyDesk contact__container--secondary" data-aos="fade-left" data-aos-duration="1500">
+            <div class="contact__container MT40" style="background-color:  {{ section.settings.circle_color2 }};">
+              {% for block in section.blocks %}
+                  {%if block.type == "page" %}
+                    <div class="contact__field">
+                      <h4>{{ block.settings.contact_field2 }}</h4>
+                      <div>{{ block.settings.address1 }}</div>
+                      <div>{{ block.settings.address2 }}</div>
+                      <div>{{ block.settings.phone }}</div>
+                      <div>{{ block.settings.email2 }}</div>
+                    </div>
+                  {%endif%}
+              {% endfor %}
+            </div>
+        </div>
+        <div class="onlyMobile contact__container contact__container--right contact__container--secondary" data-aos="fade-left" data-aos-duration="1500">
+            <div class="onlymobile_inner" style="background-color:  {{ section.settings.circle_color2 }};">
+              {% for block in section.blocks %}
+                  {%if block.type == "page" %}
+                    <div class="contact__field">
+                      <h4>{{ block.settings.contact_field2 }}</h4>
+                      <div>{{ block.settings.address1 }}</div>
+                      <div>{{ block.settings.address2 }}</div>
+                      <div>{{ block.settings.phone }}</div>
+                      <div>{{ block.settings.email2 }}</div>
+                    </div>
+                  {%endif%}
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Contact",
+    "settings": [
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Header"
+      },
+      {
+        "type": "color",
+        "id": "circle_color",
+        "label": "1st Circle Color"
+      },
+      {
+        "type": "color",
+        "id": "circle_color2",
+        "label": "2nd Circle Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Contact Field 1st circle",
+        "settings": [
+          {
+            "type": "text",
+            "id": "contact_field",
+            "label": "Contact Field"
+          },
+		  {
+            "type": "textarea",
+            "id": "email",
+            "label": "Contact Email"
+          }
+        ]
+      },
+	  {
+        "type": "page",
+        "name": "Contact Field 2nd circle",
+        "settings": [
+          {
+            "type": "text",
+            "id": "contact_field2",
+            "label": "Contact Field"
+          },
+		  {
+            "type": "text",
+            "id": "address1",
+            "label": "Address",
+			"placeholder": "Street"
+			
+          },
+		  {
+            "type": "text",
+            "id": "address2",
+			"label": "Address",
+            "placeholder": "City, ZIP"
+			
+          },
+		  {
+            "type": "text",
+            "id": "phone",
+            "label": "Phone"
+          },
+		  {
+            "type": "textarea",
+            "id": "email2",
+            "label": "Contact Email"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

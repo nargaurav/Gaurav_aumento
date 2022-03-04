@@ -1,0 +1,86 @@
+<div class="image-text page__container">
+  <div class="Container">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <h1>{{ section.settings.title }}</h1>
+      </div>
+    </header>
+    
+    <div class="image-text__container">
+      <div class="text" data-aos="fade-right" data-aos-duration="1000">
+        {% if section.settings.text_header != blank %}
+        <h4>{{ section.settings.text_header }}</h4>
+        {% endif %}
+        <p>{{ section.settings.text }}</p>
+        {% if section.settings.quote != blank %}
+        <a href="{{ section.settings.quote_link }}" target="_blank">
+          <div class="quote-box only_for_dsk" style="border: 2px solid {{ section.settings.border_color }};">
+            <p class="quote">"{{ section.settings.quote }}"</p>
+            <div class="logo-box">
+              <p>-</p><img src="{{ section.settings.logo | img_url:'100x' }}">
+            </div>
+          </div>
+        </a>
+        {% endif %}
+      </div>
+      <div class="image" data-aos="fade-left" data-aos-duration="1000">
+        {% include 'lazy-image' image: section.settings.image, fade: true %}
+      </div>
+      <a href="{{ section.settings.quote_link }}" target="_blank">
+          <div class="quote-box only_for_mob" style="border: 2px solid {{ section.settings.border_color }};">
+            <p class="quote">"{{ section.settings.quote }}"</p>
+            <div class="logo-box">
+              <p>-</p><img src="{{ section.settings.logo | img_url:'100x' }}">
+            </div>
+          </div>
+        </a>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image + Text",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "text_header",
+        "label": "Text Header"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+	  {
+        "type": "color",
+        "id": "border_color",
+        "label": "Quote Border Color"
+      },
+      {
+        "type": "textarea",
+        "id": "quote",
+        "label": "Quote"
+      },
+	  {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+	  {
+        "type": "url",
+        "id": "quote_link",
+        "label": "Quote Link"
+      }
+    ],
+    "blocks": [
+
+    ]
+  }
+{% endschema %}

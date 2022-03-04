@@ -1,0 +1,39 @@
+{% assign prod_handle = product.handle %}
+
+
+{% if section.blocks.size > 0 %}
+	{% for block in section.blocks %}
+		{% if block.settings.product-handle == product.handle %}
+			<input id="custom-name" type="text" name="properties[Custom Name]" maxlength="{{ block.settings.character-limit }}">
+		{% endif %}
+	{% endfor %}
+{% else %}
+	<input id="custom-name" type="text" name="properties[Custom Name]" maxlength="9">
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Custom Word",
+	"class": "custom-word",
+	"blocks": [
+      {
+        "type": "text_block",
+        "name": "Character Limit",
+
+        "settings": [
+			{
+			"type": "product",
+            "id": "product-handle",
+            "label": "Select product"
+			},
+			{
+		  "id": "character-limit",
+          "type": "text",
+          "label": "Number",
+          "default": "9"
+			}
+        ]
+      }
+]
+	}
+{% endschema %}

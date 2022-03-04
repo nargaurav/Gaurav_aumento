@@ -1,0 +1,60 @@
+<style>
+  .blocks__half{
+  	width:70%
+  }  
+  .blocks__whole{
+  	width:30%
+  }
+</style>
+<div class="blocks">
+  {% for block in section.blocks %}
+    {% if block.type == 'half' %}
+      <div class="blocks__item blocks__half" >
+		  {% include 'lazy-image' image: block.settings.image, fade: true %}
+      </div>
+  {% elsif block.type == 'whole' %}
+  <div class="blocks__item blocks__whole" >
+    {% include 'lazy-image' image: block.settings.image, fade: true %}
+  {% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Blocks",
+    "max_blocks": 2,
+    "settings": [
+
+    ],
+    "blocks": [
+      {
+        "type": "half",
+        "name": "Half",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "whole",
+        "name": "Whole",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Blocks",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

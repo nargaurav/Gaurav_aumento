@@ -1,0 +1,48 @@
+<div class="ProductMeta" data-name="{{product.handle}}">
+  {%- if section.settings.show_vendor and product.vendor != blank -%}
+    <h2 class="ProductMeta__Vendor Heading u-h6">
+      {%- assign vendor_handle = product.vendor | handle -%}
+      {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+      {%- unless collection_for_vendor.empty? -%}
+        <a href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+      {%- else -%}
+        {{- product.vendor -}}
+      {%- endunless -%}
+    </h2>
+  {%- endif -%}
+
+  <h2 class="ProductMeta__Title large">
+    {%- if template.name == 'product' -%}
+    {{- product.title -}}
+    {%- else -%}
+    <a href="{{ product.url }}">{{ product.title }}</a>
+    {%- endif -%}
+  </h2>
+
+  {%- if section.settings.show_sku and product.selected_or_first_available_variant.sku != blank -%}
+  <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
+  {%- endif -%}
+
+  
+  {%- if show_description and section.settings.description_below_add_to_cart == false -%}
+    <div class="ProductMeta__Description">
+      <h4 class="drop-control active">Description <span class="control">-</span></h4>
+      <div class="Rte">
+        {%- comment -%}
+        We have figured out that some merchants were copy-pasting huge chunk of code into the product description,
+        which can make the theme crashes if it contains some special attributes used by the theme. We therefore make sure to process this
+        {%- endcomment -%}
+
+        {{ product.description | replace: 'data-section-type', 'data-section-type-placeholder' }}
+      </div>
+    </div>
+  {%- endif -%}
+  
+  {% if product.metafields.custom_fields["details__dimensions"] %}
+    <div class="ProductMeta__Details">
+      <h4 class="drop-control">Details + Dimensions <span class="control">+</span></h4>
+      <h5 class="Rte" style="display: none">{{ product.metafields.custom_fields["details__dimensions"] }}</h5>
+    </div> 
+  {% endif %}
+</div>

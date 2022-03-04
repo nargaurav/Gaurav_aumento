@@ -1,0 +1,30 @@
+<div class="instagram">
+  <a href="{{ section.settings.link }}"><h2>{{ section.settings.title }}</h2></a>
+  <div class="instagram__container">
+    <div id="insta-feed"></div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Instagram",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instagram",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,809 @@
+<style>
+  .tab {
+    overflow: hidden;
+    padding:26px 0 20px 34px;
+  }
+
+  .tab button {
+    transition: 0.3s;
+    font-family: sofia-pro,sans-serif;
+    font-size: 22px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+
+  }
+  .tab .group-title--1::before {
+    background-color: #fff;
+  }
+  .tab .group-title--1.active::before {
+    background-color: #c5d9f3;
+  }
+
+  .tab .group-title--2::before {
+    background-color: transparent;
+  }
+  .tab .group-title--2.active::before {
+    background-color: #b8e7dc;
+  }
+
+  .tab .group-title--3::before {
+    background-color: transparent;
+  }
+  .tab .group-title--3.active::before {
+    background-color: #acacdd;
+  }
+
+  .tab .group-title--4::before {
+    background-color: transparent;
+  }
+  .tab .group-title--4.active::before {
+    background-color: #ffc8d3;
+  }
+
+  .tab .group-title--5::before {
+    background-color: transparent;
+  }
+  .tab .group-title--5.active::before {
+    background-color: #e0251b;
+  }
+
+  @media (max-width: 850px){
+    .stockist__container {
+      margin-bottom: 0;
+    }
+    .stockist__container .group-title {
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding:26px 0 20px 12px;
+      display: contents;
+    }
+
+    .stockist__container .group-title:before {
+      width: 60px;
+      height: 60px;
+      top: calc(50% - 30px);
+      left:  -37px;
+    }
+  }
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    margin-top: 60px;
+  }
+</style>
+<div class="stockists page__container">
+  <div class="Container">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <h1>{{ section.settings.title }}</h1>
+      </div>
+    </header>
+
+    <div class="onlyDesk">
+      {% for block in section.blocks %}
+      <div class="stockist__container">
+        <h4 class="group-title group-title--{{ forloop.index }}">{{ block.settings.group_title }}</h4>
+        <style>
+          .group-title--{{ forloop.index }}::before {
+            background-color: {{ block.settings.circle_color }};
+          }
+        </style>
+        <div class="stockist__group">
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url1}}">
+              <h4>{{ block.settings.store_name1 }}</h4>
+            </a>
+            {{ block.settings.store_add1 }}
+          </div>
+          {% if block.settings.store_name2 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url2}}">
+              <h4>{{ block.settings.store_name2 }}</h4>
+            </a>
+            {{ block.settings.store_add2 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name3 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url3}}">
+              <h4>{{ block.settings.store_name3 }}</h4>
+            </a>
+            {{ block.settings.store_add3 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name4 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url4}}">
+              <h4>{{ block.settings.store_name4 }}</h4>
+            </a>
+            {{ block.settings.store_add4 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name5 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url5}}">
+              <h4>{{ block.settings.store_name5 }}</h4>
+            </a>
+            {{ block.settings.store_add5 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name6 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url6}}">
+              <h4>{{ block.settings.store_name6 }}</h4>
+            </a>
+            {{ block.settings.store_add6 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name7 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url7}}">
+              <h4>{{ block.settings.store_name7 }}</h4>
+            </a>
+            {{ block.settings.store_add7 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name8 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url8}}">
+              <h4>{{ block.settings.store_name8 }}</h4>
+            </a>
+            {{ block.settings.store_add8 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name9 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url9}}">
+              <h4>{{ block.settings.store_name9 }}</h4>
+            </a>
+            {{ block.settings.store_add9 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name10 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url10}}">
+              <h4>{{ block.settings.store_name10 }}</h4>
+            </a>
+            {{ block.settings.store_add10 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name11 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url11}}">
+              <h4>{{ block.settings.store_name11 }}</h4>
+            </a>
+            {{ block.settings.store_add11 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name12 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url12}}">
+              <h4>{{ block.settings.store_name12 }}</h4>
+            </a>
+            {{ block.settings.store_add12 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name13 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url13}}">
+              <h4>{{ block.settings.store_name13 }}</h4>
+            </a>
+            {{ block.settings.store_add13 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name14 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url14}}">
+              <h4>{{ block.settings.store_name14 }}</h4>
+            </a>
+            {{ block.settings.store_add14 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name15 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url15}}">
+              <h4>{{ block.settings.store_name15 }}</h4>
+            </a>
+            {{ block.settings.store_add15 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name16 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url16}}">
+              <h4>{{ block.settings.store_name16 }}</h4>
+            </a>
+            {{ block.settings.store_add16 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name17 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url17}}">
+              <h4>{{ block.settings.store_name17 }}</h4>
+            </a>
+            {{ block.settings.store_add17 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name18 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url18}}">
+              <h4>{{ block.settings.store_name18 }}</h4>
+            </a>
+            {{ block.settings.store_add18 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name19 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url19}}">
+              <h4>{{ block.settings.store_name19 }}</h4>
+            </a>
+            {{ block.settings.store_add19 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name20 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url20}}">
+              <h4>{{ block.settings.store_name20 }}</h4>
+            </a>
+            {{ block.settings.store_add20 }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      <div class="stockists__bottom">
+        <h4>{{ section.settings.page_sub_title }}</h4>
+        <p>{{ section.settings.page_email_sec }}</p>
+      </div>
+    </div>
+
+    <div class="onlyMobile">
+
+      <div class="tab">
+
+        {% assign first = "1" %} 
+        {% for block in section.blocks %}
+        <style>
+          .group-title--{{ forloop.index }}::before {
+            background-color: {{ block.settings.circle_color }};
+          }	
+        </style>
+        <div class="stockist__container">
+          <button class="tablinks group-title group-title--{{ forloop.index }} {%if first=="1"%}active {% assign first = "0" %}{%endif%}" onclick="openCity(event, '{{ block.settings.group_title }}')">{{ block.settings.group_title }}</button>
+        </div>
+        {%endfor%}
+      </div>
+
+      <!-- Tab content -->
+      {% assign first = "1" %}
+      {% for block in section.blocks %}
+      <div id="{{ block.settings.group_title }}" class="tabcontent" {%if first=="1"%}style="display:block"  {% assign first = "0" %}{%endif%}>
+        <div class="stockist__group">
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url1}}">
+              <h4>{{ block.settings.store_name1 }}</h4>
+            </a>
+            {{ block.settings.store_add1 }}
+          </div>
+          {% if block.settings.store_name2 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url2}}">
+              <h4>{{ block.settings.store_name2 }}</h4>
+            </a>
+            {{ block.settings.store_add2 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name3 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url3}}">
+              <h4>{{ block.settings.store_name3 }}</h4>
+            </a>
+            {{ block.settings.store_add3 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name4 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url4}}">
+              <h4>{{ block.settings.store_name4 }}</h4>
+            </a>
+            {{ block.settings.store_add4 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name5 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url5}}">
+              <h4>{{ block.settings.store_name5 }}</h4>
+            </a>
+            {{ block.settings.store_add5 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name6 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url6}}">
+              <h4>{{ block.settings.store_name6 }}</h4>
+            </a>
+            {{ block.settings.store_add6 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name7 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url7}}">
+              <h4>{{ block.settings.store_name7 }}</h4>
+            </a>
+            {{ block.settings.store_add7 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name8 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url8}}">
+              <h4>{{ block.settings.store_name8 }}</h4>
+            </a>
+            {{ block.settings.store_add8 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name9 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url9}}">
+              <h4>{{ block.settings.store_name9 }}</h4>
+            </a>
+            {{ block.settings.store_add9 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name10 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url10}}">
+              <h4>{{ block.settings.store_name10 }}</h4>
+            </a>
+            {{ block.settings.store_add10 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name11 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url11}}">
+              <h4>{{ block.settings.store_name11 }}</h4>
+            </a>
+            {{ block.settings.store_add11 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name12 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url12}}">
+              <h4>{{ block.settings.store_name12 }}</h4>
+            </a>
+            {{ block.settings.store_add12 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name13 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url13}}">
+              <h4>{{ block.settings.store_name13 }}</h4>
+            </a>
+            {{ block.settings.store_add13 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name14 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url14}}">
+              <h4>{{ block.settings.store_name14 }}</h4>
+            </a>
+            {{ block.settings.store_add14 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name15 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url15}}">
+              <h4>{{ block.settings.store_name15 }}</h4>
+            </a>
+            {{ block.settings.store_add15 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name16 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url16}}">
+              <h4>{{ block.settings.store_name16 }}</h4>
+            </a>
+            {{ block.settings.store_add16 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name17 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url17}}">
+              <h4>{{ block.settings.store_name17 }}</h4>
+            </a>
+            {{ block.settings.store_add17 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name18 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url18}}">
+              <h4>{{ block.settings.store_name18 }}</h4>
+            </a>
+            {{ block.settings.store_add18 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name19 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url19}}">
+              <h4>{{ block.settings.store_name19 }}</h4>
+            </a>
+            {{ block.settings.store_add19 }}
+          </div>
+          {% endif %}
+          {% if block.settings.store_name20 !=blank %}
+          <div class="stockist-item">
+            <a href="{{block.settings.store_url20}}">
+              <h4>{{ block.settings.store_name20 }}</h4>
+            </a>
+            {{ block.settings.store_add20 }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {%endfor%}
+
+
+    </div><!--end only mobile-->
+
+
+
+  </div>
+</div>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+{% schema %}
+{
+"name": "Stockists",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type":"text",
+"id":"page_sub_title",
+"label":"Page Sub Title"
+},
+{
+"type":"textarea",
+"id":"page_email_sec",
+"label":"Page Email Section"
+}
+],
+"blocks": [
+{
+"type": "block",
+"name": "Location",
+"settings": [
+{
+"type": "text",
+"id": "group_title",
+"label": "Region"
+},
+{
+"type": "color",
+"id": "circle_color",
+"label": "Circle Color"
+},
+{
+"type": "text",
+"id": "store_name1",
+"label": "Store Name #1"
+},
+{
+"type": "textarea",
+"id": "store_add1",
+"label": "Store Address #1"
+},
+{
+"type": "url",
+"id": "store_url1",
+"label": "Store URL #1"
+},
+{
+"type": "text",
+"id": "store_name2",
+"label": "Store Name #2"
+},
+{
+"type": "textarea",
+"id": "store_add2",
+"label": "Store Address #2"
+},
+{
+"type": "url",
+"id": "store_url2",
+"label": "Store URL #2"
+},
+{
+"type": "text",
+"id": "store_name3",
+"label": "Store Name #3"
+},
+{
+"type": "textarea",
+"id": "store_add3",
+"label": "Store Address #3"
+},
+{
+"type": "url",
+"id": "store_url3",
+"label": "Store URL #3"
+},
+{
+"type": "text",
+"id": "store_name4",
+"label": "Store Name #4"
+},
+{
+"type": "textarea",
+"id": "store_add4",
+"label": "Store Address #4"
+},
+{
+"type": "url",
+"id": "store_url4",
+"label": "Store URL #4"
+},
+{
+"type": "text",
+"id": "store_name5",
+"label": "Store Name #5"
+},
+{
+"type": "textarea",
+"id": "store_add5",
+"label": "Store Address #5"
+},
+{
+"type": "url",
+"id": "store_url5",
+"label": "Store URL #5"
+},
+{
+"type": "text",
+"id": "store_name6",
+"label": "Store Name #6"
+},
+{
+"type": "textarea",
+"id": "store_add6",
+"label": "Store Address #6"
+},
+{
+"type": "url",
+"id": "store_url6",
+"label": "Store URL #6"
+},
+{
+"type": "text",
+"id": "store_name7",
+"label": "Store Name #7"
+},
+{
+"type": "textarea",
+"id": "store_add7",
+"label": "Store Address #7"
+},
+{
+"type": "url",
+"id": "store_url7",
+"label": "Store URL #7"
+},
+{
+"type": "text",
+"id": "store_name8",
+"label": "Store Name #8"
+},
+{
+"type": "textarea",
+"id": "store_add8",
+"label": "Store Address #8"
+},
+{
+"type": "url",
+"id": "store_url8",
+"label": "Store URL #8"
+},
+{
+"type": "text",
+"id": "store_name9",
+"label": "Store Name #9"
+},
+{
+"type": "textarea",
+"id": "store_add9",
+"label": "Store Address #9"
+},
+{
+"type": "url",
+"id": "store_url9",
+"label": "Store URL #9"
+},
+{
+"type": "text",
+"id": "store_name10",
+"label": "Store Name #10"
+},
+{
+"type": "textarea",
+"id": "store_add10",
+"label": "Store Address #10"
+},
+{
+"type": "url",
+"id": "store_url10",
+"label": "Store URL #10"
+},
+{
+"type": "text",
+"id": "store_name11",
+"label": "Store Name #11"
+},
+{
+"type": "textarea",
+"id": "store_add11",
+"label": "Store Address #11"
+},
+{
+"type": "url",
+"id": "store_url11",
+"label": "Store URL #11"
+},
+{
+"type": "text",
+"id": "store_name12",
+"label": "Store Name #12"
+},
+{
+"type": "textarea",
+"id": "store_add12",
+"label": "Store Address #12"
+},
+{
+"type": "url",
+"id": "store_url12",
+"label": "Store URL #12"
+},
+{
+"type": "text",
+"id": "store_name13",
+"label": "Store Name #13"
+},
+{
+"type": "textarea",
+"id": "store_add13",
+"label": "Store Address #13"
+},
+{
+"type": "url",
+"id": "store_url13",
+"label": "Store URL #13"
+},
+{
+"type": "text",
+"id": "store_name14",
+"label": "Store Name #14"
+},
+{
+"type": "textarea",
+"id": "store_add14",
+"label": "Store Address #14"
+},
+{
+"type": "url",
+"id": "store_url14",
+"label": "Store URL #14"
+},
+{
+"type": "text",
+"id": "store_name15",
+"label": "Store Name #15"
+},
+{
+"type": "textarea",
+"id": "store_add15",
+"label": "Store Address #15"
+},
+{
+"type": "url",
+"id": "store_url15",
+"label": "Store URL #15"
+},
+{
+"type": "text",
+"id": "store_name16",
+"label": "Store Name #16"
+},
+{
+"type": "textarea",
+"id": "store_add16",
+"label": "Store Address #16"
+},
+{
+"type": "url",
+"id": "store_url16",
+"label": "Store URL #16"
+},
+{
+"type": "text",
+"id": "store_name17",
+"label": "Store Name #17"
+},
+{
+"type": "textarea",
+"id": "store_add17",
+"label": "Store Address #17"
+},
+{
+"type": "url",
+"id": "store_url17",
+"label": "Store URL #17"
+},
+{
+"type": "text",
+"id": "store_name18",
+"label": "Store Name #18"
+},
+{
+"type": "textarea",
+"id": "store_add18",
+"label": "Store Address #18"
+},
+{
+"type": "url",
+"id": "store_url18",
+"label": "Store URL #18"
+},
+{
+"type": "text",
+"id": "store_name19",
+"label": "Store Name #19"
+},
+{
+"type": "textarea",
+"id": "store_add19",
+"label": "Store Address #19"
+},
+{
+"type": "url",
+"id": "store_url19",
+"label": "Store URL #19"
+},
+{
+"type": "text",
+"id": "store_name20",
+"label": "Store Name #20"
+},
+{
+"type": "textarea",
+"id": "store_add20",
+"label": "Store Address #20"
+},
+{
+"type": "url",
+"id": "store_url20",
+"label": "Store URL #20"
+}
+]
+}
+]
+}
+{% endschema %}

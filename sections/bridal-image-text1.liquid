@@ -1,0 +1,59 @@
+<div class="bridal about image-text page__container">
+  <div class="Container">
+    <div class="image-text__container">
+      <div class="image" data-aos="fade-right" data-aos-duration="1000">
+        {% include 'lazy-image' image: section.settings.image, fade: true %}
+      </div>
+      <div class="text" data-aos="fade-left" data-aos-duration="1000">
+        {% if section.settings.text_header != blank %}
+        <div class="header-flex">
+          <h4>{{ section.settings.text_header }}</h4>
+          <span class="cursive">{{ section.settings.text_header2 }}</span>
+        </div>
+        {% endif %}
+        <p>{{ section.settings.text }}</p>
+<!--         <img class="ring" src="{{ section.settings.small_img | img_url:'300x' }}"/> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width:640px){
+    
+    .image-text__container .text{
+    	padding-right:0 !important;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Image + Text",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "text_header",
+        "label": "Text Header"
+      },
+      {
+        "type": "text",
+        "id": "text_header2",
+        "label": "Cursive Text Header"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+
+    ]
+  }
+{% endschema %}

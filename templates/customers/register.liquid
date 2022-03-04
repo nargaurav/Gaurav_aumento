@@ -1,0 +1,105 @@
+<style>
+  h1.Form__Title {
+  	color:#b3b5dc;
+    white-space: nowrap;
+    text-transform:lowercase;
+  }
+  @media screen and (min-width: 1008px){
+    
+    .Form__Title:not(:only-child){
+        margin-bottom: 70px;
+    }
+  }
+  .Form__Legend{
+  	font-family: sofia-pro,sans-serif!important;
+    font-size:35px;
+  }
+  
+  
+.labelLogin{
+    font-family: 'sofia-pro';
+    font-size: 22px;
+  text-transform: uppercase;}
+  
+  .Form__Input, .Form__Input::placeholder{
+    font-size: 24px;
+    font-family: 'baskerville-display-pt';
+  }
+  
+  .Form__Hint span{
+  	font-size: 24px;
+    font-family: 'baskerville-display-pt';
+  }
+  
+  .Form__Hint a.Link, .Form__Hint button.Link{
+  	font-size: 24px;
+    font-family: 'baskerville-display-pt';
+    text-decoration: underline;
+  }
+  
+</style>
+<section data-section-id="reset-password" data-section-type="reset-password">
+  <div class="Container">
+    <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
+      {%- form 'create_customer', name: 'create_customer', class: 'Form Form--spacingTight', id: 'create_customer' -%}
+        <header class="Form__Header">
+          <h1 class="Form__Title  ">{{ 'customer.register.title' | t }}</h1>
+          <p class="Form__Legend">{{ 'customer.register.description' | t }}</p>
+        </header>
+
+        {%- if form.errors -%}
+          <div class="Form__Alert Alert Alert--error">
+            <ul class="Alert__ErrorList">
+              {%- for field in form.errors -%}
+                {%- if field == 'form' -%}
+                  <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+                {%- else -%}
+                  <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
+        {%- if request.locale.iso_code == 'ja' -%}
+          <div class="Form__Item">
+            <label class="labelLogin">{{ 'customer.register.last_name' | t }}</label>
+            <input type="text" class="Form__Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}">
+          </div>
+
+          <div class="Form__Item">
+            <label class="labelLogin">{{ 'customer.register.first_name' | t }}</label>
+            <input type="text" class="Form__Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" autofocus>
+            
+          </div>
+        {%- else -%}
+          <div class="Form__Item">
+            <label class="labelLogin">{{ 'customer.register.first_name' | t }}</label>
+            <input type="text" class="Form__Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" autofocus>
+            
+          </div>
+
+          <div class="Form__Item">
+            <label class="labelLogin">{{ 'customer.register.last_name' | t }}</label>
+            <input type="text" class="Form__Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}">
+            
+          </div>
+        {%- endif -%}
+
+        <div class="Form__Item">
+          <label class="labelLogin">{{ 'customer.login.email' | t }}</label>
+          <input type="email" class="Form__Input" name="customer[email]" aria-label="{{ 'customer.register.email' | t }}" placeholder="{{ 'customer.register.email' | t }}" required="required">
+          
+        </div>
+
+        <div class="Form__Item">
+          <label class="labelLogin">{{ 'customer.login.password' | t }}</label>
+          <input type="password" class="Form__Input" name="customer[password]" aria-label="{{ 'customer.register.password' | t }}" placeholder="{{ 'customer.register.password' | t }}" required="required">
+          
+        </div>
+
+        <button type="submit" class="Form__Submit Button Button--account Button--primary Button--full">{{ 'customer.register.submit' | t }}</button>
+      {%- endform -%}
+    </div>
+  </div>
+</section>

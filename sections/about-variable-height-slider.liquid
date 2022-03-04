@@ -1,0 +1,66 @@
+<div class="variable-height-slider">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.link }}">
+      <div class="variable-height-slider__item">
+        <div class="variable-height-slider__item-image">
+          {% include 'lazy-image' image: block.settings.image %}
+        </div>
+        <h4>{{ block.settings.title }}</h4>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
+<script>
+    let time = '{{ section.settings.slider_speed}}';
+    //console.log(time)
+    window.autoplayTime = parseInt(time) * 1000; 
+</script>
+
+{% schema %}
+  {
+    "name": "Variable Height Slider",
+    "settings": [
+			{
+              "type": "range",
+              "id": "slider_speed",
+              "min": 1,
+              "max": 8,
+              "step": 1,
+              "label": "Slider Auto Play",
+              "default": 1
+            }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+{% javascript %}
+
+
+});
+
+{% endjavascript
+
+{% endjavascript %}

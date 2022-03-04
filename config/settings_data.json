@@ -1,0 +1,3536 @@
+{
+  "current": {
+    "heading_color": "#000000",
+    "text_color": "#000000",
+    "text_light_color": "#000000",
+    "link_color": "#acaddd",
+    "background": "#ffffff",
+    "light_background": "#ffffff",
+    "product_on_sale_color": "#000000",
+    "button_background": "#000000",
+    "button_text_color": "#ffffff",
+    "header_background": "#ffffff",
+    "header_heading_color": "#000000",
+    "header_light_color": "#000000",
+    "footer_background": "#ffffff",
+    "footer_heading_color": "#000000",
+    "footer_text_color": "#000000",
+    "navigation_background": "#ffffff",
+    "navigation_text_color": "#000000",
+    "newsletter_popup_background": "#ffffff",
+    "newsletter_popup_text_color": "#000000",
+    "secondary_elements_background": "#ffffff",
+    "secondary_elements_text_color": "#000000",
+    "heading_font": "montserrat_n5",
+    "heading_size": "small",
+    "uppercase_heading": false,
+    "text_font": "nunito_sans_n4",
+    "base_text_font_size": 14,
+    "show_page_transition": false,
+    "show_button_transition": true,
+    "show_image_zooming": true,
+    "search_mode": "product",
+    "product_show_price_on_hover": false,
+    "product_show_secondary_image": false,
+    "product_info_alignment": "center",
+    "product_image_size": "natural",
+    "product_list_horizontal_spacing": "medium",
+    "product_list_vertical_spacing": "small",
+    "cart_type": "drawer",
+    "cart_enable_notes": true,
+    "cart_show_free_shipping_threshold": false,
+    "cart_free_shipping_threshold": "50",
+    "favicon": "shopify:\/\/shop_images\/NewDiamond.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/ALcheckout-Logo2.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#f6f6f6",
+    "checkout_accent_color": "#1c1b1b",
+    "checkout_button_color": "#1c1b1b",
+    "sections": {
+      "sidebar-menu": {
+        "type": "sidebar-menu",
+        "settings": {
+          "primary_menu": "mobile-sidebar-menu",
+          "secondary_menu": "",
+          "show_social_media": true
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "2fd87db9-fbcf-4b6f-8135-e094af4ce0c3": {
+            "type": "announcement",
+            "settings": {
+              "enable_announcement": true,
+              "home_page_only": false,
+              "content": "Shop our In-Stock ready to ship pieces",
+              "content_mobile": "Shop our In-Stock ready to ship pieces",
+              "link": "shopify:\/\/collections\/in-stock",
+              "background": "#000000",
+              "text_color": "#ffffff"
+            }
+          },
+          "5d052945-f352-439d-940c-f8bf6128198f": {
+            "type": "announcement",
+            "settings": {
+              "enable_announcement": false,
+              "home_page_only": false,
+              "content": "ORDERS MUST BE PLACED BY NOVEMBER 30 FOR A GUARANTEED HOLIDAY DELIVERY",
+              "content_mobile": "ORDERS MUST BE PLACED BY NOVEMBER 30 FOR A GUARANTEED HOLIDAY DELIVERY",
+              "link": "",
+              "background": "#000000",
+              "text_color": "#ffffff"
+            }
+          },
+          "7433943d-c0c1-412e-929b-b8ee71901116": {
+            "type": "announcement",
+            "settings": {
+              "enable_announcement": false,
+              "home_page_only": false,
+              "content": "Announce something here",
+              "content_mobile": "Announce something here",
+              "link": "",
+              "background": "#f1fa85",
+              "text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "2fd87db9-fbcf-4b6f-8135-e094af4ce0c3",
+          "5d052945-f352-439d-940c-f8bf6128198f",
+          "7433943d-c0c1-412e-929b-b8ee71901116"
+        ],
+        "settings": {
+          "enable_bar": true,
+          "background": "#000000"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "127975b4-237f-4c61-9392-816ea43f639b": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "shop",
+              "push_1_heading": "Example heading",
+              "push_1_subheading": "Example sub-heading",
+              "push_1_url": "",
+              "push_2_heading": "Example heading",
+              "push_2_subheading": "Example sub-heading",
+              "push_2_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "127975b4-237f-4c61-9392-816ea43f639b"
+        ],
+        "settings": {
+          "use_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/alisonlou-logo.png",
+          "logo_max_width": 300,
+          "mobile_logo_max_width": 200,
+          "show_currency_selector": false,
+          "show_locale_selector": false,
+          "navigation_menu": "main-menu-2021",
+          "navigation_style": "inline",
+          "show_icons": false,
+          "enable_transparent_header": false,
+          "enable_transparent_header_collection": false,
+          "show_transparent_header_border": false,
+          "transparent_text_color": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-1": {
+            "type": "links",
+            "settings": {
+              "menu": "company"
+            }
+          },
+          "29305c0e-d6c6-4f02-9694-2cd36f4a7035": {
+            "type": "links",
+            "settings": {
+              "menu": "resources"
+            }
+          },
+          "412e4fbe-7ed3-4b51-9cb6-3307027a89f9": {
+            "type": "links",
+            "settings": {
+              "menu": "follow"
+            }
+          },
+          "eb46e9b5-d912-408d-abc9-d63d2c47e738": {
+            "type": "links",
+            "settings": {
+              "menu": "policies"
+            }
+          },
+          "footer-2": {
+            "type": "newsletter",
+            "settings": {
+              "title": "stay in the loop",
+              "content": "<p>Receive 10% off your first purchase<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-1",
+          "29305c0e-d6c6-4f02-9694-2cd36f4a7035",
+          "412e4fbe-7ed3-4b51-9cb6-3307027a89f9",
+          "eb46e9b5-d912-408d-abc9-d63d2c47e738",
+          "footer-2"
+        ],
+        "settings": {
+          "show_payment_methods": false,
+          "show_currency_selector": false,
+          "show_locale_selector": false
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slide-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MainCarousel-Desktop_Groovy2.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/MainCarousel-Mobile_Groovy2_1936c4fa-0bb7-4a2a-a6af-3f6a63197901.jpg",
+              "apply_overlay": false,
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "GROOVY",
+              "button_1_text": "DISCOVER NOW",
+              "button_1_link": "shopify:\/\/collections\/groovy",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "16bdab66-4ac6-43de-aa97-f5a7b5e6f297": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MainCarousel-Desktop-CocktailHair2.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/MainCarousel-Mobile_CocktailHair2_4b3f68cb-4a82-4c00-a64e-bacad6d8a0a0.jpg",
+              "apply_overlay": false,
+              "content_position": "bottomLeft",
+              "subheading": "HAIR TIES + BARRETTES",
+              "title": "COCKTAIL COLLECTION",
+              "button_1_text": "SHOP NOW",
+              "button_1_link": "shopify:\/\/collections\/hair",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "72800a3e-5608-4ca0-a056-4ab7a9ae2a6e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MainCarousel-Desktop_CocktailRings_e81779d7-7265-4f5f-8435-844e2f52d9ed.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/MainCarousel-Mobile_CocktailRings_3ce31194-091f-4677-b87b-583cb98d1b7e.jpg",
+              "apply_overlay": false,
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "COCKTAIL RINGS",
+              "button_1_text": "DISCOVER NOW",
+              "button_1_link": "shopify:\/\/collections\/cocktail-pieces",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "7e904b92-f55d-4619-b90e-5326a9752c43": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MainCarousel-Desktop_VdayEarrings_172a9104-f0c3-4cc9-b125-6b2c23eea36c.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/MainCarousel-Mobile_VdayEarrings.jpg",
+              "apply_overlay": false,
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "EARRINGS",
+              "button_1_text": "SHOP NOW",
+              "button_1_link": "shopify:\/\/collections\/earring",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slide-0",
+          "16bdab66-4ac6-43de-aa97-f5a7b5e6f297",
+          "72800a3e-5608-4ca0-a056-4ab7a9ae2a6e",
+          "7e904b92-f55d-4619-b90e-5326a9752c43"
+        ],
+        "settings": {
+          "show_fullscreen": true,
+          "show_arrow": false,
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_color": "#ffffff",
+          "button_color": "#ffffff",
+          "button_background": "rgba(0,0,0,0)",
+          "button_border_background": "#ffffff",
+          "btn_hover_color": "#000000",
+          "btn_hover_border_color": "#000000",
+          "btn_hover_back_color": ""
+        }
+      },
+      "featured-collections": {
+        "type": "featured-collections",
+        "blocks": {
+          "featured-collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "title": "",
+              "grid_items_count": 8,
+              "button_text": "View all products"
+            }
+          }
+        },
+        "block_order": [
+          "featured-collection-0"
+        ],
+        "settings": {
+          "title": "Featured collection",
+          "layout_mode": "grid",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false,
+          "grid_mobile_items_per_row": "2",
+          "grid_desktop_items_per_row": 4
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "Sub-heading",
+              "title": "Collection name",
+              "button_text": "View products",
+              "apply_overlay": true
+            }
+          },
+          "collection-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "Sub-heading",
+              "title": "Collection name",
+              "button_text": "View products",
+              "apply_overlay": true
+            }
+          },
+          "collection-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "Sub-heading",
+              "title": "Collection name",
+              "button_text": "View products",
+              "apply_overlay": true
+            }
+          }
+        },
+        "block_order": [
+          "collection-0",
+          "collection-1",
+          "collection-2"
+        ],
+        "settings": {
+          "image_size": "normal",
+          "add_spacing": true,
+          "expand_collection": false,
+          "stack_on_mobile": true,
+          "text_color": "#ffffff",
+          "button_color": "#363636"
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "settings": {
+          "subheading": "",
+          "title": "Featured product",
+          "show_headings_on_mobile": true,
+          "product": "",
+          "show_vendor": true,
+          "show_sku": false,
+          "show_description": true,
+          "description_below_add_to_cart": false,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": true,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 3,
+          "show_price_in_button": false,
+          "show_payment_button": true,
+          "show_pickup_availability": false
+        }
+      },
+      "timeline": {
+        "type": "timeline",
+        "blocks": {
+          "item-0": {
+            "type": "item",
+            "settings": {
+              "apply_overlay": true,
+              "title": "2000",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          },
+          "item-1": {
+            "type": "item",
+            "settings": {
+              "apply_overlay": true,
+              "title": "2001",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          },
+          "item-2": {
+            "type": "item",
+            "settings": {
+              "apply_overlay": true,
+              "title": "2002",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "item-0",
+          "item-1",
+          "item-2"
+        ],
+        "settings": {
+          "text_color": "#ffffff"
+        }
+      },
+      "blog-posts": {
+        "type": "blog-posts",
+        "blocks": {
+          "blog-0": {
+            "type": "blog",
+            "settings": {
+              "blog": "news"
+            }
+          }
+        },
+        "block_order": [
+          "blog-0"
+        ],
+        "settings": {
+          "subheading": "",
+          "title": "Featured article",
+          "show_category": false,
+          "button_text": "View all articles"
+        }
+      },
+      "shop-the-look": {
+        "type": "shop-the-look",
+        "blocks": {
+          "look-0": {
+            "type": "look",
+            "settings": {
+              "dot_style": "light",
+              "product_1": "",
+              "product_1_horizontal_position": 30,
+              "product_1_vertical_position": 40,
+              "product_2": "",
+              "product_2_horizontal_position": 45,
+              "product_2_vertical_position": 65,
+              "product_3": "",
+              "product_3_horizontal_position": 70,
+              "product_3_vertical_position": 50
+            }
+          },
+          "look-1": {
+            "type": "look",
+            "settings": {
+              "dot_style": "light",
+              "product_1": "",
+              "product_1_horizontal_position": 25,
+              "product_1_vertical_position": 45,
+              "product_2": "",
+              "product_2_horizontal_position": 55,
+              "product_2_vertical_position": 30,
+              "product_3": "",
+              "product_3_horizontal_position": 65,
+              "product_3_vertical_position": 60
+            }
+          }
+        },
+        "block_order": [
+          "look-0",
+          "look-1"
+        ],
+        "settings": {
+          "subheading": "Shop",
+          "title": "Our looks",
+          "show_mobile_product_info": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_collection_info": true,
+          "product_show_secondary_image": true,
+          "show_collection_image": false,
+          "apply_overlay": false,
+          "show_color_swatch": true,
+          "show_vendor": false,
+          "collection_image_size": "normal",
+          "show_sort_by": true,
+          "show_layout_switch": false,
+          "toolbar_position": "top",
+          "color_filter_order": "Pink,Red,Orange,Yellow,Green,Blue,Purple,Black,White,Glitter,Multicolor,Neon,Pastels",
+          "filter_position": "drawer",
+          "filter_mode": "group",
+          "show_filter_color_swatch": true,
+          "filter_menu": "",
+          "pagination_option": "pagination",
+          "grid_items_per_page": 48,
+          "grid_mobile_items_per_row": "2",
+          "grid_desktop_items_per_row": 4
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "show_section": true,
+          "title": "Recently viewed",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "collection-footer": {
+        "type": "collection-footer",
+        "settings": {
+          "show_section": false,
+          "text_color": "#ffffff",
+          "apply_overlay": true,
+          "title": "Our story",
+          "content": "<p>Add your own custom content to explain your processes...<\/p>"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "blocks": {
+          "b4b09ff2-5225-421c-b18b-08d829fd28fb": {
+            "type": "word",
+            "settings": {
+              "product-handle": "custom-word-necklace",
+              "custom-word-label": "Type word below to preview",
+              "character-limit": "9"
+            }
+          },
+          "bf71d328-b72d-436e-b4f6-a1360042b40e": {
+            "type": "word",
+            "settings": {
+              "product-handle": "mini-custom-word-necklace",
+              "custom-word-label": "Type word below to preview",
+              "character-limit": "9"
+            }
+          },
+          "2f9c5a71-3ea0-4a11-9f32-5e92a7e2fa94": {
+            "type": "word",
+            "settings": {
+              "product-handle": "custom-word-bracelet",
+              "custom-word-label": "Type word below to preview",
+              "character-limit": "9"
+            }
+          },
+          "f63a064d-428c-41ef-b56f-4b8203995d52": {
+            "type": "word",
+            "settings": {
+              "product-handle": "custom-word-baby-bracelet",
+              "custom-word-label": "Type word below to preview",
+              "character-limit": "9"
+            }
+          },
+          "3202c0cd-1464-452d-8841-5f2342811f71": {
+            "type": "word",
+            "settings": {
+              "product-handle": "custom-word-huggy",
+              "custom-word-label": "Type word below to preview",
+              "character-limit": "9"
+            }
+          },
+          "0d88a734-318b-4d3e-998a-bc43acf95c86": {
+            "type": "word",
+            "settings": {
+              "product-handle": "custom-word-ring",
+              "custom-word-label": "Type word below to preview",
+              "character-limit": "6"
+            }
+          },
+          "71b642ed-2116-4096-ad72-80c59f33de89": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "enamel-letter-huggy"
+            }
+          },
+          "24d397ec-d742-4909-afc5-dc643a09ed89": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "diamond-letter-with-enamel-shadow-necklace"
+            }
+          },
+          "93260b9f-15fd-40c0-9996-a357cd001f30": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "double-enamel-letter-necklace"
+            }
+          },
+          "cd274f2c-fe2b-4f07-ac7b-e586ff496e75": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "mini-diamond-letter-with-enamel-shadow-necklace"
+            }
+          },
+          "784516a7-956c-437c-b94f-4864883d38a3": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "stellar-enamel-letter-necklace"
+            }
+          },
+          "51a25545-5b3d-426d-b358-3f2e2ea2cf61": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "enamel-letter-stud"
+            }
+          },
+          "4b6b0bfb-3020-4c64-b24e-4814897215fd": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "superlou-enamel-letter-ring"
+            }
+          },
+          "05078404-8ba3-45f5-9b42-c5abc67b0128": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "superlou-diamond-letter-ring"
+            }
+          },
+          "964bada8-0d30-45d3-b30f-598b1643ab13": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "custom-pave-mrs-ring"
+            }
+          },
+          "5a8f1066-3c0a-4b66-b931-02f958333ec7": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "heart-baby-bracelet",
+              "custom-word-label-darl": "Type Word to Preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "f52e8d13-9ddf-4788-ab6b-eed6423c23db": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "amour-necklace",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "9"
+            }
+          },
+          "71ce4aac-4abe-45ab-8139-d2cfe24f5664": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "amour-necklace-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "9"
+            }
+          },
+          "1f9146f2-065f-44e2-bcbe-6c220241b9db": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "stripe-necklace",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "9"
+            }
+          },
+          "795a7b28-d2b3-44d5-8807-65656468a1de": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "stripe-necklace-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "9"
+            }
+          },
+          "ed0a1769-5aba-433b-a089-eb62e89d9d28": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "amour-bracelet",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "9"
+            }
+          },
+          "2c9a8bcd-c3b7-478b-a4d6-5839ec3683cf": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "amour-bracelet-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "9"
+            }
+          },
+          "3a9a3113-b941-4b2c-a7f6-3602c005fabc": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "amour-signet-ring",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "d6bfed9f-6b4f-4c1b-b246-d56040ebb7f5": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "amour-signet-ring-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "61aa6afe-678e-4f02-a59b-0d52cf97c6c6": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "checker-signet-ring",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "78a825a5-f1e8-42a0-9528-dd96f81bc8ea": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "checker-signet-ring-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "7d19442e-2545-43e0-baae-8343c2976ce9": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "stripe-signet-ring",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "996cd817-08d3-4df4-b805-e8f7d3283a94": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "checker-signet-ring-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "1"
+            }
+          },
+          "8cb0d1e5-bca4-49a8-973f-681d9f54c1af": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "oval-charm-pendant",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "3"
+            }
+          },
+          "2224d109-0e6b-406e-8293-3f5666011bf6": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "puffy-heart-charm-pendant",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "3"
+            }
+          },
+          "cd2e42e5-0089-4a04-89e2-4d745f5c46f9": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "puffy-heart-charm-pendant-in-stock",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "3"
+            }
+          },
+          "a1711e23-e5be-47db-bbe0-16764b2cceba": {
+            "type": "darleston",
+            "settings": {
+              "product-handle": "rectangle-charm-pendant",
+              "custom-word-label-darl": "Type word below to preview",
+              "character-limit-darl": "3"
+            }
+          },
+          "020391a8-ce33-475b-a709-41acfdc115f2": {
+            "type": "double_letter",
+            "settings": {
+              "product-handle": "diamond-cufflinks"
+            }
+          },
+          "0a078bc4-c76d-4f45-865f-5371e8d28363": {
+            "type": "word",
+            "settings": {
+              "product-handle": "",
+              "custom-word-label": "",
+              "character-limit": "9"
+            }
+          }
+        },
+        "block_order": [
+          "b4b09ff2-5225-421c-b18b-08d829fd28fb",
+          "bf71d328-b72d-436e-b4f6-a1360042b40e",
+          "2f9c5a71-3ea0-4a11-9f32-5e92a7e2fa94",
+          "f63a064d-428c-41ef-b56f-4b8203995d52",
+          "3202c0cd-1464-452d-8841-5f2342811f71",
+          "0d88a734-318b-4d3e-998a-bc43acf95c86",
+          "71b642ed-2116-4096-ad72-80c59f33de89",
+          "24d397ec-d742-4909-afc5-dc643a09ed89",
+          "93260b9f-15fd-40c0-9996-a357cd001f30",
+          "cd274f2c-fe2b-4f07-ac7b-e586ff496e75",
+          "784516a7-956c-437c-b94f-4864883d38a3",
+          "51a25545-5b3d-426d-b358-3f2e2ea2cf61",
+          "4b6b0bfb-3020-4c64-b24e-4814897215fd",
+          "05078404-8ba3-45f5-9b42-c5abc67b0128",
+          "964bada8-0d30-45d3-b30f-598b1643ab13",
+          "5a8f1066-3c0a-4b66-b931-02f958333ec7",
+          "f52e8d13-9ddf-4788-ab6b-eed6423c23db",
+          "71ce4aac-4abe-45ab-8139-d2cfe24f5664",
+          "1f9146f2-065f-44e2-bcbe-6c220241b9db",
+          "795a7b28-d2b3-44d5-8807-65656468a1de",
+          "ed0a1769-5aba-433b-a089-eb62e89d9d28",
+          "2c9a8bcd-c3b7-478b-a4d6-5839ec3683cf",
+          "3a9a3113-b941-4b2c-a7f6-3602c005fabc",
+          "d6bfed9f-6b4f-4c1b-b246-d56040ebb7f5",
+          "61aa6afe-678e-4f02-a59b-0d52cf97c6c6",
+          "78a825a5-f1e8-42a0-9528-dd96f81bc8ea",
+          "7d19442e-2545-43e0-baae-8343c2976ce9",
+          "996cd817-08d3-4df4-b805-e8f7d3283a94",
+          "8cb0d1e5-bca4-49a8-973f-681d9f54c1af",
+          "2224d109-0e6b-406e-8293-3f5666011bf6",
+          "cd2e42e5-0089-4a04-89e2-4d745f5c46f9",
+          "a1711e23-e5be-47db-bbe0-16764b2cceba",
+          "020391a8-ce33-475b-a709-41acfdc115f2",
+          "0a078bc4-c76d-4f45-865f-5371e8d28363"
+        ],
+        "settings": {
+          "show_share_buttons": true,
+          "show_vendor": false,
+          "show_sku": false,
+          "show_taxes_included": false,
+          "description_below_add_to_cart": false,
+          "selector_mode": "block",
+          "show_color_swatch": true,
+          "show_color_carousel": false,
+          "show_quantity_selector": false,
+          "show_inventory_quantity": false,
+          "in_stock_text": "IN STOCK READY TO SHIP",
+          "made_order_text": "MADE TO ORDER",
+          "inventory_quantity_threshold": 0,
+          "show_price_in_button": false,
+          "show_payment_button": false,
+          "show_pickup_availability": false,
+          "image_size": "large",
+          "stack_images": false,
+          "show_thumbnails": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "reviews_enabled": false,
+          "featured_image_size": "large"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "show_popup": true,
+          "show_only_on_index": false,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "title": "STAY IN THE LOOP",
+          "content": "<p>Receive 10% off your first purchase<\/p>",
+          "show_newsletter": true,
+          "apparition_delay": 3
+        }
+      },
+      "16130781205eec0539": {
+        "type": "index-collections",
+        "blocks": {
+          "73c8c984-f703-4a21-bff5-1ae05e185aa5": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bracelets2.jpg",
+              "title": "Bracelets",
+              "collection": "bracelet"
+            }
+          },
+          "5e74546e-a574-4b55-ba44-7a5217295a10": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/VdayNecklaces_dab6ba76-c6af-4ce3-93c0-e2bd834adcc1.jpg",
+              "title": "Necklaces",
+              "collection": "necklace"
+            }
+          },
+          "cc1315b9-8a75-427c-b534-09735dddc7be": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Studs-Jamie.jpg",
+              "title": "Studs",
+              "collection": "earring"
+            }
+          }
+        },
+        "block_order": [
+          "73c8c984-f703-4a21-bff5-1ae05e185aa5",
+          "5e74546e-a574-4b55-ba44-7a5217295a10",
+          "cc1315b9-8a75-427c-b534-09735dddc7be"
+        ],
+        "settings": {
+        }
+      },
+      "1613150307a9fa5faf": {
+        "type": "index-featured-items",
+        "blocks": {
+          "ad5b4e63-1d7b-4de6-9de6-208a370b87a4": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ZiggyHoops.jpg",
+              "title": "Ziggy Diamond Hoops",
+              "link": "https:\/\/www.alisonlou.com\/collections\/groovy\/products\/ziggy-diamond-hoops"
+            }
+          },
+          "4275b4f4-686f-440a-b29d-cc73a39bb468": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SingleBezelNecklace.jpg",
+              "title": "Diamond Enamel Bezel Necklace",
+              "link": "shopify:\/\/products\/diamond-enamel-bezel-necklace"
+            }
+          },
+          "f763730b-7379-4a68-ac58-97d9e3674856": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HeartCocktailBTYBracelet.gif",
+              "title": "Heart Cocktail By The Yard Bracelet",
+              "link": "shopify:\/\/products\/heart-cocktail-by-the-yard-bracelet"
+            }
+          },
+          "3bbda20c-04fb-498d-a77a-282c560f5d5f": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CheckerSignet-Engraved.jpg",
+              "title": "Checker Signet Ring",
+              "link": "shopify:\/\/products\/checker-signet-ring"
+            }
+          },
+          "69003065-1b4b-486c-93a5-b238259b3566": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JellyHoops-Red.jpg",
+              "title": "Medium Jelly Hoops",
+              "link": "shopify:\/\/products\/medium-jelly-hoops-fall"
+            }
+          },
+          "8f52ac1d-efab-4bc1-8574-6facc00a3da0": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HeartCocktailDrop_457cde8c-7b9c-4cbe-935f-cbee30f605fe.gif",
+              "title": "Heart Cocktail Drops",
+              "link": "shopify:\/\/products\/heart-shaped-cocktail-drops"
+            }
+          },
+          "c13c92aa-7a02-4496-87db-2b592a24246d": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/TinyDiamondHuggy.jpg",
+              "title": "Diamond Huggy",
+              "link": "shopify:\/\/products\/diamond-huggy"
+            }
+          },
+          "56eb2077-b75c-497c-9b47-73b617ef5f19": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/StellarLetterGoldPendants.jpg",
+              "title": "Mini Stellar Letter Necklaces",
+              "link": "https:\/\/www.alisonlou.com\/products\/mini-stellar-letter-necklace"
+            }
+          }
+        },
+        "block_order": [
+          "ad5b4e63-1d7b-4de6-9de6-208a370b87a4",
+          "4275b4f4-686f-440a-b29d-cc73a39bb468",
+          "f763730b-7379-4a68-ac58-97d9e3674856",
+          "3bbda20c-04fb-498d-a77a-282c560f5d5f",
+          "69003065-1b4b-486c-93a5-b238259b3566",
+          "8f52ac1d-efab-4bc1-8574-6facc00a3da0",
+          "c13c92aa-7a02-4496-87db-2b592a24246d",
+          "56eb2077-b75c-497c-9b47-73b617ef5f19"
+        ],
+        "settings": {
+        }
+      },
+      "1613154878e71e4ceb": {
+        "type": "index-blocks",
+        "blocks": {
+          "ebbea057-9b46-4492-987f-abd014a837ab": {
+            "type": "half",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Showroom.jpg",
+              "title": "Showroom",
+              "link": "shopify:\/\/pages\/showroom"
+            }
+          },
+          "7dfcea66-afda-4f23-a7ce-ecca2d20be64": {
+            "type": "half",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Loucite2.jpg",
+              "title": "Loucite Jelly Hoops™",
+              "link": "shopify:\/\/collections\/loucite"
+            }
+          },
+          "40560b2d-db00-4eb7-a4b8-aac139aee22f": {
+            "type": "whole",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SecondSlide-GroovyRings2_5cc33b6b-3ca6-45a0-8f32-4a6d321cbfd3.jpg",
+              "title": "Rings",
+              "link": "shopify:\/\/collections\/ring"
+            }
+          }
+        },
+        "block_order": [
+          "ebbea057-9b46-4492-987f-abd014a837ab",
+          "7dfcea66-afda-4f23-a7ce-ecca2d20be64",
+          "40560b2d-db00-4eb7-a4b8-aac139aee22f"
+        ],
+        "settings": {
+        }
+      },
+      "1613155533b173749e": {
+        "type": "index-instagram",
+        "settings": {
+          "title": "@alisonLou",
+          "link": "https:\/\/instagram.com\/alisonLou"
+        }
+      },
+      "stockists-template": {
+        "type": "stockists-template",
+        "blocks": {
+          "5bac0586-fd31-4369-97dd-9750129dc66c": {
+            "type": "block",
+            "settings": {
+              "group_title": "United States",
+              "circle_color": "#c5d9f3",
+              "store_name1": "DESIGNS BY MILLO",
+              "store_add1": "<p>2150 East 4th St<br>Brooklyn, NY<br> 11223 <br>United States<\/p>",
+              "store_url1": "https:\/\/millo.com\/",
+              "store_name2": "H. AUDREY",
+              "store_add2": "<p>4027 Hillsboro Pike<br>\nNashville, TN<br>37215<br>United States<\/p>",
+              "store_url2": "https:\/\/haudrey.com\/",
+              "store_name3": "",
+              "store_add3": "",
+              "store_url3": "",
+              "store_name4": "",
+              "store_add4": "",
+              "store_url4": "",
+              "store_name5": "JAMIE GELLER JEWELRY",
+              "store_add5": "<p>15310 W Antioch St<br>Pacific Palisades, CA<br> 90272<br>United States<\/p>",
+              "store_url5": "https:\/\/jaimiegellerjewelry.com\/",
+              "store_name6": "LEWEEKEND",
+              "store_add6": "<p>1917 Cahaba Rd<br>\nBirmingham, AL<br> 35223<br>United States<\/p>",
+              "store_url6": "https:\/\/leweekendstudio.com\/",
+              "store_name7": "MARISSA COLLECTIONS",
+              "store_add7": "<p>1167 3rd St S<br>Naples, FL <br>34102<br>United States<\/p>",
+              "store_url7": "https:\/\/marissacollections.com\/",
+              "store_name8": "MAXFIELD MALIBU",
+              "store_add8": "<p>3939 Cross Creek Rd<br>Malibu, CA<br> 90265<br>United States<\/p>",
+              "store_url8": "https:\/\/www.maxfieldla.com\/",
+              "store_name9": "MAXFIELD <br>LOS ANGELES",
+              "store_add9": "<p>8825 Melrose Ave<br>Los Angeles, CA 90069<br>United States<\/p>",
+              "store_url9": "https:\/\/www.maxfieldla.com\/",
+              "store_name10": "OAK HALL",
+              "store_add10": "<p>6150 Poplar Ave<br> Suite 146<br>Memphis, TN <br>38119<br>United States<\/p>",
+              "store_url10": "https:\/\/oakhall.com\/",
+              "store_name11": "PERI. A",
+              "store_add11": "<p>520 East Durant St<br> Suite 201<br>Aspen, CO <br>81611<br>United States<\/p>",
+              "store_url11": "https:\/\/peri-a.com\/",
+              "store_name12": "REINHOLD",
+              "store_add12": "<p>Plaza Las Americas<br>525 F.D. Roosevelt<br>San Juan, PR <br>00918<br>United States<\/p>",
+              "store_url12": "https:\/\/www.reinholdjewelers.com\/",
+              "store_name13": "TOOTSIES ATLANTA",
+              "store_add13": "<p>8825 Melrose Ave<br>Los Angeles, CA <br>90069<br>United States<\/p>",
+              "store_url13": "https:\/\/www.tootsies.com",
+              "store_name14": "TOOTSIES DALLAS",
+              "store_add14": "<p>8300 Preston Rd<br> Suite 200<br>Dallas, TX<br> 75225<br>United States<\/p>",
+              "store_url14": "https:\/\/www.tootsies.com",
+              "store_name15": "TOOTSIES HOUSTON",
+              "store_add15": "<p>2601 Westheimer Rd<br>Houston, TX <br>77098<br>United States<\/p>",
+              "store_url15": "https:\/\/www.tootsies.com\/houston",
+              "store_name16": "YLANG23",
+              "store_add16": "<p>8300 Preston Rd<br> Suite 700<br>Dallas, TX <br>75225<br>United States<\/p>",
+              "store_url16": "https:\/\/www.ylang23.com\/",
+              "store_name17": "YLANG YLANG",
+              "store_add17": "<p>8845 Ladue Rd<br>St. Louis, MO<br>63124<br>United States<\/p>",
+              "store_url17": "https:\/\/www.ylangylang.com\/",
+              "store_name18": "WILDLIKE",
+              "store_add18": "<p>4218 Oak Lawn Ave<br>Dallas, TX <br>75219<br>United States<\/p>",
+              "store_url18": "https:\/\/wildlike.com\/",
+              "store_name19": "",
+              "store_add19": "",
+              "store_url19": "",
+              "store_name20": "",
+              "store_add20": "",
+              "store_url20": ""
+            }
+          },
+          "7bd3c18e-bd00-4a94-9092-b08f8797719b": {
+            "type": "block",
+            "settings": {
+              "group_title": "United Kingdom",
+              "circle_color": "#b8e7dc",
+              "store_name1": "Browns",
+              "store_add1": "<p>24-27 S Molton St <br>Mayfair, London <br>W1K 5RD<br>United Kingdom<\/p>",
+              "store_url1": "https:\/\/www.brownsfashion.com\/",
+              "store_name2": "Matchesfashion",
+              "store_add2": "<p>60-64 Ledbury Rd<br>Notting Hill, London <br>W11 2AJ<br>United Kingdom<\/p>",
+              "store_url2": "https:\/\/www.matchesfashion.com\/womens",
+              "store_name3": "",
+              "store_add3": "",
+              "store_url3": "",
+              "store_name4": "",
+              "store_add4": "",
+              "store_url4": "",
+              "store_name5": "",
+              "store_add5": "",
+              "store_url5": "",
+              "store_name6": "",
+              "store_add6": "",
+              "store_url6": "",
+              "store_name7": "",
+              "store_add7": "",
+              "store_url7": "",
+              "store_name8": "",
+              "store_add8": "",
+              "store_url8": "",
+              "store_name9": "",
+              "store_add9": "",
+              "store_url9": "",
+              "store_name10": "",
+              "store_add10": "",
+              "store_url10": "",
+              "store_name11": "",
+              "store_add11": "",
+              "store_url11": "",
+              "store_name12": "",
+              "store_add12": "",
+              "store_url12": "",
+              "store_name13": "",
+              "store_add13": "",
+              "store_url13": "",
+              "store_name14": "",
+              "store_add14": "",
+              "store_url14": "",
+              "store_name15": "",
+              "store_add15": "",
+              "store_url15": "",
+              "store_name16": "",
+              "store_add16": "",
+              "store_url16": "",
+              "store_name17": "",
+              "store_add17": "",
+              "store_url17": "",
+              "store_name18": "",
+              "store_add18": "",
+              "store_url18": "",
+              "store_name19": "",
+              "store_add19": "",
+              "store_url19": "",
+              "store_name20": "",
+              "store_add20": "",
+              "store_url20": ""
+            }
+          },
+          "9a94b34e-1a21-4eeb-bb29-c24e4641ef34": {
+            "type": "block",
+            "settings": {
+              "group_title": "Middle East",
+              "circle_color": "#acacdd",
+              "store_name1": "Sylvie Saliba",
+              "store_add1": "<p>Quantum Tower<br>Charles Malek Ave<br>Beirut, Beyrouth<br> 2071 4714<br>Lebanon<\/p>",
+              "store_url1": "http:\/\/www.sylviesaliba.com\/",
+              "store_name2": "",
+              "store_add2": "",
+              "store_url2": "",
+              "store_name3": "",
+              "store_add3": "",
+              "store_url3": "",
+              "store_name4": "",
+              "store_add4": "",
+              "store_url4": "",
+              "store_name5": "",
+              "store_add5": "",
+              "store_url5": "",
+              "store_name6": "",
+              "store_add6": "",
+              "store_url6": "",
+              "store_name7": "",
+              "store_add7": "",
+              "store_url7": "",
+              "store_name8": "",
+              "store_add8": "",
+              "store_url8": "",
+              "store_name9": "",
+              "store_add9": "",
+              "store_url9": "",
+              "store_name10": "",
+              "store_add10": "",
+              "store_url10": "",
+              "store_name11": "",
+              "store_add11": "",
+              "store_url11": "",
+              "store_name12": "",
+              "store_add12": "",
+              "store_url12": "",
+              "store_name13": "",
+              "store_add13": "",
+              "store_url13": "",
+              "store_name14": "",
+              "store_add14": "",
+              "store_url14": "",
+              "store_name15": "",
+              "store_add15": "",
+              "store_url15": "",
+              "store_name16": "",
+              "store_add16": "",
+              "store_url16": "",
+              "store_name17": "",
+              "store_add17": "",
+              "store_url17": "",
+              "store_name18": "",
+              "store_add18": "",
+              "store_url18": "",
+              "store_name19": "",
+              "store_add19": "",
+              "store_url19": "",
+              "store_name20": "",
+              "store_add20": "",
+              "store_url20": ""
+            }
+          },
+          "8d13814e-437c-45fc-8c9a-45d7446079e2": {
+            "type": "block",
+            "settings": {
+              "group_title": "Asia",
+              "circle_color": "#ffc8d3",
+              "store_name1": "H.P. France Bijoux",
+              "store_add1": "<p>Shibua, Jingumae<br>4 Chome-12-10<br>Tokyo, Tokyo<br>150-0001<br>Japan<\/p>",
+              "store_url1": "https:\/\/www.hpfrance.com\/",
+              "store_name2": "Boon the Shop",
+              "store_add2": "<p>21 Apgujeong-ro 60-gil<br> Cheongdam-dong, Gangnam-gu <br> South Korea<\/p>",
+              "store_url2": "https:\/\/boontheshop.com\/",
+              "store_name3": "",
+              "store_add3": "",
+              "store_url3": "",
+              "store_name4": "",
+              "store_add4": "",
+              "store_url4": "",
+              "store_name5": "",
+              "store_add5": "",
+              "store_url5": "",
+              "store_name6": "",
+              "store_add6": "",
+              "store_url6": "",
+              "store_name7": "",
+              "store_add7": "",
+              "store_url7": "",
+              "store_name8": "",
+              "store_add8": "",
+              "store_url8": "",
+              "store_name9": "",
+              "store_add9": "",
+              "store_url9": "",
+              "store_name10": "",
+              "store_add10": "",
+              "store_url10": "",
+              "store_name11": "",
+              "store_add11": "",
+              "store_url11": "",
+              "store_name12": "",
+              "store_add12": "",
+              "store_url12": "",
+              "store_name13": "",
+              "store_add13": "",
+              "store_url13": "",
+              "store_name14": "",
+              "store_add14": "",
+              "store_url14": "",
+              "store_name15": "",
+              "store_add15": "",
+              "store_url15": "",
+              "store_name16": "",
+              "store_add16": "",
+              "store_url16": "",
+              "store_name17": "",
+              "store_add17": "",
+              "store_url17": "",
+              "store_name18": "",
+              "store_add18": "",
+              "store_url18": "",
+              "store_name19": "",
+              "store_add19": "",
+              "store_url19": "",
+              "store_name20": "",
+              "store_add20": "",
+              "store_url20": ""
+            }
+          },
+          "457e7899-9555-48bd-8e68-28bae5844929": {
+            "type": "block",
+            "settings": {
+              "group_title": "Online",
+              "circle_color": "#e0251b",
+              "store_name1": "Browns",
+              "store_add1": "",
+              "store_url1": "https:\/\/www.brownsfashion.com\/shopping\/woman\/alison-lou",
+              "store_name2": "Les Mini",
+              "store_add2": "",
+              "store_url2": "https:\/\/shoplesmini.com\/collections\/alison-lou",
+              "store_name3": "Lulu's Collective",
+              "store_add3": "",
+              "store_url3": "https:\/\/luluscollective.co.nz\/",
+              "store_name4": "Net-a-Porter",
+              "store_add4": "",
+              "store_url4": "https:\/\/www.net-a-porter.com\/en-us\/shop\/designer\/alison-lou",
+              "store_name5": "Matchesfashion",
+              "store_add5": "",
+              "store_url5": "https:\/\/www.matchesfashion.com\/us\/womens\/designers\/alison-lou\/accessories\/fine-jewellery",
+              "store_name6": "Over The Moon",
+              "store_add6": "",
+              "store_url6": "https:\/\/overthemoon.com\/collections\/alison-lou",
+              "store_name7": "Saks Fifth Avenue",
+              "store_add7": "",
+              "store_url7": "https:\/\/www.saksfifthavenue.com\/brand\/alison-lou",
+              "store_name8": "Shopbop",
+              "store_add8": "",
+              "store_url8": "https:\/\/www.shopbop.com",
+              "store_name9": "",
+              "store_add9": "",
+              "store_url9": "",
+              "store_name10": "",
+              "store_add10": "",
+              "store_url10": "",
+              "store_name11": "",
+              "store_add11": "",
+              "store_url11": "",
+              "store_name12": "",
+              "store_add12": "",
+              "store_url12": "",
+              "store_name13": "",
+              "store_add13": "",
+              "store_url13": "",
+              "store_name14": "",
+              "store_add14": "",
+              "store_url14": "",
+              "store_name15": "",
+              "store_add15": "",
+              "store_url15": "",
+              "store_name16": "",
+              "store_add16": "",
+              "store_url16": "",
+              "store_name17": "",
+              "store_add17": "",
+              "store_url17": "",
+              "store_name18": "",
+              "store_add18": "",
+              "store_url18": "",
+              "store_name19": "",
+              "store_add19": "",
+              "store_url19": "",
+              "store_name20": "",
+              "store_add20": "",
+              "store_url20": ""
+            }
+          },
+          "b420ec28-5aba-4367-af7f-9ebc817d5521": {
+            "type": "block",
+            "settings": {
+              "group_title": "canada",
+              "circle_color": "#c5d9f3",
+              "store_name1": "Holt renfrew",
+              "store_add1": "<p>50 Bloor St W<br>Toronto, ON<br>M4W 1A1<br>Canada<\/p>",
+              "store_url1": "",
+              "store_name2": "",
+              "store_add2": "",
+              "store_url2": "",
+              "store_name3": "",
+              "store_add3": "",
+              "store_url3": "",
+              "store_name4": "",
+              "store_add4": "",
+              "store_url4": "",
+              "store_name5": "",
+              "store_add5": "",
+              "store_url5": "",
+              "store_name6": "",
+              "store_add6": "",
+              "store_url6": "",
+              "store_name7": "",
+              "store_add7": "",
+              "store_url7": "",
+              "store_name8": "",
+              "store_add8": "",
+              "store_url8": "",
+              "store_name9": "",
+              "store_add9": "",
+              "store_url9": "",
+              "store_name10": "",
+              "store_add10": "",
+              "store_url10": "",
+              "store_name11": "",
+              "store_add11": "",
+              "store_url11": "",
+              "store_name12": "",
+              "store_add12": "",
+              "store_url12": "",
+              "store_name13": "",
+              "store_add13": "",
+              "store_url13": "",
+              "store_name14": "",
+              "store_add14": "",
+              "store_url14": "",
+              "store_name15": "",
+              "store_add15": "",
+              "store_url15": "",
+              "store_name16": "",
+              "store_add16": "",
+              "store_url16": "",
+              "store_name17": "",
+              "store_add17": "",
+              "store_url17": "",
+              "store_name18": "",
+              "store_add18": "",
+              "store_url18": "",
+              "store_name19": "",
+              "store_add19": "",
+              "store_url19": "",
+              "store_name20": "",
+              "store_add20": "",
+              "store_url20": ""
+            }
+          }
+        },
+        "block_order": [
+          "5bac0586-fd31-4369-97dd-9750129dc66c",
+          "7bd3c18e-bd00-4a94-9092-b08f8797719b",
+          "9a94b34e-1a21-4eeb-bb29-c24e4641ef34",
+          "8d13814e-437c-45fc-8c9a-45d7446079e2",
+          "457e7899-9555-48bd-8e68-28bae5844929",
+          "b420ec28-5aba-4367-af7f-9ebc817d5521"
+        ],
+        "settings": {
+          "title": "stockists",
+          "page_sub_title": "Don't See Your City?",
+          "page_email_sec": "Email us at <a href=\"mailto:sales@alisonlou.com\">sales@alisonlou.com<\/a>"
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "blocks": {
+          "e07d821b-a7b0-4488-969c-085d38d93e5d": {
+            "type": "block",
+            "settings": {
+              "contact_field": "General Inquiries",
+              "email": "<p><a href=\"mailto:store@alisonlou.com\">store@alisonlou.com<\/a><\/p>"
+            }
+          },
+          "4596643d-8b44-4646-84df-b789dfae7e3f": {
+            "type": "block",
+            "settings": {
+              "contact_field": "Wholesale Inquiries",
+              "email": "<p><a href=\"mailto:sales@alisonlou.com\">sales@alisonlou.com<\/a><\/p>"
+            }
+          },
+          "27a649ff-fcf1-4632-9d0c-42ab676e605c": {
+            "type": "block",
+            "settings": {
+              "contact_field": "Press Inquiries",
+              "email": "<p><a href=\"mailto:margo@alisonlou.com\">margo@alisonlou.com<\/a><\/p>"
+            }
+          },
+          "dd125ac5-7dd6-4734-b74e-fe8975b1ffbe": {
+            "type": "block",
+            "settings": {
+              "contact_field": "Careers",
+              "email": "<p><a href=\"mailto:careers@alisonlou.com\">careers@alisonlou.com<\/a><\/p>"
+            }
+          },
+          "14c44495-430a-4a21-ae04-ab2cf3b0740c": {
+            "type": "page",
+            "settings": {
+              "contact_field2": "<a href=\"https:\/\/www.alisonlou.com\/pages\/showroom-new\">NYC SHOWROOM<\/a>",
+              "address1": "22 East 65th Street, 5th Floor",
+              "address2": "New York, NY 10065",
+              "phone": "212-237-0900",
+              "email2": "<p><a href=\"mailto:store@alisonlou.com\">store@alisonlou.com<\/a><\/p>"
+            }
+          },
+          "58775738-6367-4148-90e0-931fe83d79d5": {
+            "type": "page",
+            "settings": {
+              "contact_field2": "<a href=\"https:\/\/www.alisonlou.com\/pages\/showroom-new\">EAST HAMPTON STORE<\/a>",
+              "address1": "38 Newtown Lane",
+              "address2": "East Hampton, NY 11937",
+              "phone": "631-604-6747",
+              "email2": "<p><a href=\"mailto:eh@alisonlou.com\">eh@alisonlou.com<\/a><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "e07d821b-a7b0-4488-969c-085d38d93e5d",
+          "4596643d-8b44-4646-84df-b789dfae7e3f",
+          "27a649ff-fcf1-4632-9d0c-42ab676e605c",
+          "dd125ac5-7dd6-4734-b74e-fe8975b1ffbe",
+          "14c44495-430a-4a21-ae04-ab2cf3b0740c",
+          "58775738-6367-4148-90e0-931fe83d79d5"
+        ],
+        "settings": {
+          "title": "contact",
+          "circle_color": "#c5d9f3",
+          "circle_color2": "#b8e7dc"
+        }
+      },
+      "customer-care-template": {
+        "type": "customer-care-template",
+        "blocks": {
+          "d2a44f10-0e69-4ef0-8eba-8f930147e83a": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "Order Processing",
+              "answer_shipping": "All orders are processed and shipped from New York City. Please note orders are processed pending item availability and credit card verification (for first time international orders). You will be contacted if there are any issues with your order.\n<br>\n<br>\nAll items are made-to-order (except <a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In-Stock Collection<\/a> and <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>) in New York City and take approximately 20 business days for production. This does not include weekends and holidays. \n<br>\n<br>\nFor items that are in-stock and ready to ship, processing may take up to 5 business days. \nAs soon as your order is shipped, you will receive an automated email with tracking information.\n<br>\n<br>\nIf you need an order by a specific date please contact us at <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>. We are happy to assist you."
+            }
+          },
+          "77afdb3b-06b0-4b03-9ba9-7c59a83f327b": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "Domestic Shipping",
+              "answer_shipping": "Ground Shipping** - Free\n<br>\n2nd Day Air** - $45 \n<br>\nOvernight** - $70\n<br>\nIn-Store Pick Up* (22 East 65th Street, 5th Floor, New York) – Free\n<br>\nNew York City Messenger (Manhattan Only)* - $20 \n<br>\n<br>\nWe does not ship to APO\/FPO addressed or P.O. boxes. \n<br>\n<br>\nWe do not ship on weekends or U.S. Holidays and we do not offer Saturday delivery unless this has been requested and approved prior to purchase. \n<br>\n<br>\n*NY State Sales Tax applies to all in-store pick up and messengered items. \n<br>\n**fees vary for Alaska, Hawaii, Puerto Rico, Caribbean and U.S. Virgin \/ Outlying Islands"
+            }
+          },
+          "887b62e8-2390-492e-99f9-917577d27785": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "International Shipping",
+              "answer_shipping": "We ship internationally for a flat-rate of $100. Any taxes or customs duties incurred are covered by Alison Lou.\n<br>\nAll international orders are considered final sale once shipped and are therefore ineligible for refund or exchange. \n<br>\nAll purchases must be paid for in U.S. dollars at the prices shown on our website."
+            }
+          },
+          "46476dd0-6384-4d00-8d97-b1200b113d84": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "Shipping Insurance",
+              "answer_shipping": "All fine jewelry orders are shipped insured and require a signature upon delivery.\n<br> \nIf you choose to waive signature upon delivery, please note in Special Instructions\/Gift Note at checkout or contact us upon placing your order. <br>\nWe are not responsible for any lost items that are not signature required."
+            }
+          },
+          "331b8d49-9773-436b-a987-cb94ab52ab06": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "In-Store Pick Up",
+              "answer_shipping": "You will receive an email or text notification when your order is ready for pick up. \n<br>\n<br>\nPlease note, all items are made-to-order with the exception of <a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In-Stock Collection<\/a> and <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> in New York City and take approximately 20 business days for production. This does not include weekends and holidays. \n<br>\n<br>\nItems that are in-stock will be ready for pick up within 24 hours (excluding weekends) at 22 East 65th Street, 5th Floor, New York."
+            }
+          },
+          "2b3d0113-155d-4f13-8192-90945fb397a2": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "Sales Tax",
+              "answer_shipping": "Sales tax is calculated according to your shipping destination.\n<br>\n<br>\nOrders placed in stores and for pick-up are subject to New York State tax."
+            }
+          },
+          "bb5bbde3-0d7d-487a-bee2-1bdb8cf00bf6": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "Rush Orders",
+              "answer_shipping": "If you need your order by a specific date please contact us prior to placing an order at <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>. We will do our best to accommodate you, but cannot guarantee rush production and\/or shipping.\n<br>\n<br>\nPlease note, all items are made-to-order with the exception of <a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In-Stock Collection<\/a> and <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> in New York City and take approximately 20 business days for production. This does not include weekends and holidays. \n<br>\n<br>\nFor last minute gifts, we suggest shopping our <a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In-Stock Collection<\/a>. We also offer virtual e-gifting, a custom digital e-gift to send to your loved one as a place holder until the real thing is made and shipped. Please include the name of the recipient and personalized message in our Special Instructions\/Gift Note section during checkout."
+            }
+          },
+          "647566e4-2e53-4549-b171-4b898f7f37fa": {
+            "type": "Shipping",
+            "settings": {
+              "question_shipping": "Order Status",
+              "answer_shipping": "If your order has shipped you will receive an automated email with your tracking number.\n<br>\nYou may also reach out to <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a> for an update."
+            }
+          },
+          "a814a2a9-3f24-459f-ba5d-dac64ca75bf9": {
+            "type": "Returns",
+            "settings": {
+              "question_returns": "Return\/Exchange Policy",
+              "answer_returns": "All purchases made on alisonlou.com or in-store (excluding <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>, items marked final sale, items purchased with a store credit, sale items purchased with a promo code) can either be exchanged or returned for store credit only within 10 days of receiving your order.\n<br>\n<br>\nIf your exchange is of lesser value, the balance will remain in store credit. \n<br>\nStore Credit is valid for 1 year from the date of issue.\n<br>\n<br>\nAny original shipping charges are non-refundable. Additionally you will be charged $10 for using a return shipping label provided by Alison Lou. Should you choose to use your own shipping label we recommend a trackable service and insuring the package for its entire value. We are not responsible for any lost packages should you choose to ship with your own label.\n<br>\n<br>\nItems must be sent back in brand new condition, unused, and with all original Alison Lou packaging. Items sent for return\/exchange that are damaged, worn, soiled or altered will not be accepted and will be sent back to the customer. Alison Lou reserves the right to implement a 20% restocking fee in special circumstances. \n<br>\n<br>\n<u>How to start a return\/exchange:<\/u>\n<br>\n<i>Step 1<\/i>: Email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a> with your order number in the subject line. Please let us know the piece you want to return\/exchange. A customer service representative will respond within 2 business days and send you a pre-paid return label. Please note a $10 fee will be deducted from your return\/exchange total for the use of the label. You may also ship the order back using the carrier of your choice, however we would not be responsible for any loss or damage.\n<br>\n<i>Step 2<\/i>: Pack up your order including all original Alison Lou packaging. Attach the label on the outside of the original box and seal your package well.\n<br>\n<i>Step 3<\/i>: Drop your shipment off at any UPS or USPS store (depending on the label provided). This must be done within no more than 4 days of receiving your pre-paid return label or initial email correspondence regarding a return\/exchange.\n<br>\n<br>\nReturns\/exchanges on gifts are done on a case by case basis. Please reach out to <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a> and provide as much information as possible so we may best assist you. \n<br>\n<br>\nWe do not accept returns\/exchanges from third-party stores. No exceptions."
+            }
+          },
+          "ed4b73bc-02d2-4bfd-97fa-fbbc631b564d": {
+            "type": "Returns",
+            "settings": {
+              "question_returns": "Final Sale",
+              "answer_returns": "Any products that note \"final sale\" in the description are not eligible for return or exchange.\n<br>\n<br>\nAll <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> orders are final sale. \n<br>\n<br>\nAll sale items, including items purchased with a promo code, are final sale. \n<br>\n<br>\nAll items purchased with store credit are final sale."
+            }
+          },
+          "ee1a6f94-e68b-43e1-be5e-773472bd6d9b": {
+            "type": "Returns",
+            "settings": {
+              "question_returns": "Third-Party Purchases",
+              "answer_returns": "If you purchased an item from any of our third-party retailers and would like to return or exchange it, this must be done at the retailer. \n<br>\n<br>\nWe are only able to process exchanges on pieces purchased directly from our store or alisonlou.com."
+            }
+          },
+          "2c9a87ee-f3f7-4f87-9807-844097fa235c": {
+            "type": "Returns",
+            "settings": {
+              "question_returns": "Loucite",
+              "answer_returns": "All <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> products including Jelly Clips and Jelly Hoops™ orders are final sale. No returns or exchanges."
+            }
+          },
+          "0772ea40-6860-4822-9ffa-241c0850db6b": {
+            "type": "Returns",
+            "settings": {
+              "question_returns": "Store Credit",
+              "answer_returns": "Store credit issued by one of our customer representatives may be used online and in-stores. \n<br>\n<br>\nStore credit is valid within 1 year from date of issue. \n<br>\n<br>\nStore credits are not automatically applied at checkout. Customers are solely responsible for keeping and utilizing their store credit. \n<br>\n<br>\nFor information regarding your store credit please email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>"
+            }
+          },
+          "1dab9017-184e-4081-a5e5-16f51c4787c4": {
+            "type": "Care",
+            "settings": {
+              "question_care": "Care",
+              "answer_care": "All Alison Lou pieces are made under fair trade in both sourcing and manufacturing. All pieces are made of 14K Yellow, White, or Rose Gold. Some pieces feature enamel and\/or precious stones.\n <br>\n <br>\nIf your piece has enamel please keep it away from extreme cold or heat as it can melt or crack. Light colored enamel is prone to color transfer especially white. Avoid contact with dyes, and oil\/alcohol based products such as hand sanitizers, hair sprays, perfumes and lotions.\n<br>\n<br>\nJewelry can scratch with wear; this is normal, and just shows how much you love your Alison Lou piece. We recommend keeping your jewelry in the provided pouch when you are not wearing it."
+            }
+          },
+          "73de5a81-bbca-47a9-be07-733a51f3f264": {
+            "type": "Care",
+            "settings": {
+              "question_care": "Repairs",
+              "answer_care": "For all fine jewelry repair inquiries email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>. \n<br>\nDo not send in an item for repair without contacting our team first.\n<br>\nPlease include your name, description of the repair required, photo of the damage, and proof of purchase.\n<br>\n<br>\nIf your fine jewelry pieces was purchased within 1 year, directly from Alison Lou (alisonlou.com and Alison Lou stores), we will cover the repair cost upon approval from a customer service representative. \n<br>\n<br>\nRepairs outside of the 1 year warranty period have the following costs associated*:\n<br>\nRing Sizing: $50+\n<br>\nNecklace Chain Replacement: $175+\n<br>\nBracelet Chain Repair: $75+\n<br>\nEnamel Repair: $50+\n<br>\n<br>              \n*There may be an additional charge for your repair, which you will be notified of prior to any work being done. \n<br>\nRepairs can take up to 4-6 weeks to complete depending on the nature of the repair.\n<br>\n<br>\nAll repairs are subject to shipping charges. \n<br>\nSome repairs are not possible and we reserve the right to deny any unreasonable repairs.\n<br>\n<br>\nWe do not offer repairs on <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>. Please follow the instructions on the care card to give your jewelry a long-lasting life."
+            }
+          },
+          "7a47e377-b13a-4a7d-8c65-a7c1d70692df": {
+            "type": "Care",
+            "settings": {
+              "question_care": "Loucite",
+              "answer_care": "<a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> including Jelly Hoops™ and Jelly Clips are made of lucite, hand painted enamel, and 14K yellow gold plated brass components.\n<br> \nJelly Hoops™ have 14K yellow gold plated brass earring posts and backs. \n<br>\n<br>\n<a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> is fun, fashion jewelry and should be cared for as such. Extreme cold or heat can cause the enamel to melt or crack. Any aspect of this collection made with 14K yellow gold plated brass should not be word in water as the plating will tarnish. When you are not wearing your jewelry make sure it is wiped clean with a dry cloth and stored in the provided pouch. Do not use any jewelry cleaner on this product. \n<br>\n<br>\nWe do not offer repairs on <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>. Please follow the instructions on the care card to give your jewelry a long-lasting life."
+            }
+          },
+          "9ad423c4-f323-49e4-ad87-bf4bcc997068": {
+            "type": "Sizing",
+            "settings": {
+              "question_sizing": "Ring Sizing",
+              "answer_sizing": "Please reference our <b><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0250\/1406\/files\/ALISON_LOU_Ring_Size_Chart.pdf?v=1613076799\">Ring Size Chart<\/a><\/b> for sizing guide.\n<br>\n<br>\nIf you would like to purchase a ring in a size that is not listed on the product page please reach out to <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>. We will will try our best to accommodate but please note not at all ring styles are available in all sizes.\n<br>\n<br>\nIf you're located in New York City feel free to stop by our store to get measured.\n<br>\n<br>\nFor more help please email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>"
+            }
+          },
+          "c3a8dc79-6d3d-49e3-8d2d-102e74b8b0f7": {
+            "type": "Sizing",
+            "settings": {
+              "question_sizing": "Ring Resizing",
+              "answer_sizing": "For all resizing inquiries email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>. Please include your name, size of the current ring, desired size, and your original order number.\n<br>\n<br>\nPlease reference our <b><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0250\/1406\/files\/ALISON_LOU_Ring_Size_Chart.pdf?v=1613076799\">Ring Size Chart<\/a><\/b> for sizing guide."
+            }
+          },
+          "a51a3f51-3b7d-477e-8e83-ce366823b168": {
+            "type": "Sizing",
+            "settings": {
+              "question_sizing": "Baby Bracelet Sizing",
+              "answer_sizing": "Please reference our <b><a href=\"https:\/\/www.alisonlou.com\/pages\/wrist-sizer\">Wrist Sizer<\/a><\/b> for sizing guide.\n<br>\n<br>\nIf you're located in New York City feel free to stop by our store to get measured.\n<br>\n<br>\nNote a ½\" extension will be added to any size you choose to accommodate your growing baby.\n<br>\n<br>\nFor more help please email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>"
+            }
+          },
+          "9a28c536-2296-4774-9b7e-10c13bbfe7fa": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "How do I know if an item in in-stock?",
+              "answer_faq": "All items in our <a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In-Stock Collection<\/a> Collection page are ready to ship. Note in-stock orders take up to 5 business days to process.\n<br>\n<br>\nIf you have any questions about the availability of a specific piece please reach out to <a href=\"mailto:%20store@alisonlou.com\">store@alisonlou.com<\/a>."
+            }
+          },
+          "86253905-14a8-49fd-99e4-ebe1ff7dcd13": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Do you offer custom pieces?",
+              "answer_faq": "Whether it’s designing a unique engagement ring, repurposing an old stone, or creating something one-of-a-kind, we’re here to help. Our team will be there to guide you through every step of the process; from sourcing the perfect stones, finding the right size or reviewing and making edits to your CAD design. Custom Lou pieces start at $2500. All our jewelry is made in New York City with 14K gold and ethically sourced stones.\n<br>\n<br>\nEmail us with your inquiries at <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>.\n<br>\n<br>\nFor bridal inquiries email <a href=\"mailto:%20bridal@alisonlou.com\">bridal@alisonlou.com<\/a> or fill out our form <a href=\"https:\/\/www.alisonlou.com\/pages\/bridal\">here<\/a>.\n<br>\n<br>\nPlease note, custom commissions come with a design fee."
+            }
+          },
+          "46aafa18-27ed-4fb0-957f-7896062ffe0a": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Do you make engagement rings?",
+              "answer_faq": "Yes! Discover our <a href=\"https:\/\/www.alisonlou.com\/pages\/bridal\">I do by Lou Collection<\/a> and fill out an engagement ring consultation form.\n<br>\n<br>\nFor bridal inquiries email <a href=\"mailto:%20bridal@alisonlou.com\">bridal@alisonlou.com<\/a> or fill out our <a href=\"https:\/\/www.alisonlou.com\/pages\/bridal\">engagement ring consultation form<\/a>."
+            }
+          },
+          "031d87c0-de4f-4bb6-b675-84915e963746": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Can I choose a different enamel color than what is offered?",
+              "answer_faq": "For custom color enamel requests email us at <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>and a customer service representative will be in touch. \n<br>\n<br>\nWe do not offer custom colors for LOUCITE products."
+            }
+          },
+          "b75afa32-13ad-4335-8154-923322500c15": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Do you offer gift wrapping?",
+              "answer_faq": "Yes! Please check \"Gift Wrap My Order\" at check out. Orders are wrapped in custom Alison Lou wrapping paper and finished with ribbon. \n<br>\n<br>\nWe also offer handwritten notes if requested. Please note your message in the Special Instructions \/ Gift Note during checkout."
+            }
+          },
+          "45d14b4c-24f6-461b-b153-c3c5ec4a537d": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "What is virtual e-gifting?",
+              "answer_faq": "If you order an item that is not in stock or is custom made, we will create a custom digital e-gift to send to your loved one as a place holder until the real thing is made and shipped. \n<br>\n<br>\nPlease include the name of the recipient and personalized message in our Special Instructions\/Gift Note section during checkout. If you have more questions please reach out to us at <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>"
+            }
+          },
+          "b62fbf96-c590-4a99-9fb4-1031b43dd66a": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Where can I see ALISON LOU pieces in person?",
+              "answer_faq": "If you're in New York you may make an appointment to visit our Showroom located at 22 East 65th Street, 5th Floor. \n<br>\n<br>\nFor other locations please visit our <a href=\"https:\/\/www.alisonlou.com\/pages\/stockists-new\">Stockists<\/a>. If you are looking for a specific piece we recommend reaching out to that store directly."
+            }
+          },
+          "8bbd531a-528f-439b-8711-134b9cd2af31": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Why does the product image looks different on my computer than on my phone?",
+              "answer_faq": "Be aware every computer monitor has different settings so color and size may vary."
+            }
+          },
+          "538e5e35-10bb-41c0-8311-d1e8d5b5ea58": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Are your earrings sold as singles or pairs?",
+              "answer_faq": "It varies from earring to earring but we always specify on the product page under Details + Dimensions. \n<br>\n<br>\nTo order multiples of earrings sold as singles, please adjust quantities in your shopping cart."
+            }
+          },
+          "0e381174-a390-4fa9-8e28-096297d34df9": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Why doesn't my promo code work?",
+              "answer_faq": "Discount codes unless specified do not apply to <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a> orders. Should an order be processed with a discount code we reserve the right to cancel your order.\n<br>\n<br>\nCertain promo codes do expire, the dates for the window of use will be noted from the source of receipt. \n<br>\n<br>\nAll promo codes cannot be applied to orders that have already been placed, combined with other discounts or used to purchase gift cards."
+            }
+          },
+          "a1bd95dd-ae65-4b78-9f2b-e3ac8fa3e027": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "How do I use my store credit?",
+              "answer_faq": "Store credits may be used online and in-stores.\n<br>\n<br>\nFor online orders, you may enter the code issued to you in the \"Gift card or discount code\" field at checkout. \n<br>\n<br>\nIf you need any assistance applying a store credit, please email <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>.\n<br>\n<br>\nStore credits are valid within 1 year from date of issue."
+            }
+          },
+          "f2499924-76dc-4cc1-a78a-15c8f4c268ac": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "What does final sale mean?",
+              "answer_faq": "Final sale items cannot be returned or exchanged. No exceptions. \n<br>\n<br>\nItems marked final sale are noted in the description of the product.\n<br>\n<br>\n<a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>, items marked final sale, items purchased with a store credit, and sale items purchased with a promo code are final sale."
+            }
+          },
+          "fa52bbb0-0514-4552-83a7-b8e67da83dc3": {
+            "type": "FAQ",
+            "settings": {
+              "question_faq": "Why haven't I received my order?",
+              "answer_faq": "All orders are processed and shipped from our office in New York City. Please note orders are processed pending item availability and credit card verification (for international orders). You will be contacted if there are any issues with your order.\n<br>\n<br>\nAll items are made-to-order (except <a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In-Stock Collection<\/a> and <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>) in New York City and take approximately 20 business days for production. This does not include weekends and holidays. \n<br>\n<br>\nFor items that are in-stock and ready to ship your order will be processed and shipped within 5 business days. As soon as your order is shipped, you will receive an automated email with tracking information.\n<br>\n<br>\nIf you need something by a specific date please contact us at <a href=\"mailto:%20orders@alisonlou.com\">orders@alisonlou.com<\/a>. We are happy to assist you."
+            }
+          },
+          "2539a70c-dde6-4b7a-912f-bded57355d0a": {
+            "type": "Shippingtitle",
+            "settings": {
+              "shipping_title": "Shipping"
+            }
+          },
+          "8b9be22e-1eb4-4bd2-9b35-7bdcb803a9a2": {
+            "type": "ReturnsTitle",
+            "settings": {
+              "return_title": "Returns + Exchanges"
+            }
+          },
+          "dfae71b0-f575-47b8-a5fb-89f57056c29b": {
+            "type": "Caretitle",
+            "settings": {
+              "care_title": "Care + Repair"
+            }
+          },
+          "a691fd20-da5c-4eb4-b127-cb595d3ec1a3": {
+            "type": "Sizingtitle",
+            "settings": {
+              "sizing_title": "Sizing"
+            }
+          },
+          "824c939c-26c7-4aad-a7ae-ca48ceff2e44": {
+            "type": "FAQtitle",
+            "settings": {
+              "question_faq": "FAQs"
+            }
+          }
+        },
+        "block_order": [
+          "d2a44f10-0e69-4ef0-8eba-8f930147e83a",
+          "77afdb3b-06b0-4b03-9ba9-7c59a83f327b",
+          "887b62e8-2390-492e-99f9-917577d27785",
+          "46476dd0-6384-4d00-8d97-b1200b113d84",
+          "331b8d49-9773-436b-a987-cb94ab52ab06",
+          "2b3d0113-155d-4f13-8192-90945fb397a2",
+          "bb5bbde3-0d7d-487a-bee2-1bdb8cf00bf6",
+          "647566e4-2e53-4549-b171-4b898f7f37fa",
+          "a814a2a9-3f24-459f-ba5d-dac64ca75bf9",
+          "ed4b73bc-02d2-4bfd-97fa-fbbc631b564d",
+          "ee1a6f94-e68b-43e1-be5e-773472bd6d9b",
+          "2c9a87ee-f3f7-4f87-9807-844097fa235c",
+          "0772ea40-6860-4822-9ffa-241c0850db6b",
+          "1dab9017-184e-4081-a5e5-16f51c4787c4",
+          "73de5a81-bbca-47a9-be07-733a51f3f264",
+          "7a47e377-b13a-4a7d-8c65-a7c1d70692df",
+          "9ad423c4-f323-49e4-ad87-bf4bcc997068",
+          "c3a8dc79-6d3d-49e3-8d2d-102e74b8b0f7",
+          "a51a3f51-3b7d-477e-8e83-ce366823b168",
+          "9a28c536-2296-4774-9b7e-10c13bbfe7fa",
+          "86253905-14a8-49fd-99e4-ebe1ff7dcd13",
+          "46aafa18-27ed-4fb0-957f-7896062ffe0a",
+          "031d87c0-de4f-4bb6-b675-84915e963746",
+          "b75afa32-13ad-4335-8154-923322500c15",
+          "45d14b4c-24f6-461b-b153-c3c5ec4a537d",
+          "b62fbf96-c590-4a99-9fb4-1031b43dd66a",
+          "8bbd531a-528f-439b-8711-134b9cd2af31",
+          "538e5e35-10bb-41c0-8311-d1e8d5b5ea58",
+          "0e381174-a390-4fa9-8e28-096297d34df9",
+          "a1bd95dd-ae65-4b78-9f2b-e3ac8fa3e027",
+          "f2499924-76dc-4cc1-a78a-15c8f4c268ac",
+          "fa52bbb0-0514-4552-83a7-b8e67da83dc3",
+          "2539a70c-dde6-4b7a-912f-bded57355d0a",
+          "8b9be22e-1eb4-4bd2-9b35-7bdcb803a9a2",
+          "dfae71b0-f575-47b8-a5fb-89f57056c29b",
+          "a691fd20-da5c-4eb4-b127-cb595d3ec1a3",
+          "824c939c-26c7-4aad-a7ae-ca48ceff2e44"
+        ],
+        "settings": {
+          "title": "customer care"
+        }
+      },
+      "about-image-text": {
+        "type": "about-image-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Alison2.png",
+          "text_header": "The Founder",
+          "text": "Alison Chemla is the Creative Director and Designer of Alison Lou, a fine jewelry brand based in New York City inspired by the deceptive simplicity of modern communication and beyond.",
+          "border_color": "#c6d9f3",
+          "quote": "Jewelry that’ll make you smile",
+          "logo": "shopify:\/\/shop_images\/elle.png",
+          "quote_link": "https:\/\/www.elle.com"
+        }
+      },
+      "about-image-text-bottom": {
+        "type": "about-image-text-bottom",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/JellyHoops.png",
+          "text_header": "",
+          "text": "In the Spring of 2018, Alison launched LOUCITE, a diffusion collection of hoop earrings made of lucite and hand-painted enamel in a wide variety of colors and sizes. LOUCITE quickly established a strong following especially amongst the celebrity set. It has been seen on Emily Ratajkowski, Selena Gomez, Lady Gaga, Gigi Hadid, Tracee Ellis Ross, Celine Dion, and many more.",
+          "border_color": "#ffc7d3",
+          "quote": "They continually sell out since they’re so fun, colorful, lightweight, and affordable.",
+          "logo": "shopify:\/\/shop_images\/thecut.png",
+          "quote_link": "#"
+        }
+      },
+      "about-richtext": {
+        "type": "about-richtext",
+        "settings": {
+          "text": "Her introductory collection Emoticore remains a thoughtful and cheeky commentary on the expression of feelings from the banal to the intimate through the language of emoticons. Since Alison’s first collection, which stands as her signature today, the line has evolved to include collections based on themes from Casino to Secret Garden, while always remaining playful in its approach. Alison Lou’s FW '17 collection, Mama Mia, was dreamed up after a summer trip to Italy. The collection consists of designs inspired by everyone's favorite pastas - farfalle, penne, and spaghetti to name a few. Most recently, Alison Lou has added a wide variety of updated classics to their core collection such as signet rings, pendant necklaces, and diamond hoops, all with enamel accents which are a brand staple."
+        }
+      },
+      "about-richtext-bottom": {
+        "type": "about-richtext-bottom",
+        "settings": {
+          "text": "Since it’s birth, Alison Lou has garnered press from both the editorial end including Vogue, WWD, InStyle, Harper’s Bazaar and Elle and celebrities like Blake Lively, Beyonce, Rihanna, and Amy Adams. \n<br><br>\nAlison continues to approach Alison Lou with a sense of humor and an appreciation for luxury as her brand expands. You can find Alison Lou in top retailers around the world such as Net-a-Porter, Browns, Matches, Shopbop, Ylang23 and Marissa Collections."
+        }
+      },
+      "about-full-width-slider": {
+        "type": "about-full-width-slider",
+        "blocks": {
+          "a2fce0c5-7c16-4a22-bfed-395fcffb444f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Showroom-Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Showroom-Desktop.jpg"
+            }
+          },
+          "724cd94e-3851-4f5d-b6e8-36c486752b7b": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Jamie-Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Jamie-Desktop.jpg"
+            }
+          },
+          "8ee88c8e-041c-46f4-bcda-acca7fc6dede": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Cocktail-Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Cocktail-Desktop.jpg"
+            }
+          },
+          "2fafcda8-9d6f-49be-86a9-57986d015023": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MeetingRoom-Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/MeetingRoom-Desktop.jpg"
+            }
+          },
+          "6bbaef58-c844-4f9f-99e8-c72d8e5a8fbd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HolidayPopup-Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/HolidayPopup-Desktop.jpg"
+            }
+          },
+          "2762e887-9b56-4adc-8d82-a1818dc20854": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "a2fce0c5-7c16-4a22-bfed-395fcffb444f",
+          "724cd94e-3851-4f5d-b6e8-36c486752b7b",
+          "8ee88c8e-041c-46f4-bcda-acca7fc6dede",
+          "2fafcda8-9d6f-49be-86a9-57986d015023",
+          "6bbaef58-c844-4f9f-99e8-c72d8e5a8fbd",
+          "2762e887-9b56-4adc-8d82-a1818dc20854"
+        ],
+        "settings": {
+          "slider_speed": 2
+        }
+      },
+      "about-variable-height-slider": {
+        "type": "about-variable-height-slider",
+        "blocks": {
+          "89820f01-fea5-4dc7-b60b-af72661972ef": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/EmoticoreBarRing.jpg",
+              "title": "Emoticore",
+              "link": ""
+            }
+          },
+          "f8edf5e1-3b86-4d26-a14e-4c70ddf8016c": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Nature-SnakeEarrings.jpg",
+              "title": "Nature",
+              "link": ""
+            }
+          },
+          "a698c424-124a-4470-97e2-7eeb5f5e806f": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ConeyIsland-Carousel.jpg",
+              "title": "Coney Island",
+              "link": ""
+            }
+          },
+          "596bad16-749f-4f6d-afcb-564d56626523": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Dearest_Caviar.jpg",
+              "title": "Decadence",
+              "link": ""
+            }
+          },
+          "1510e5de-d811-4f3d-bd7b-e6cfdb5f1a03": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Casino_CardNecklace.jpg",
+              "title": "Casino",
+              "link": ""
+            }
+          },
+          "0466b80b-6625-4a52-8d28-a9402cdd212a": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Flower-DaisyOAKRing.jpg",
+              "title": "Secret Garden",
+              "link": ""
+            }
+          },
+          "9a310efc-9f4c-47e0-94ce-c6867feb906e": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Hasbro_MonopolyCharmBracelet.jpg",
+              "title": "Hasbro",
+              "link": ""
+            }
+          },
+          "06263ae7-8917-4e91-a048-77218102ebd0": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MamaMia-CharmNecklace.jpg",
+              "title": "Mama Mia",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "89820f01-fea5-4dc7-b60b-af72661972ef",
+          "f8edf5e1-3b86-4d26-a14e-4c70ddf8016c",
+          "a698c424-124a-4470-97e2-7eeb5f5e806f",
+          "596bad16-749f-4f6d-afcb-564d56626523",
+          "1510e5de-d811-4f3d-bd7b-e6cfdb5f1a03",
+          "0466b80b-6625-4a52-8d28-a9402cdd212a",
+          "9a310efc-9f4c-47e0-94ce-c6867feb906e",
+          "06263ae7-8917-4e91-a048-77218102ebd0"
+        ],
+        "settings": {
+          "slider_speed": 2
+        }
+      },
+      "showroom-image-text": {
+        "type": "showroom-image-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/EH.png",
+          "text_header": "EAST HAMPTON STORE",
+          "text": "38 Newtown Lane <br>\nEast Hampton, NY 11937 <br>\n<a href=\"https:\/\/goo.gl\/maps\/fTvNaNUbGYiagC1Y9\" target=\"_blank\">Map<\/a>\n <br> <br>\n\n<i>closed for the season<\/i><br>\n<a href=\"tel:6316046747\">631-604-6747<\/a>\n<br>\n<a href=\"mailto:eh@alisonlou.com\">eh@alisonlou.com<\/a>",
+          "border_color": "",
+          "quote": "",
+          "quote_link": ""
+        }
+      },
+      "showroom-full-width-slider": {
+        "type": "showroom-full-width-slider",
+        "blocks": {
+          "37b04c0a-e137-437c-9d9a-83db512b9ac0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Case.jpg"
+            }
+          },
+          "5cb76d2a-0737-43a6-a81f-553067599726": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Filter_Multicolor.png"
+            }
+          },
+          "12ed9a95-8b31-494d-aa71-24ff403f957c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MintCabinet_ff5944b3-89c8-4eda-86de-1d63fb28b93d.jpg"
+            }
+          },
+          "cae01925-43bb-4205-af60-3f89df90c65b": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Game.jpg"
+            }
+          },
+          "215fd5e5-890d-49a8-a88f-255d098d604e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BlobSideTable_23088112-c3ea-43e8-92ac-c24b2a31f165.jpg"
+            }
+          },
+          "0c471b33-e8e6-4d14-be68-b0fb08b17420": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bar.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "37b04c0a-e137-437c-9d9a-83db512b9ac0",
+          "5cb76d2a-0737-43a6-a81f-553067599726",
+          "12ed9a95-8b31-494d-aa71-24ff403f957c",
+          "cae01925-43bb-4205-af60-3f89df90c65b",
+          "215fd5e5-890d-49a8-a88f-255d098d604e",
+          "0c471b33-e8e6-4d14-be68-b0fb08b17420"
+        ],
+        "settings": {
+        }
+      },
+      "showroom-image-text-bottom": {
+        "type": "showroom-image-text-bottom",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/UES.png",
+          "text_header": "UPPER EAST SIDE SHOWROOM",
+          "text": "22 East 65th Street, 5th Floor <br>\nNew York, NY 10065 <br>\n<a href=\"https:\/\/goo.gl\/maps\/t6oL3LfkXfy9XppC9\" target=\"_blank\">Map<\/a> <br>\n <br>\n<i>by appointment only<\/i>\n<br>\nMonday - Friday  <br>\n11:00am to 6:00pm <br>\n<a href=\"tel:2123270900\">212-327-0900<\/a>\n<br>\n<a href=\"mailto:store@alisonlou.com\">store@alisonlou.com<\/a>",
+          "border_color": "",
+          "quote": "",
+          "quote_link": ""
+        }
+      },
+      "bridal-image-text1": {
+        "type": "bridal-image-text1",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/bridal1.png",
+          "text_header": "I Do",
+          "text_header2": "by lou",
+          "text": "I Do by Lou is Alison Chemla's first formal foray into the bridal world after many years of designing both engagement rings and re-sets for her private clientele. Staying true to the Alison Lou brand, I Do by Lou features classic engagement rings with modern, unexpected twists, like the use of colorful <span class=\"right_justify\">enamel and gold heavy settings.<\/span>"
+        }
+      },
+      "bridal-image-text2": {
+        "type": "bridal-image-text2",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/bridal2.png",
+          "text_header": "",
+          "text": "Our goal with this collection is to make the bridal experience seamless. Select from our 8 settings and we can customize them to accommodate almost any size diamond, which we can source for you, or you can provide us with.  \n<br><br>\nTo begin the bridal process with our team, please fill out the form below. Any further inquiries, please contact bridal@alisonlou.com",
+          "small_img": "shopify:\/\/shop_images\/diamond_cfea9097-2563-481b-b11c-62421a1796f4.png",
+          "small_img_mob": "shopify:\/\/shop_images\/ring_e00e5c95-9ede-463c-bc6d-01845dbad3a4.png",
+          "small_img_dsk": "shopify:\/\/shop_images\/ring_e00e5c95-9ede-463c-bc6d-01845dbad3a4.png"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States",
+          "ena_accept_terms": true,
+          "terms_text": "I accept the <a href=\"https:\/\/www.alisonlou.com\/pages\/customer-care-new\"> Shipping & Exchange Policies<\/a> along with <a href=\"https:\/\/www.alisonlou.com\/pages\/privacy-policy\">Terms & Conditions<\/a>",
+          "ena_made_order": true,
+          "made_title": "MADE TO ORDER",
+          "made_content": "All items (except \n<a href=\"https:\/\/www.alisonlou.com\/collections\/in-stock-1\">In Stock<\/a>\n& <a href=\"https:\/\/www.alisonlou.com\/collections\/loucite\">Loucite<\/a>) are made to order and take <b>approximately 20 business days to produce.<\/b>",
+          "ena_virtualgift": true,
+          "virtual_label_title": "Virtual E-Gift",
+          "virtual_title": "Need to gift a piece before your order is ready?",
+          "virtual_desc": "We can create a custom digital e-gift to send to your loved one as a place holder until the real thing is made and shipped. Please include the name of the recipient and a personalized message in the <i>Special Instructions<\/i> above.\nFor questions please reach out to <a href=\"mailto:store@alisonlou.com\">store@alisonlou.com<\/a>."
+        }
+      },
+      "default-product-template": {
+        "type": "default-product-template",
+        "blocks": {
+          "716d26ff-c153-4661-9764-a1994db90d2e": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "superlou-enamel-letter-ring"
+            }
+          },
+          "2ffebe74-b939-4295-a0c9-10f52f942790": {
+            "type": "word",
+            "settings": {
+              "product-handle": "amour-necklace",
+              "character-limit": "10"
+            }
+          },
+          "b3562f79-a304-4d43-b9ce-a2075246ad01": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "enamel-letter-huggy"
+            }
+          },
+          "d88f96ef-b04e-41f6-8bc1-b5db9e16b3af": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "custom-pave-mrs-ring"
+            }
+          },
+          "8a060677-622c-46cf-b9c0-b4ccbfe0d722": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "enamel-letter-stud"
+            }
+          },
+          "9b06b9f9-0fd6-4c8e-a575-1d1df164776f": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "diamond-letter-with-enamel-shadow-necklace"
+            }
+          },
+          "86481712-ec93-46c2-b0a5-b6750700cea0": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "double-enamel-letter-necklace"
+            }
+          },
+          "2940d064-0a0f-4f87-ad93-00796d3bf3cd": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "mini-diamond-letter-with-enamel-shadow-necklace"
+            }
+          },
+          "7dc133e8-b2d4-4ded-ab45-4b783411aaac": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "letter-baby-bracelet"
+            }
+          },
+          "8ab5d1ab-c917-4f1b-903f-e53c187dcbe7": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "superlou-diamond-letter-ring"
+            }
+          },
+          "8f05c699-5ba4-45e5-a06f-07c8c4275f35": {
+            "type": "double_letter",
+            "settings": {
+              "product-handle": "diamond-cufflinks"
+            }
+          },
+          "d6970598-718f-4f50-827d-926875582cf8": {
+            "type": "double_letter",
+            "settings": {
+              "product-handle": "gold-cufflinks"
+            }
+          },
+          "dec287ed-066a-4046-b9da-f6f76e3c29bb": {
+            "type": "double_letter",
+            "settings": {
+              "product-handle": "silver-cufflinks"
+            }
+          },
+          "274a479e-186e-4c3d-8151-ed934d424d31": {
+            "type": "word",
+            "settings": {
+              "product-handle": "custom-word-ring",
+              "character-limit": "6"
+            }
+          },
+          "66aba55b-2f8e-4503-8af3-738f057e2e49": {
+            "type": "letter",
+            "settings": {
+              "product-handle": "stellar-enamel-letter-necklace"
+            }
+          }
+        },
+        "block_order": [
+          "716d26ff-c153-4661-9764-a1994db90d2e",
+          "2ffebe74-b939-4295-a0c9-10f52f942790",
+          "b3562f79-a304-4d43-b9ce-a2075246ad01",
+          "d88f96ef-b04e-41f6-8bc1-b5db9e16b3af",
+          "8a060677-622c-46cf-b9c0-b4ccbfe0d722",
+          "9b06b9f9-0fd6-4c8e-a575-1d1df164776f",
+          "86481712-ec93-46c2-b0a5-b6750700cea0",
+          "2940d064-0a0f-4f87-ad93-00796d3bf3cd",
+          "7dc133e8-b2d4-4ded-ab45-4b783411aaac",
+          "8ab5d1ab-c917-4f1b-903f-e53c187dcbe7",
+          "8f05c699-5ba4-45e5-a06f-07c8c4275f35",
+          "d6970598-718f-4f50-827d-926875582cf8",
+          "dec287ed-066a-4046-b9da-f6f76e3c29bb",
+          "274a479e-186e-4c3d-8151-ed934d424d31",
+          "66aba55b-2f8e-4503-8af3-738f057e2e49"
+        ],
+        "settings": {
+          "show_share_buttons": true,
+          "show_vendor": false,
+          "show_sku": false,
+          "show_taxes_included": false,
+          "description_below_add_to_cart": false,
+          "selector_mode": "block",
+          "show_color_swatch": true,
+          "show_color_carousel": false,
+          "show_quantity_selector": false,
+          "show_inventory_quantity": false,
+          "in_stock_text": "IN STOCK READY TO SHIP",
+          "made_order_text": "MADE TO ORDER",
+          "inventory_quantity_threshold": 0,
+          "show_price_in_button": false,
+          "show_payment_button": false,
+          "show_pickup_availability": false,
+          "image_size": "large",
+          "stack_images": false,
+          "show_thumbnails": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "reviews_enabled": false,
+          "featured_image_size": "large"
+        }
+      },
+      "bridal-form": {
+        "type": "bridal-form",
+        "settings": {
+        }
+      },
+      "showroom_text": {
+        "type": "showroom_text",
+        "settings": {
+          "show_title": "",
+          "text": "Come visit us at our East Hampton store and showroom on the Upper East Side. Browse and shop our latest arrivals and exclusive designs. Our customer representatives are here to help you find the perfect piece whether it’s a gift for someone special or a treat for yourself."
+        }
+      },
+      "custom-lou-text-1": {
+        "type": "custom-lou-text-1",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/img01.png",
+          "text_header": "",
+          "text_header2": "",
+          "text_header3": "custom lan",
+          "text": "Create something one-of-a-kind with us. Whether\nyou’re starting from scratch or repurposing an old\nstone, we're here. Our team will be there to aid\nyou\nin\nevery step of the process, from sourcing the perfect\nstones, finding the right size, or reviewing and making\nedits to your CAD design.",
+          "small_img": "shopify:\/\/shop_images\/Heart-Diamond-Sasha_410dd357-dd1b-458e-8dc8-d2270b289c13.png"
+        }
+      },
+      "custom-lou-text-2": {
+        "type": "custom-lou-text-2",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/CustomHeartDiamondNecklaceRing.jpg",
+          "text_header": "",
+          "text": "Custom Lou pieces start at $2500. All our jewelry is\nmade in New York City with 14k gold and ethically\nsourced stones.\nTo begin the process with our team, please fill out the\nform below. Any further inquiries, please contact\norders@alisonlou.com .",
+          "small_img": "shopify:\/\/shop_images\/EmeraldTennisBracelet_50fcf2a4-1a3f-4ec0-b2a1-a15d9c2af086.png",
+          "small_img_mob": "shopify:\/\/shop_images\/EmeraldTennisBracelet.png"
+        }
+      },
+      "custom-lou-full-width-slider": {
+        "type": "custom-lou-full-width-slider",
+        "blocks": {
+          "1d0c60ac-d3b1-4d39-812b-b5938b9911ce": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/Mikey-PS_d9132488-f335-49ac-aec1-b37a275b97dc.jpg"
+            }
+          },
+          "48b2b9b0-0c29-47e1-acc7-8f08ba8513dd": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/PansyEarrings.jpg"
+            }
+          },
+          "6b13c694-d841-46c5-a62d-d65b6a523758": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/CustomEnamelRing.jpg"
+            }
+          },
+          "73fdf4ad-aad4-4740-ab3e-084966f8934e": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/CookieBearNecklace.jpg"
+            }
+          },
+          "d9591ffd-bd3e-4b20-a5a9-32d9dabf1971": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/CustomWord4Necklace.jpg"
+            }
+          },
+          "73337d15-def4-46b2-87a1-75779419cd20": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/SashaSignetCuff.jpg"
+            }
+          },
+          "e3335909-afbd-4c8a-ae40-c2ebd31d0c53": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/CBasketballBracelet.jpg"
+            }
+          },
+          "92d890b0-3d81-493c-97e9-bc8ca1fe4bdc": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/CustomAmourNecklace.jpg"
+            }
+          },
+          "f53b23ce-f952-4514-a395-1ff1acf5cfc9": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/TourmalineEarrings.jpg"
+            }
+          },
+          "ca752bc0-6783-4bb6-8c9d-339e82e24fd3": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/CustomEnamelBezelNecklace3.jpg"
+            }
+          },
+          "634d22db-f303-4dc3-b834-2cd96e1bf013": {
+            "type": "image",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/MargoNecklacs.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1d0c60ac-d3b1-4d39-812b-b5938b9911ce",
+          "48b2b9b0-0c29-47e1-acc7-8f08ba8513dd",
+          "6b13c694-d841-46c5-a62d-d65b6a523758",
+          "73fdf4ad-aad4-4740-ab3e-084966f8934e",
+          "d9591ffd-bd3e-4b20-a5a9-32d9dabf1971",
+          "73337d15-def4-46b2-87a1-75779419cd20",
+          "e3335909-afbd-4c8a-ae40-c2ebd31d0c53",
+          "92d890b0-3d81-493c-97e9-bc8ca1fe4bdc",
+          "f53b23ce-f952-4514-a395-1ff1acf5cfc9",
+          "ca752bc0-6783-4bb6-8c9d-339e82e24fd3",
+          "634d22db-f303-4dc3-b834-2cd96e1bf013"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "16130781205eec0539",
+      "1613150307a9fa5faf",
+      "1613154878e71e4ceb",
+      "1613155533b173749e"
+    ]
+  },
+  "presets": {
+    "Allure": {
+      "heading_color": "#1c1b1b",
+      "text_color": "#1c1b1b",
+      "text_light_color": "#6a6a6a",
+      "link_color": "#6a6a6a",
+      "background": "#efefef",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#1c1b1b",
+      "button_text_color": "#ffffff",
+      "header_background": "#ffffff",
+      "header_heading_color": "#1c1b1b",
+      "header_light_color": "#6a6a6a",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#1c1b1b",
+      "footer_text_color": "#6a6a6a",
+      "newsletter_popup_background": "#1c1b1b",
+      "newsletter_popup_text_color": "#ffffff",
+      "secondary_elements_background": "#1c1b1b",
+      "secondary_elements_text_color": "#ffffff",
+      "navigation_background": "#1c1b1b",
+      "navigation_text_color": "#ffffff",
+      "heading_font": "montserrat_n5",
+      "heading_size": "small",
+      "uppercase_heading": true,
+      "text_font": "nunito_sans_n4",
+      "base_text_font_size": 14,
+      "show_page_transition": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": false,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "center",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "medium",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#efefef",
+      "checkout_accent_color": "#1c1b1b",
+      "checkout_button_color": "#1c1b1b",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#000000"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "inline",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "image_size": "large",
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    },
+    "Couture": {
+      "heading_color": "#5c5c5c",
+      "text_color": "#5c5c5c",
+      "text_light_color": "#939393",
+      "link_color": "#323232",
+      "background": "#ffffff",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#5c5c5c",
+      "button_text_color": "#ffffff",
+      "header_background": "#ffffff",
+      "header_heading_color": "#5c5c5c",
+      "header_light_color": "#939393",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#5c5c5c",
+      "footer_text_color": "#939393",
+      "newsletter_popup_background": "#ffffff",
+      "newsletter_popup_text_color": "#1c1b1b",
+      "secondary_elements_background": "#5c5c5c",
+      "secondary_elements_text_color": "#ffffff",
+      "navigation_background": "#ffffff",
+      "navigation_text_color": "#5c5c5c",
+      "heading_font": "futura_n4",
+      "heading_size": "large",
+      "uppercase_heading": false,
+      "text_font": "century_gothic_n4",
+      "base_text_font_size": 15,
+      "show_page_transition": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": true,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "left",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "small",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_accent_color": "#323232",
+      "checkout_button_color": "#5c5c5c",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#f3f3f3"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "center",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "image_size": "large",
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    },
+    "Vogue": {
+      "heading_color": "#303030",
+      "text_color": "#303030",
+      "text_light_color": "#595959",
+      "link_color": "#000000",
+      "background": "#ffffff",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#f5db8b",
+      "button_text_color": "#303030",
+      "header_background": "#ffffff",
+      "header_heading_color": "#303030",
+      "header_light_color": "#595959",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#303030",
+      "footer_text_color": "#595959",
+      "navigation_background": "#ffffff",
+      "navigation_text_color": "#303030",
+      "newsletter_popup_background": "#ffffff",
+      "newsletter_popup_text_color": "#303030",
+      "secondary_elements_background": "#fce7a8",
+      "secondary_elements_text_color": "#303030",
+      "heading_font": "din_neuzeit_grotesk_n3",
+      "heading_size": "small",
+      "uppercase_heading": true,
+      "text_font": "futura_n4",
+      "base_text_font_size": 14,
+      "show_page_transition": false,
+      "show_element_staggering": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": true,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "center",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "medium",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_accent_color": "#a17c5e",
+      "checkout_button_color": "#454545",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#f1e4d8"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "inline",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "image_size": "large",
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    }
+  }
+}

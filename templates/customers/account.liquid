@@ -1,0 +1,519 @@
+<style>
+  a.Button.Button--account.Button--primary.act_btn{
+  padding: 5px 15px 7px;
+  }
+  .tab {
+    overflow: hidden;
+    padding:0 0 0 34px;
+    width:30%;
+    float:left;  
+  }
+  .tabContent{
+    float: right;
+    width: 99%;
+  }
+  .tab button {
+    transition: 0.3s;
+    font-family: sofia-pro,sans-serif;
+    font-size: 22px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .tab .group-title--1::before {
+    background-color: #fff;
+  }
+  .tab .group-title--1.active::before {
+    background-color: #c5d9f3;
+  }
+  .tab .group-title--2::before {
+    background-color: transparent;
+  }
+  .tab .group-title--2.active::before {
+    background-color: #b8e7dc;
+  }
+  .tab .group-title--3::before {
+    background-color: transparent;
+  }
+  .tab .group-title--3.active::before {
+    background-color: #acacdd;
+  }
+  .tab .group-title--4::before {
+    background-color: transparent;
+  }
+  .tab .group-title--4.active::before {
+    background-color: #ffc8d3;
+  }
+  .tab .group-title--5::before {
+    background-color: transparent;
+  }
+  .tab .group-title--5.active::before {
+    background-color: #e0251b;
+  }
+  .tab .tit, th.tit {
+    transition: 0.3s;
+    font-family: sofia-pro,sans-serif;
+    font-size: 22px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+  }
+  th.tit {
+    width:33.33%;
+    border-bottom: 1px solid #000;
+  }
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    margin-top: 41px;
+  }
+  .nav__container {
+    position:relative;
+    padding: 60px 0 0 30px;
+  }
+  .tab .nav__container::last-child {
+    padding-bottom:60px;
+  }  
+  .ContainerAccount{
+    width:100%;
+    overflow:hidden;
+    padding-bottom: 60px;
+    padding-right:30px;
+  }
+  .nav__container .group-title:before {
+    position: absolute;
+    content: '';
+    width: 120px;
+    height: 120px;
+    /*top: calc(50% - 27px);
+    left: calc(50% - 308px);*/
+    top: 12px;
+    left: -60px;
+    background-color: transparent;
+    border-radius: 100%;
+    z-index: -1;
+  }
+  .bb-000{
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+  }
+  .Segment__Content p{
+    font-size: 26px;
+    margin: 10px 0 0 0;
+  }
+  .AccountTable .Heading td{
+    font-family:'baskerville-display-pt';
+    font-size:26px;
+    padding-bottom:0;
+    border:none;
+  }
+  .AccountTable .Heading td a{
+    font-family:'baskerville-display-pt';
+    font-size:26px;
+    border:none;
+    text-decoration:none!important;
+  }
+  .SectionHeader h1{
+    color:#acacdc;
+  }
+  .linkLogout{
+    font-family: 'baskerville-display-pt';
+    font-size:25px;
+  }
+  .Email{
+    margin-bottom: 40px;
+  }
+  .Email .titSection{
+    font-family:'sofia-pro';
+    font-size:22px;
+    margin-bottom: 10px;
+    text-align:left;
+  }  
+  .Email a.txtLink{
+    font-family:'baskerville-display-pt';
+    font-size:25px;
+    margin-left:30px;
+    display:inline-block;
+  }  
+  .Email a.txtLinkMobile{
+    display:none;
+  }  
+  .Email p{
+    font-family:'baskerville-display-pt';
+    font-size:20px;
+    line-height: 26px;
+    width: 55%;
+    text-align: left;
+  }  
+  .titS{
+    display:none;
+  }  
+  .titS2 {
+    margin-bottom: 40px;
+    text-align: left;
+    font-size:22px;
+    color:#000;
+  }
+  .share{
+    background: #c5d9f3;
+    padding: 5px 0;
+    cursor: pointer;
+    text-align: center;
+  }
+  .share a{
+    font-family: 'sofia-pro';
+    font-size: 22px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 300;
+  }
+  .titDetails{
+    font-family:'sofia-pro';
+    font-size:26px;
+    line-height: 40px;
+  }
+  .subTitDetails{
+    font-family:'baskerville-display-pt';
+    font-size:26px;
+    line-height: 40px;
+  }
+  .AccountAddress, .AccountAddress p,
+  .AccountAddress span{
+    font-family:'baskerville-display-pt';
+    font-size:20px;
+    line-height: 30px;
+    padding-top: 5px;
+  }
+  .BBBlack{   
+    border-bottom: 1px solid #000;
+  }  
+  .titSection2{
+    font-family: 'sofia-pro';
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .detailsSection2{
+    font-family:'baskerville-display-pt';
+    font-size:20px;
+    line-height: 26px;
+  }
+  .TTUpper{
+    text-transform:uppercase;
+  }
+  .detailsSection2 .AccountAddress, 
+  .detailsSection2 .AccountAddress p, 
+  .detailsSection2 .AccountAddress span {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  a.linkLogout {
+    margin-top: 14px;
+    display: block;
+  } 
+  @media (max-width: 1100px){
+    .nav__container {
+      margin-bottom: 0;
+    }
+    .nav__container .group-title {
+      margin-bottom: 0;
+    }
+    .tab {
+      padding:26px 0 20px 12px;
+      display: contents;
+    }
+    .nav__container .group-title:before {
+      width: 80px;
+      height: 80px;
+      /*top: calc(50% - 22px);
+      left: calc(50% - 207px);*/
+      top: 13px;
+      left: -25px;
+    }
+    .tab button {
+      font-size: 25px;
+    }
+    .tabContent {
+      width: 100%;
+    }
+    .AccountTable .Heading td, .AccountTable .Heading td a{
+      font-size:17px;
+    }
+    th.tit {
+      font-size: 12px;
+    }
+    .ContainerAccount {
+      padding-right: 0;
+    }
+    .nav__container {
+      padding: 36px 0 0 20px;
+    }
+    .TableWrapper>.Table {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .Email .titSection{
+      text-align:center;
+    }
+    .Email a.txtLink{
+      display:none
+    }
+    .Email a.txtLinkMobile{
+      display:block;
+    }
+    .Email .titSection {
+      font-size: 21px;
+    }
+    .Email p {
+      font-size: 21px;
+      line-height: 29px;
+      width: 100%;
+      text-align: center;
+    }
+    .Email a.txtLinkMobile{
+      font-family:'sofia-pro';
+      font-size:22px;
+      padding:0;
+      border:1px solid #000;
+      text-transform:uppercase;
+      margin-top: 30px;
+    }
+    #ACCOUNT1 .titSection, #ACCOUNT1 .Email p{
+      text-align:left;
+    }
+    #ACCOUNT1 .titSection a.txtLink{
+      display:inline-block;
+    }
+    .titS, .titS2 {
+      margin-bottom: 40px;
+      text-align: center;
+      font-family:'sofia-pro';
+      font-size:25px;
+      line-height:70px;
+      text-transform:uppercase;
+      margin-bottom: 20px;
+      font-weight: 400;
+      color:#000;
+      letter-spacing: 0.03em;
+      display:block;
+    }
+    .share {
+      margin-bottom: 70px;
+    }
+    .share a{
+      line-height: 45px;
+    }
+    .AccountAddress, .AccountAddress p, .AccountAddress span {
+      font-size: 16px;
+      line-height: 17px;
+    }
+    .titSection2 {
+      font-size: 16px;
+    }
+    .Button {
+      font-size: 16px;
+    }   
+  } 
+</style>
+
+
+<div class="ContainerAccount">
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+      <h1>{{ 'customer.account.title' | t }}</h1>
+    </div>
+  </header>
+
+  <div class="tab">
+    <div class="nav__container">
+      <button class="tablinks group-title group-title--1 active"  onclick="openCity(event, 'ACCOUNT1')">ADDRESS</button>
+    </div>
+    <div class="nav__container">
+      <button class="tablinks group-title group-title--2" onclick="openCity(event, 'ACCOUNT2')">ORDER HISTORY</button>
+    </div>
+    <div class="nav__container">
+      <button class="tablinks group-title group-title--3 " onclick="openCity(event, 'ACCOUNT3')">WISHLIST</button>
+    </div>
+    <div class="nav__container">
+      <button class="tablinks group-title group-title--4" onclick="openCity(event, 'ACCOUNT4')">EMAILS PREFERENCES</button>
+    </div>
+    <!--    <div class="nav__container">
+<button class="tablinks group-title group-title--5" onclick="openCity(event, 'ACCOUNT5')">&nbsp;</button>
+</div> -->
+    <div class="nav__container">
+      <a href="{{ routes.account_logout_url }}" class="linkLogout">{{ 'customer.account.logout' | t }}</a>
+    </div>
+  </div>
+
+  <!-- Tab content -->
+  <div class="PageLayout PageLayout--breakLap"> 
+    <div class="tabContent">
+      <div id="ACCOUNT1" class="tabcontent"  style="display: block;">
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        ADDRESS
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+
+        <div class="titS2 TTUpper ">{{ 'customer.addresses.title' | t }}</div>
+
+        <div class="PageLayout__Section PageLayout__Section--secondary ">
+          <div class="Segment">
+            {%- if customer.addresses_count == 0 -%}
+            <h2 class="titSection2 BBBlack">{{ 'customer.account.no_addresses_title' | t }}</h2>
+
+            <div class="detailsSection2">
+              <p>{{ 'customer.account.no_addresses_content' | t }}</p>
+
+              <div class="Segment__ButtonWrapper">
+                <a href="{{ routes.account_addresses_url }}" class="Button Button--primary">{{ 'customer.account.manage_addresses' | t }}</a>
+              </div>
+            </div>
+            {%- else -%}
+            <h2 class="titSection2 BBBlack">{{ 'customer.account.default_address' | t }}</h2>
+
+            <div class="detailsSection2">
+              {{ customer.default_address | format_address | replace: '<p>', '<p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
+              <div class="Segment__ButtonWrapper">
+
+                <a href="javascript:void(0)" class="Button Button--account Button--primary act_btn" onclick="openCity(event, 'ACCOUNT6')">{{ 'customer.account.edit_addresses' | t }}</a>
+              </div>
+            </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+      </div>
+      <div id="ACCOUNT2" class="tabcontent">
+
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        ORDER HISTORY
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+        <div class="titS">ORDER HISTORY</div>
+
+        <div class="PageLayout__Section">
+          {%- if customer.orders.size == 0 -%}
+          <div class="Segment">
+            <div class="bb-000">
+              <h2 class="titSection2">{{ 'customer.account.no_orders_title' | t }}</h2>
+            </div>
+            <div class="Segment__Content">
+              <p>{{ 'customer.account.no_orders_content' | t }}</p>
+            </div>
+          </div>
+          {%- else -%}
+          {%- paginate customer.orders by 25 -%}
+          <div class="TableWrapper">
+            <table class="AccountTable Table Table--large">
+              <thead class="Text--subdued">
+                <tr>
+                  <th class="tit">{{ 'customer.orders.order_number' | t }}</th>
+                  <th class="tit">{{ 'customer.orders.date' | t }}</th>
+                  <th class="Text--alignRight tit">{{ 'customer.orders.total' | t }}</th>
+
+                </tr>
+              </thead>
+
+              <tbody class="Heading u-h7">
+
+                {%- for order in customer.orders -%}
+                <tr>
+                  <td><a href="javascript:void(0)" onclick='$("#ACCOUNT5").load("{{ order.customer_url }}");openCity(event, "ACCOUNT5");$(window ).scrollTop(0);' class="Link ">{{ order.name }}</a></td>
+                  <td>{{ order.created_at | date: format: 'month_day_year' }}</td>
+                  <td class="Text--alignRight">{{ order.total_price | money_without_trailing_zeros }}</td>
+                </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+          </div>
+          {%- render 'pagination', paginate: paginate -%}
+          {%- endpaginate -%}
+          {%- endif -%}
+        </div>
+      </div><!--end order history-->
+      <div id="ACCOUNT3" class="tabcontent wishlistpage ">
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        WISHLIST
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+        <div class="col-md-4 col-xs-12"><div class="titS2">MY WISHLIST</div></div>
+        <div class="col-md-4 col-xs-12">&nbsp;</div>
+        <input type="hidden" id="ruta" value="https://www.alisonlou.com/a/wishlist/{{customer.id}}">
+        <div class="col-md-4 col-xs-12 share" id="wishlist_share_modal"><a href="javascript:void(0)" id="copyclipboard">SHARE WISHLIST</a></div>
+        {% include 'wishlist' %}            
+      </div>
+      <div id="ACCOUNT4" class="tabcontent" >
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        EMAIL PREFERENCES
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+        <div class="titS">EMAIL PREFERENCES</div>
+        <div class="Email">
+          <div class="titSection">
+            MAILING LIST SUBSCRIPTION <a href="{{ unsubscribe_url }}" class="txtLink">Unsubscribe</a>
+          </div>
+          <p>Get the latest updates on new product launches and events.</p>
+          <div class="titSection">
+            <a href="{{ unsubscribe_url }}" class="txtLinkMobile">Unsubscribe</a>
+          </div>
+        </div>
+      </div>
+      <div id="ACCOUNT5" class="tabcontent" >
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        ORDER DETAILS
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+      </div>
+      <div id="ACCOUNT6" class="tabcontent" >
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        MANAGE ADDRESS
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+        {%- include 'address' -%}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+    if (cityName=="ACCOUNT6"){
+      $(".group-title--1").addClass(" active");
+    } else if (cityName=="ACCOUNT5"){
+      $(".group-title--2").addClass(" active");
+    }
+  }
+</script>
+<!-- Begin Smart Wishlist Callback -->
+<script type="text/javascript">
+  $("body").on("click","#copyclipboard", function(){	
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($("#wishlist_url").text()).select();
+    var temp_share_button_title=$(this).html();
+    $(this).html("URL Copied!"); //text to be displayed after URL copied
+    setTimeout(function() {
+      $(this).html(temp_share_button_title);
+    },1000);
+    navigator.clipboard.writeText($("#ruta").val())
+    .catch((error) => { alert(`Copy failed! ${error}`) })
+  });
+</script>

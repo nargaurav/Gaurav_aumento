@@ -1,0 +1,226 @@
+<link rel="stylesheet" href="https://cloud.smartwishlist.webmarked.net/v6/bootstrap/css/bootstrap.css">
+<link href="https://backend.smartwishlist.webmarked.net/v6/css/wishlist.css" rel="stylesheet">
+<style>
+  .product-grid-image--centered {
+    width: 60%;
+    /*margin:0 auto;*/
+  }
+  .product-item--price{ 
+    text-align:left;
+    font-family: 'baskerville-display-pt';
+    font-size: 22px;
+    color: #000;
+    line-height: 35px;
+  }
+  .product-grid-item p{
+    text-align:left;
+    font-family:'sofia-pro';
+    font-size:22px;
+    color:#000;
+    line-height:35px;
+    letter-spacing: 0.02em;
+  }
+  div#bookmarkit {
+    text-align: left;
+    padding: 2% 5% 2% 0;
+  }
+  .actions{
+    text-align: left!important;
+  }
+  .addtocartbutton{
+    border: none!important;
+    text-align:left!important;
+    background:none!important;
+    padding:0!important;
+    color: #000!important;
+  }  
+  .actions span{
+    margin-left:0px;
+  }
+  .grid-item {
+    padding-bottom: 11px;
+  }
+  .wishlist_heart_icon2,
+  .wishlist_heart_icon{
+    /*font-size: 18px;
+    padding: 0 0 0 0;
+    margin: 0 18px 0 0;
+    background:none;*/
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-style: inherit!important;
+    background: #000;
+    border-radius: 50px;
+    padding: 5px 5px 4px 4px;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #000;
+    margin-right: 12px;
+  }
+  .wishlist_heart_icon:before {
+    color:#f7d1dc;
+  }
+  .fa-shopping-cart {
+    color: #000;
+  }
+  @media screen and (max-width:1100px){
+    .product-item--price{ 
+      font-size: 17px;
+      line-height:20px;
+    }
+    .product-grid-item p{
+      font-size:17px;
+      line-height:20px;
+    }
+    #wishlisthtml{
+      margin: 0 auto;
+      width: 100%;
+    }
+    .grid-item {
+      padding-left: 12px;
+    }
+    .product-grid-image--centered {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<div class="row " id="wishlisthtml" style="text-aling:center">  
+  <p><img src="{{ 'loadding-page.gif' | asset_url }}"/></p>
+</div>
+
+<script>
+  //define this function for fetching express wishlist ID from cookie
+  function getWishlistId(){for(var i=decodeURIComponent(document.cookie).split(";"),t=0;t<i.length;t++){for(var n=i[t];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf("wishlist_id="))return n.substring("wishlist_id=".length,n.length)}}
+
+  {% if customer %}
+  query_url="/a/wishlist?type=api&customerid="+{{customer.id}}+"&version=1";
+  {% else %}
+  query_url="/a/wishlist?type=api&wishlistid="+getWishlistId()+"&version=1";
+  {% endif %}
+
+
+  $(document).ready(function(){
+    let interval = setInterval(function(){
+      if(window.ReloadSmartWishlist){
+        window.ReloadSmartWishlist();
+        clearInterval(interval);
+
+
+        $(".smartwishlist").on("click", function(){
+          console.log("Clicked..");
+          $(this).parents(".grid-item").remove();
+        })
+      }
+
+    },1500)
+
+    var gridhtml="";
+
+    $.ajax({
+      url: query_url,
+      dataType: "json",
+      cache:false,   
+      success: function(data) {
+        if(parseInt(data.count)>0)
+        {
+          $.each(data.items,function(key,value){
+            var product_url="/products/"+value.handle;
+            var product_title=value.title;
+            var product_image=value.image;
+            var product_id=value.id;
+            var variant_id=value.variant_id;
+
+            var variant_title=value.variant_title;
+            var variant_price=value.variant_price;
+
+            // NOTE: This grid HTML has been optimized for Supply theme. For other themes, you need to modify it for best experience.
+            gridhtml+='<div class="grid-item col-md-4 col-xs-6"> <a href="'+product_url+'" class="product-grid-item"> <div class="product-grid-image" > <div class="product-grid-image--centered"> <img src="'+product_image+'"> </div></div><div class="wish_content"><p>'+product_title+'</p><div class="product-item--price"> <span class="h1 medium--left">$'+variant_price+'</span> </div></a> <div class="actions"><a href="javascript:void(0);"  class="smartwishlist" data-product="'+product_id+'" data-variant="'+variant_id+'"></a><a role="button" tabindex="0" href="#" aria-label="Add to Shopping Cart" class="addtocartbutton" data-action="add-to-cart" data-drawer-id="sidebar-cart"  data-productid="'+product_id+'" data-variantid="'+variant_id+'"><i class="fas fa-shopping-cart"></i></a></div></div></div>';		
+          }); 
+          $("#wishlisthtml").html(gridhtml);				
+        }
+        else
+        {
+          gridhtml='<p style="text-align: center;">There are no items in the Wishlist.</p>';	
+        }
+      },
+      complete: function(){
+        $("#wishlisthtml").html(gridhtml);
+      } 
+    });
+
+    $(document.body).on('click','.addtocartbutton', function(e) {
+      e.preventDefault();
+      document.dispatchEvent(new CustomEvent('theme:loading:start'));
+      let addToCartButton = $(this)[0];
+     // console.log("Added to cart...")
+      var items={
+        "id":$(this).data("variantid"),
+        "quantity": 1
+      }
+      
+      let _this7 = this;
+
+      fetch(window.routes.cartAddUrl + '.js', {
+        body: JSON.stringify(items),
+        credentials: 'same-origin',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest' // This is needed as currently there is a bug in Shopify that assumes this header
+        }
+      })
+      .then(function (response) {
+        
+        document.dispatchEvent(new CustomEvent('theme:loading:end'));
+        if (response.ok) {
+          addToCartButton.removeAttribute('disabled');
+          response.json().then(function (content) {
+            _this7.dispatchEvent(new CustomEvent('product:added', {
+              bubbles: true,
+              detail: {
+                variant: content,
+                quantity: content.quantity
+              }
+            }));
+          });          
+        } else {
+          response.json().then(function (content) {
+            console.log
+            alert('testerror');
+            var errorMessageElement = document.createElement('span');
+            errorMessageElement.className = 'ProductForm__Error Alert Alert--error';
+            errorMessageElement.innerHTML = content['description'];
+            addToCartButton.removeAttribute('disabled');
+            addToCartButton.insertAdjacentElement('afterend', errorMessageElement);
+            setTimeout(function () {
+              errorMessageElement.remove();
+            }, 1500);
+          });
+        }
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+
+      //       $.ajax({
+      //         url:"/cart/add.js",
+      //         data: {quantity:1,id:variantid},
+      //         dataType: 'json',
+      //         error: function(data){alert(data.responseJSON.description)},
+      //         success:function(data){
+      //           $.ajax({
+      //             url:"/cart.js",
+      //             dataType: 'json',
+      //             error: function(cdata){alert(cdata.responseJSON.description)},
+      //             success:function(cdata){              
+      //               $(".Header__CartCount").text(cdata.item_count)
+
+      //               setTimeout(function(data){ $('.Header__CartCount').click() }, 10);
+      //             }});          
+      //           // location.reload()
+      //         }});
+    });
+  });
+</script>

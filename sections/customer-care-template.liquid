@@ -1,0 +1,310 @@
+<style>
+  @media (max-width: 768px){
+    .customer-care__nav .nav-item.active:before {
+      width: 60px;
+      height: 60px;
+      top: calc(50% - 30px);
+      left: -37px;
+    }
+  }
+</style>
+<div class="customer-care page__container">
+  <div class="Container">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <h1>{{ section.settings.title }}</h1>
+      </div>
+    </header>
+
+    <div class="customer-care__nav">
+      {% for block in section.blocks %}
+        {% if block.type == 'ReturnsTitle' %}
+      <div class="nav-item" data-name="Returns + Exchanges">
+        <h4>{{ block.settings.return_title }}</h4>
+      </div>
+      {% elsif block.type == 'Shippingtitle' %}
+      <div class="nav-item" data-name="Shipping">
+        <h4>{{ block.settings.shipping_title }}</h4>
+      </div> 
+      {% elsif block.type == 'FAQtitle' %}
+      <div class="nav-item" data-name="FAQs">
+        <h4>{{ block.settings.question_faq }}</h4>
+      </div>
+      {% elsif block.type == 'Caretitle' %}
+      <div class="nav-item" data-name="Care + Repair">
+        <h4>{{ block.settings.care_title }}</h4>
+      </div>
+      {% elsif block.type == 'Sizingtitle' %}
+      <div class="nav-item" data-name="Sizing">
+        <h4>{{ block.settings.sizing_title }}</h4>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="customer-care__container">
+
+      <div data-id="Returns + Exchanges" class="faq__content">
+        {% for block in section.blocks %}
+        {% if block.type == 'Returns' %}
+        <div class="faq__question">
+          <div class="faq-q" id="faq_q_1">
+            <div class="faq-symbol faq-plus">{% render 'plus' %}</div>
+            <div class="faq-symbol faq-minus">{% render 'minus' %}</div>
+            <h4>{{ block.settings.question_returns }}</h4>
+          </div>
+          <div class="faq-a">
+            <p>{{ block.settings.answer_returns }}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div data-id="Shipping" class="faq__content" style="display: none;">
+        {% for block in section.blocks %}
+        {% if block.type == 'Shipping' %}
+        <div class="faq__question">
+          <div class="faq-q" id="faq_q_2">
+            <div class="faq-symbol faq-plus">{% render 'plus' %}</div>
+            <div class="faq-symbol faq-minus">{% render 'minus' %}</div>
+            <h4>{{ block.settings.question_shipping }}</h4>
+          </div>
+          <div class="faq-a">
+            <p>{{ block.settings.answer_shipping }}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div data-id="FAQs" class="faq__content" style="display: none;">
+        {% for block in section.blocks %}
+        {% if block.type == 'FAQ' %}
+        <div class="faq__question">
+          <div class="faq-q">
+            <div class="faq-symbol faq-plus">{% render 'plus' %}</div>
+            <div class="faq-symbol faq-minus">{% render 'minus' %}</div>
+            <h4>{{ block.settings.question_faq }}</h4>            
+          </div>
+          <div class="faq-a">
+            <p>{{ block.settings.answer_faq }}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div data-id="Care + Repair" class="faq__content" style="display: none;">
+        {% for block in section.blocks %}
+        {% if block.type == 'Care' %}
+        <div class="faq__question">
+          <div class="faq-q">
+
+            <div class="faq-symbol faq-plus">{% render 'plus' %}</div>
+            <div class="faq-symbol faq-minus">{% render 'minus' %}</div>
+            <h4>{{ block.settings.question_care }}</h4>
+          </div>
+          <div class="faq-a">
+            <p>{{ block.settings.answer_care }}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div data-id="Sizing" class="faq__content" style="display: none;">
+        {% for block in section.blocks %}
+        {% if block.type == 'Sizing' %}
+        <div class="faq__question">
+          <div class="faq-q">
+            <div class="faq-symbol faq-plus">{% render 'plus' %}</div>
+            <div class="faq-symbol faq-minus">{% render 'minus' %}</div>
+            <h4>{{ block.settings.question_sizing }}</h4>
+          </div>
+          <div class="faq-a">
+            <p>{{ block.settings.answer_sizing }}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Contact",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Header"
+}
+],
+"blocks": [
+{
+"type": "ReturnsTitle",
+"name": "Returns Title",
+"limit":1,
+"settings": [
+{
+"type": "text",
+"id": "return_title",
+"label": "Returns Title"
+}
+]
+},
+{
+"type": "Returns",
+"name": "Returns and Exchanges",
+"settings": [
+{
+"type": "header",
+"content": "Returns and Exchanges"
+},
+{
+"type": "text",
+"id": "question_returns",
+"label": "Question"
+},
+{
+"type": "textarea",
+"id": "answer_returns",
+"label": "Answer"
+}
+]
+},
+{
+"type": "Shippingtitle",
+"name": "Shipping Title",
+"limit":1,
+"settings": [
+{
+"type": "text",
+"id": "shipping_title",
+"label": "Shipping Title"
+}
+]
+},
+{
+"type": "Shipping",
+"name": "Shipping",
+"settings": [
+{
+"type": "header",
+"content": "Shipping"
+},
+{
+"type": "text",
+"id": "question_shipping",
+"label": "Question"
+},
+{
+"type": "textarea",
+"id": "answer_shipping",
+"label": "Answer"
+}
+]
+},
+{
+"type": "FAQtitle",
+"name": "FAQ Title",
+"limit":1,
+"settings": [
+{
+"type": "text",
+"id": "question_faq",
+"label": "FAQ Title"
+}
+]
+},
+{
+"type": "FAQ",
+"name": "FAQ",
+"settings": [
+{
+"type": "header",
+"content": "FAQ"
+},
+{
+"type": "text",
+"id": "question_faq",
+"label": "Question"
+},
+{
+"type": "textarea",
+"id": "answer_faq",
+"label": "Answer"
+}
+]
+},
+{
+"type": "Caretitle",
+"name": "Care + Repair Title",
+"limit":1,
+"settings": [
+{
+"type": "text",
+"id": "care_title",
+"label": "Care + Repair Title"
+}
+]
+},
+{
+"type": "Care",
+"name": "Care + Repair",
+"settings": [
+{
+"type": "header",
+"content": "Care + Repair"
+},
+{
+"type": "text",
+"id": "question_care",
+"label": "Question"
+},
+{
+"type": "textarea",
+"id": "answer_care",
+"label": "Answer"
+}
+]
+},
+{
+"type": "Sizingtitle",
+"name": "Sizing Q+A Title",
+"limit":1,
+"settings": [
+{
+"type": "text",
+"id": "sizing_title",
+"label": "Sizing Q+A Title"
+}
+]
+},
+{
+"type": "Sizing",
+"name": "Sizing Q+A",
+"settings": [
+{
+"type": "header",
+"content": "Sizing Q+A"
+},
+{
+"type": "text",
+"id": "question_sizing",
+"label": "Question"
+},
+{
+"type": "textarea",
+"id": "answer_sizing",
+"label": "Answer"
+}
+]
+}
+]
+}
+{% endschema %}

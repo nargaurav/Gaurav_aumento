@@ -1,0 +1,288 @@
+{%- assign is_entirely_fulfilled = false -%}
+{%- assign has_one_fulfillment = false -%}
+
+{%- if order.fulfillment_status == 'fulfilled' -%}
+  {%- assign is_entirely_fulfilled = true -%}
+  {%- assign tracking_numbers = '' -%}
+
+  {%- for line_item in order.line_items -%}
+    {%- assign tracking_numbers = tracking_numbers | append: line_item.fulfillment.tracking_number | append: ',' -%}
+  {%- endfor -%}
+
+  {%- assign tracking_numbers = tracking_numbers | split: ',' | compact | uniq -%}
+
+  {%- if tracking_numbers.size == 1 -%}
+    {%- assign has_one_fulfillment = true -%}
+  {%- endif -%}
+{%- endif -%}
+<style>
+  .TAR{text-align:right!important;}  
+  .Text--subdued th{ 
+  	font-size: 22px;
+  }
+  .alertDetails{color:#df251b;}
+  
+  .titProd{
+  	font-size: 22px;
+    font-family: 'sofia-pro';
+    line-height:35px;
+  }
+  
+   .featureProd{
+  	font-size: 26px;
+    font-family: 'baskerville-display-pt';
+    line-height:35px;
+  }
+  
+  .borderBNone{border:none!important;}
+  .Rte table th, .Table th{border-bottom:1px solid #000;}
+  .borderTop{border-top:1px solid #000!important;}
+  .TT-upper{text-transform:uppercase;}
+  .back{
+    font-size: 16px;
+    font-family: 'baskerville-display-pt';
+    text-decoration: underline;
+    cursor:pointer;
+  }
+  .Taddress{margin-top:80px;}
+  .BBBlack{border-bottom-color:#000!important;}
+  
+  .Segment__Content p{
+  	    font-size: 20px;
+  }
+  
+  .AccountAddress, .AccountAddress p, .AccountAddress span {
+    font-size: 22px;}
+  
+  
+  @media (max-width:1100px){
+  	.Text--subdued th {
+        font-size: 17px;
+        letter-spacing: 0;
+      
+    }
+    .titDetails {
+      font-size: 17px;
+      line-height: 22px;
+  	}
+    .subTitDetails {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .Rte table td, .Rte table th, .Table td, .Table th {
+      padding: 10px 10px;}
+    
+    
+  }
+</style>
+<div class="back"><a href="javascript:void(0)" onclick="openCity(event, 'ACCOUNT2')">&lt; Back to Order History</a></div>
+<div class="PageLayout__Section">
+  <div class="titS">ORDER DETAILS</div>
+  <header class="PageHeader">
+    
+    <div class="SectionHeader">
+      {%- assign placed_at = order.created_at | date: format: 'month_day_year_time' -%}
+      <div class="titDetails">ORDER #{{ 'customer.order.title' | t: order_number: order.name }}</div>
+      <div class="subTitDetails">Order placed on {{ 'customer.order.placed_at' | t: date: placed_at }}</div>
+      <br/>
+      <div class="titDetails">ORDER STATUS</div>
+      {%- if order.cancelled -%}
+        {%- assign cancelled_at = order.cancelled_at | date: format: 'month_day_year_time' -%}
+        <div class="subTitDetails alertDetails">Order {{ 'customer.order.cancelled_at' | t: date: cancelled_at }}</div>
+      {%- endif -%}
+
+      {%- if is_entirely_fulfilled and has_one_fulfillment -%}
+        {%- assign fulfillment = '' -%}
+
+        {%- for line_item in order.line_items -%}
+          {%- if line_item.fulfillment -%}
+            {%- assign fulfillment = line_item.fulfillment -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        
+        <div class="subTitDetails">Order {{ 'customer.order.fulfillment_html' | t: tracking_url: fulfillment.tracking_url, tracking_number: fulfillment.tracking_number }}</div>
+      {%- endif -%}
+
+      
+    </div>
+  </header>
+
+  <div class="PageLayout PageLayout--breakLap">
+    <div class="PageLayout__Section">
+      <div class="TableWrapper">
+        <table class="AccountTable Table ">
+          <thead class="Text--subdued">
+            <tr>
+              <th>ITEM</th>
+              <th class="Text--alignCenter onlyMobile">QTY</th>
+              <th class="Text--alignCenter onlyDesk">{{ 'customer.order.quantity' | t }}</th>
+              <th class="Text--alignRight">{{ 'customer.order.line_price' | t }}</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {%- for line_item in order.line_items -%}
+              <tr>
+                <td>
+                  <div class="CartItem__ImageWrapper AspectRatio">
+                    <div class="AspectRatio" style="--aspect-ratio: {{ line_item.image.aspect_ratio }}">
+                      <img class="CartItem__Image" src="{{ line_item.image | img_url: '240x' }}" alt="{{ line_item.image.alt | escape }}">
+                    </div>
+                  </div>
+
+                  <div class="CartItem__Info">
+                    <h2 class="titProd">
+                      <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
+                    </h2>
+
+                    <div class="CartItem__Meta Heading Text--subdued">
+                      {%- unless line_item.product.has_only_default_variant -%}
+                        <p class="CartItem__Variant titProd">{{ line_item.variant.title }}</p>
+                      {%- endunless -%}
+
+                      {%- if line_item.selling_plan_allocation -%}
+                        <p class="CartItem__PlanAllocation featureProd">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
+                      {%- endif -%}
+
+                      {%- if line_item.properties != empty -%}
+                        <ul class="CartItem__PropertyList featureProd">
+                          {%- for property in line_item.properties -%}
+                            {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                            {%- if property.last == blank or first_character_in_key == '_' -%}
+                              {%- continue -%}
+                            {%- endif -%}
+
+                            <li class="CartItem__Property featureProd">{{ property.first }}: {{ property.last }}</li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+
+                      <div class="CartItem__PriceList">
+                        {%- if line_item.original_price != line_item.final_price -%}
+                          <span class="CartItem__Price Price Price--highlight featureProd">{{ line_item.final_price | money_without_trailing_zeros }}</span>
+                          
+                        {%- else -%}
+                          <span class="CartItem__Price Price featureProd">{{ line_item.final_price | money_without_trailing_zeros }}</span>
+                        {%- endif -%}
+
+                        {%- if line_item.line_level_discount_allocations != blank -%}
+                          <ul class="CartItem__DiscountList">
+                            {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                              <li class="CartItem__Discount featureProd">
+                                {%- render 'icon' with 'sale' -%}{{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money }}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </div>
+
+                      {%- if line_item.unit_price_measurement -%}
+                        <div class="CartItem__UnitPriceMeasurement">
+                          <div class="UnitPriceMeasurement Heading Text--subdued">
+                            <span class="UnitPriceMeasurement__Price featureProd">{{ line_item.unit_price | money_without_trailing_zeros }}</span>
+                            
+
+                            <span class="UnitPriceMeasurement__ReferenceUnit featureProd">{{ line_item.unit_price_measurement.reference_unit }}</span>
+                          </div>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </td>
+
+                <td class="Text--alignCenter Heading Text--subdued featureProd">{{ line_item.quantity }}</td>
+
+                <td class="Text--alignRight Heading Text--subdued">
+                  {%- if line_item.original_line_price != line_item.final_line_price -%}
+                    <span class="CartItem__Price Price Price--highlight featureProd">{{ line_item.final_line_price | money_without_trailing_zeros }}</span>
+                    <span class="CartItem__OriginalPrice Price Price--compareAt featureProd">{{ line_item.original_line_price | money_without_trailing_zeros }}</span>
+                  {%- else -%}
+                    <span class="CartItem__Price Price featureProd">{{ line_item.final_line_price | money_without_trailing_zeros }}</span>
+                  {%- endif -%}
+                </td>
+              </tr>
+
+              {%- if line_item.fulfillment and has_one_fulfillment == false -%}
+                <tr>
+                  <td colspan="3">
+                    <p class="featureProd alertDetails">{{ 'customer.order.line_fulfillment_html' | t: product_title: line_item.product.title, tracking_url: line_item.fulfillment.tracking_url, tracking_number: line_item.fulfillment.tracking_number }}</p>
+                  </td>
+                </tr>
+              {%- endif -%}
+            {%- endfor -%}
+          </tbody>
+
+          <tfoot>
+            <tr>
+              
+              <td class="titDetails borderTop TT-upper borderBNone">{{ 'customer.order.subtotal' | t }}</td>
+              <td colspan="2" class="titDetails TAR borderTop borderBNone">{{ order.line_items_subtotal_price | money_without_trailing_zeros }}</td>
+            </tr>
+
+            {%- for discount_application in order.cart_level_discount_applications -%}
+              <tr>
+                
+                <td><span class="titDetails TT-upper borderBNone">{{ 'customer.order.discount' | t }}</span> <span class="Text--subdued">({{ discount_application.title }})</span></td>
+                <td colspan="2" class="titDetails TAR borderBNone">-{{ discount_application.total_allocated_amount | money_without_trailing_zeros }}</td>
+              </tr>
+            {%- endfor -%}
+
+            {%- for shipping_method in order.shipping_methods -%}
+              <tr>
+               
+                <td><span class="titDetails TT-upper borderBNone">{{ 'customer.order.shipping' | t }}</span> <span class="Text--subdued">({{ shipping_method.title }})</span></td>
+                <td colspan="2" class="titDetails TAR borderBNone">{{ shipping_method.price | money_without_trailing_zeros }}</td>
+              </tr>
+            {%- endfor -%}
+
+            {%- for tax_line in order.tax_lines -%}
+              <tr>
+                
+                <td><span class="titDetails TT-upper borderBNone">{{ 'customer.order.tax' | t }}</span> <span class="Text--subdued">({{ tax_line.title }} {{ tax_line.rate_percentage }}%)</span></td>
+                <td colspan="2" class="titDetails TAR borderBNone">{{ tax_line.price | money_without_trailing_zeros }}</td>
+              </tr>
+            {%- endfor -%}
+
+            <tr>
+              
+              <td class="titDetails TT-upper borderBNone">{{ 'customer.order.total' | t }}</td>
+              <td colspan="2" class="titDetails TAR borderBNone">{{ order.total_price | money_without_trailing_zeros }}</td>
+            </tr>
+          </tfoot>
+        </table>
+        <table class="AccountTable Table Taddress">
+           <tr>
+              <td class="titDetails TT-upper BBBlack">{{ 'customer.order.shipping_address' | t }}</td>
+            </tr>
+            <tr>
+              <td class="Text--alignLeft featureProd borderBNone">
+              	{%- if order.shipping_address -%}
+                  {{ order.shipping_address | format_address | replace: '<p>', '<p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
+                {%- else -%}
+                  <p>{{ 'customer.order.no_shipping_address' | t }}</p>
+                {%- endif -%}
+              </td>
+            </tr>
+        </table>
+        
+        <table class="AccountTable Table Taddress">
+            <tr>
+              <td class="titDetails TT-upper BBBlack">{{ 'customer.order.billing_address' | t }}</td>
+            </tr>
+            <tr>
+              <td class="Text--alignLeft featureProd borderBNone">
+              	{{ order.billing_address | format_address | replace: '<p>', '<p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
+              </td>
+            </tr>
+        </table>
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>

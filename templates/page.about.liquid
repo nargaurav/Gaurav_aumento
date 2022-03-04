@@ -1,0 +1,44 @@
+<div class="about page__container">
+  <div class="Container">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <h1>the world of lou!</h1>
+      </div>
+    </header>
+  </div>
+</div>
+{% section 'about-image-text' %}
+
+{% section 'about-full-width-slider' %}
+{% section 'about-richtext' %}
+{% section 'about-variable-height-slider' %}
+{% section 'about-image-text-bottom' %}
+{% section 'about-richtext-bottom' %}
+
+{% comment %}
+{% section 'about-product-grid-slider' %}
+{% section 'about-two images' %}
+{% endcomment %}
+
+<style>
+  .image-text__container .text p, #shopify-section-about-richtext .Container p, #shopify-section-about-richtext-bottom .Container p{
+  	font-size:22px;
+    line-height:35px;
+  }
+  .richtext.Container p, .image-text__container p{
+  	text-align:justify !important;
+  }
+  
+  @media screen and (max-width:767px){
+  	.image-text__container .text p, #shopify-section-about-richtext .Container p, #shopify-section-about-richtext-bottom .Container p{
+      font-size:17px;
+      line-height:25px;
+    }
+    .text_lt_sec{
+    	margin:0 auto;
+    }
+    div#shopify-section-about-richtext-bottom .richtext.Container {
+    margin-top: -10px;
+    }
+  }
+</style>

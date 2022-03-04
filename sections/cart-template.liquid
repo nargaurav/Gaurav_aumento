@@ -1,0 +1,635 @@
+{%- capture section_settings -%}
+{
+"type": {{ settings.cart_type | json }},
+"itemCount": {{ cart.item_count }},
+"drawer": false,
+"hasShippingEstimator": {% if section.settings.show_shipping_estimator and cart.item_count > 0 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+{%- if cart.item_count > 0 -%}
+<style>
+  .Cart__Head .Cart__HeadItem {
+    font-family: sofia-pro,sans-serif!important;
+    text-transform: uppercase;
+    font-size:20px;
+  }
+  .PageContent {
+    max-width: 1100px;
+    width:100%;
+  }
+  #shopify-section-cart-template .Price{
+    font-family: sofia-pro,sans-serif!important;
+    font-size:26px;
+  }
+  .CartItem__Title a{
+    font-family: sofia-pro,sans-serif!important;
+    font-size:22px;
+  }
+  .CartItem__Meta.Heading.Text--subdued {
+    font-size: 20px;
+    font-family: baskerville-display-pt, sans-serif !important;
+  }
+  .Cart .QuantitySelector__CurrentQuantity {
+    width: 24px;
+    font-family: sofia-pro,sans-serif!important;
+    width: 26px;
+    margin-top: -13px;
+  }
+  .CartItem__Remove a{
+    text-decoration:none;
+  }
+  .QuantitySelector{
+    border:none;
+  }
+  h2.CartItem__Title.Heading{
+    margin-top: 0;
+    white-space: normal;
+    line-height: 17px;
+  }
+  p.CartItem__Variant{
+    margin:0;
+    font-size:26px;
+  }
+  .Cart--expanded .CartItem__QuantitySelector {
+    margin-top: 8px;
+  }
+  .cart-tools .cart-attribute__field{
+    font-family: sofia-pro,sans-serif!important;
+    font-size: 26px;
+    text-transform:uppercase;
+  }
+  .summary {
+    font-family: baskerville-display-pt, serif!important;
+    font-size: 22px;  	
+    text-align:justify;
+  }
+  .summary.accept {
+    font-family: baskerville-display-pt, serif!important;
+    font-size: 18px;  	
+    text-align:justify;
+    letter-spacing: normal;
+  }
+  .summaryShipping {
+    font-family: baskerville-display-pt, serif!important;
+    font-size: 22px;
+    margin-top:32px;
+    margin-bottom:44px;
+    text-align:left;
+  }
+  input[type=checkbox], input[type=radio]{
+    width:20px;
+    height:20px;
+  }
+  .ML20{margin-left:20px;}
+  .ML48{margin-left:48px;}
+  .total{
+    font-family: sofia-pro,sans-serif!important;
+    font-size: 40px;
+    text-transform:uppercase;
+  }
+  .PL100{
+    padding-left:30px;
+  }
+  .term{
+    width: calc(100% - 30px);
+    text-align:justify;
+    margin-top: -5px;
+    margin-bottom:25px;
+    padding-left:10px;
+  }
+  button.Cart__Checkout{
+    width:100%!important;
+  }
+ /* .Cart--expanded .Cart__Footer{
+    border-top:1px solid #a1a1a1;
+  }
+  .Cart--expanded .Cart__HeadItem{
+    border-bottom:1px solid #a1a1a1;
+  }*/
+  .equis{
+    width:20px;
+    text-align:left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .Cart--expanded .Cart__NoteContainer, .Cart--expanded .Cart__Recap {
+    display: block;
+  }
+  .Cart--expanded .Cart__NoteContainer {
+    width: 100%;
+  }
+  /*.Cart--expanded .Cart__NoteContainer, .Cart--expanded .Cart__Recap {
+  display: table-cell;
+  }*/
+  .summary a {
+    text-decoration: underline;
+  }
+  .errorMsg{
+    color:red;
+    text-align:left;
+    margin-bottom: -40px;
+  }
+  .tag {
+    font-family: 'sofia-pro';
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .Cart--expanded .CartItem__Info~.CartItem__Actions, .Cart--expanded .CartItem__Info~.CartItem__LinePriceList {
+    vertical-align: top!important;
+    padding-top: 20px;
+  }
+  .CartItem__PropertyList {
+    font-style: normal;
+    margin-top: -7px;
+    font-family: baskerville-display-pt, serif!important;
+    font-size: 20px;
+  }
+  #qp-container {
+    letter-spacing: 0.5px !important;
+    font-size: 18px !important;
+}
+  
+  @media screen and (max-width:1400px){
+    .PL100 {
+      padding-left: 30px;
+    }
+  }
+
+
+
+  @media screen and (max-width:640px){
+    .errorMsg{
+      color:red;
+      text-align:left;
+      margin-bottom:0;
+    }
+    .CartItem__LinePriceList.Heading.Text--subdued.subtotal{
+      display:none;
+    }
+  }
+  @media screen and (max-width:1140px){
+    #shopify-section-cart-template h1{
+      font-size: 100px;
+    }
+    .PageContent {
+      max-width: 100%;
+    }
+    h2.CartItem__Title.Heading {
+      margin-top: -10px;
+    }
+    .CartItem__Title a{
+      white-space: break-spaces;
+      line-height: 20px;
+      font-family: sofia-pro,sans-serif!important;
+      font-size: 17px;
+    }
+    .CartItem__Meta,
+    .CartItem__Variant,
+    .CartItem__Actions,
+    .CartItem__QuantitySelector,
+    .p.CartItem__Variant{
+      font-family: baskerville-display-pt, serif!important;
+      font-size: 17px;
+    }
+    .Cart .QuantitySelector__CurrentQuantity{
+      font-size: 17px;
+    }
+    .CartItem__Info~.CartItem__LinePriceList {
+      display: block;
+    }
+    .Cart .QuantitySelector svg {
+      width: 10px;
+      height: 10px;
+    }
+    .Cart--expanded .CartItem__QuantitySelector {
+      margin-top: 0;
+    }
+    .CartItem__Info {
+      padding-left: 12px;
+      width: 180px;
+    }
+    #shopify-section-cart-template .Price{
+      font-size: 17px;
+      margin-top: -11px!important;
+    }
+    .CartItem__ImageWrapper {
+      width: 80px;
+      min-width: 80px;
+      position: relative;
+    }
+    .equis{
+      top: 6px;
+    }
+    .CartItem__Actions {
+      margin-top: -10px;
+    }
+    .PL100 {
+      padding-left: 0;
+    }
+    .total {
+      font-size: 25px;
+    }
+    .summaryShipping {
+      font-size: 17px;
+      text-align:left;
+    }
+    .summary {
+      font-size: 17px;
+    }
+    .term{
+      text-align:left;
+      width: 93%;
+    }
+    .tag {
+      font-size: 13px;
+    }
+    .CartItem__PropertyList {
+      margin-top: -7px;
+      font-size: 17px;
+      line-height: 22px;
+    }
+    .Cart__ItemList{
+      border-top: 1px solid #000;
+      margin-top: 60px;
+      
+    }
+    .Cart .QuantitySelector__CurrentQuantity {
+      margin-top: 0px;
+    }
+    .Cart--expanded .CartItem__Info~.CartItem__Actions, .Cart--expanded .CartItem__Info~.CartItem__LinePriceList {
+      padding-top: 0
+    }
+    
+  }
+</style>
+{% endif %}
+<section data-section-id="{{ section.id }}" data-section-type="cart" data-section-settings='{{ section_settings }}'>
+  {%- if cart.item_count == 0 -%}
+  <div class="EmptyState">
+    <div class="Container">
+      <header class="PageHeader">
+        <div class="SectionHeader SectionHeader--center">
+          <h1 class="EmptyState__Title Heading ">{{ 'cart.general.empty' | t }}</h1>
+        </div>
+      </header>
+
+      {%- if settings.cart_show_free_shipping_threshold -%}
+      {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+      {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+
+      <p class="Text--subdued">{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
+      {%- endif -%}
+      <a href="{{ routes.all_products_collection_url }}" class="EmptyState__Action Button Button--primary">{{ 'cart.general.empty_button' | t }}</a>
+    </div>
+  </div>
+  {%- else -%}
+  <div class="Container">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <div class="SectionHeader SectionHeader--center">
+          <h1 class="SectionHeader__Heading Heading ">{{ 'cart.general.title' | t }}</h1>
+        </div>
+        {%- if settings.cart_show_free_shipping_threshold -%}
+        {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+        <p class="SectionHeader__Description Text--subdued">
+          {%- if cart.total_price >= threshold_in_cents -%}
+          {{- 'cart.general.free_shipping' | t -}}
+          {%- else -%}
+          {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+          {{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}
+          {%- endif -%}
+        </p>
+        {%- endif -%}
+      </div>
+    </header>
+    <div class="onlyDesk">
+      <div class="PageContent">
+        <form  action="{{ routes.cart_url }}" method="POST" class="Cart Cart--expanded" novalidate>
+          <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+          <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+          {% render 'cart-items' %}
+          <footer class="Cart__Footer">
+            {%- if settings.cart_enable_notes -%}
+            <div class="Cart__NoteContainer">
+              {%- comment -%}
+              <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
+              <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="4" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+              {%- endcomment -%}
+              <div class="cart-tools">
+                {% if section.settings.ena_made_order %}
+                <div class="cart-attribute__field eGift madeto_order">
+                  <label for="eGift_wrap_check">{{ section.settings.made_title }}</label>
+                </div>
+                <br />
+                <div class="vGift summary">
+                  {{ section.settings.made_content }} 
+                </div>
+                <br />
+                <br />
+                {% endif %}
+                <div class="cart-attribute__field giftwrap">
+                  <input type="hidden" name="attributes[Gift Wrap]" value="No">
+                  <input id="gift_wrap_check" type="checkbox" name="attributes[Gift Wrap]" value="Yes"{% if cart.attributes["Gift Wrap"] == "Yes" %} checked{% endif %}>
+                  <label for="gift_wrap_check">Gift wrap my order</label>
+                </div>
+                <br />
+                <div class="instructions summary ">Special Instructions / Gift Note</div>
+                <textarea placeholder="{{ settings.cart-special-instructions }}" name="attributes[order_note]">{{ cart.note }}</textarea>
+                <br />
+                <br />
+                {% if section.settings.ena_virtualgift %}
+                {% if section.settings.virtual_label_title != blank %}
+                <div class="cart-attribute__field eGift">
+                  <input type="hidden" name="attributes[eGift]" value="No">
+                  <input id="eGift_wrap_check" type="checkbox" name="attributes[eGift]" value="Yes"{% if cart.attributes["eGift"] == "Yes" %} checked{% endif %}>
+                  <label for="eGift_wrap_check">{{ section.settings.virtual_label_title }}</label>
+                </div>
+                {% endif %}
+                <br />
+                <div class="vGift_btn summary">{{ section.settings.virtual_title }}</div>
+                <div class="vGift summary">
+                  {{ section.settings.virtual_desc }}
+                </div>
+                {% endif %}
+              </div>  
+            </div>
+            {%- endif -%}
+            <div class="Cart__Recap PL100">
+              {%- capture shipping_and_taxes_notice -%}{{ 'cart.general.shipping_and_taxes_notice' | t }}{%- endcapture -%}
+              {%- if cart.cart_level_discount_applications != blank -%}
+              {%- for discount_application in cart.cart_level_discount_applications -%}
+              <p class="Cart__Discount Heading u-h6">{{ 'cart.general.discount' | t }} ({{ discount_application.title }}): -<span>{{ discount_application.total_allocated_amount | money_without_trailing_zeros }}</span></p>
+              {%- endfor -%}fv
+              {%- endif -%}
+              <div class="Cart__Total  floatL total">{{ 'cart.general.total' | t }}</div>
+              <div class="Cart__Total floatR total">{{ cart.total_price | money_without_trailing_zeros }}</div>
+              <div class="clear"></div>
+              {%- if shipping_and_taxes_notice != blank -%}
+              <div class="Cart__Taxes Text--subdued summaryShipping">{{ shipping_and_taxes_notice }}</div>
+              {%- endif -%}
+              <!-- Insert Zip Widget -->
+              <div style="padding-bottom:20px; font-size:18px; letter-spacing:0.5px;">
+                <quadpay-widget amount={{ cart.total_price | divided_by: 100.00 }}></quadpay-widget>
+              </div>
+              {% if section.settings.ena_accept_terms  %}
+              <div class="cart-attribute__field eGift floatL">
+                <input type="hidden"  value="No">
+                <input id="eterms_wrap_check_desk" type="checkbox" value="No"{% if cart.attributes["eGift"] == "Yes" %} checked{% endif %}>
+                <label for="eterms_wrap_check_desk" class="summary accept"></label>
+              </div>
+              <div class="floatL term"><label for="eterms_wrap_check_desk " class="summary accept">{{ section.settings.terms_text }}</label></div>
+              <div class="errorMsg" id="carterrorMsgdesk"></div>
+              {% endif %}
+              <br><br>
+              <button type="submit" name="checkout"  class="Cart__Checkout Button Button--primary Button--full clear" id="btnCheckout2">{{ 'cart.general.checkout' | t }}</button>
+            </div>
+          </footer>
+        </form>
+        {%- if section.settings.show_shipping_estimator -%}
+        <div class="Section Section--spacingExtraLarge">
+          <div class="Panel">
+            <h2 class="Panel__Title Heading u-h2">{{ 'cart.shipping_estimator.title' | t }}</h2>
+            <div class="Panel__Content">
+              <div class="ShippingEstimator">
+                <div class="ShippingEstimator__Form">
+                  <div class="ShippingEstimator__Country Form__Select Select Select--primary">
+                    {%- render 'icon' with 'select-arrow' -%}
+                    <select name="country" title="{{ 'cart.shipping_estimator.country' | t }}" data-default="{% if customer %}{{ customer.default_address.country }}{% elsif section.settings.shipping_estimator_default_country != '' %}{{ section.settings.shipping_estimator_default_country }}{% endif %}">{{ all_country_option_tags }}</select>
+                  </div>
+                  <div class="ShippingEstimator__Province Form__Select Select Select--primary" style="display: none">
+                    {%- render 'icon' with 'select-arrow' -%}
+                    <select name="province" title="{{ 'cart.shipping_estimator.province' | t }}"></select>
+                  </div>
+                  <input type="text" class="ShippingEstimator__Zip Form__Input" name="zip" placeholder="{{ 'cart.shipping_estimator.zip_code' | t }}">
+                  <button type="button" class="ShippingEstimator__Submit Button Button--primary">{{ 'cart.shipping_estimator.estimate' | t }}</button>
+                </div>
+                <div class="ShippingEstimator__Error Alert Alert--error" style="display: none"></div>
+                <div class="ShippingEstimator__Results">
+                  <div class="ShippingEstimator__ResultsInner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="onlyMobile">
+      <div class="PageContent">
+        <form action="{{ routes.cart_url }}" method="POST" id="mobcart" class="Cart Cart--expanded" novalidate>
+          <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+          <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+          <div class="mob-cart-items">
+            {% render 'cart-items' %}
+          </div>
+          <footer class="Cart__Footer">
+            <div class="Cart__Recap PL100">
+              {%- capture shipping_and_taxes_notice -%}{{ 'cart.general.shipping_and_taxes_notice' | t }}{%- endcapture -%}
+              {%- if cart.cart_level_discount_applications != blank -%}
+              {%- for discount_application in cart.cart_level_discount_applications -%}
+              <p class="Cart__Discount Heading u-h6">{{ 'cart.general.discount' | t }} ({{ discount_application.title }}): -<span>{{ discount_application.total_allocated_amount | money_without_trailing_zeros }}</span></p>
+              {%- endfor -%}
+              {%- endif -%}
+              <div class="Cart__Total  floatL total">{{ 'cart.general.total' | t }}</div>
+              <div class="Cart__Total floatR total">{{ cart.total_price | money_without_trailing_zeros }}</div>
+              <div class="clear"></div>
+              {%- if shipping_and_taxes_notice != blank -%}
+              <div class="Cart__Taxes Text--subdued summaryShipping">{{ shipping_and_taxes_notice }}</div>
+              {%- endif -%}
+              <!--               <div class="quad_text">
+<p>or 4 interest-free payments on orders up to $1500 with <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/quapay_img_2200x.png" alt=""/>
+<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="exclamation-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-exclamation-circle fa-w-16 fa-3x"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm42-104c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42zm-81.37-211.401l6.8 136c.319 6.387 5.591 11.401 11.985 11.401h41.17c6.394 0 11.666-5.014 11.985-11.401l6.8-136c.343-6.854-5.122-12.599-11.985-12.599h-54.77c-6.863 0-12.328 5.745-11.985 12.599z" class=""></path></svg>
+</p>
+</div> -->
+              <!-- Insert Zip Widget -->
+              <div style="padding-bottom:20px">
+                <quadpay-widget amount={{ cart.total_price | divided_by: 100.00 }}></quadpay-widget>
+              </div>
+              {% if section.settings.ena_accept_terms %}
+              <div class="cart-attribute__field eGift floatL">
+                <input type="hidden" value="No">
+                <input id="eterms_wrap_check_mob" type="checkbox" value="Yes"{% if cart.attributes["eGift"] == "Yes" %} checked{% endif %}>
+                <label for="eterms_wrap_check_mob" class="summary"></label>
+              </div>
+              <div class="floatL term" ><label for="eterms_wrap_check_mob" class="summary">{{ section.settings.terms_text }}</label></div>
+              <br><br>
+              <div class="errorMsg" id="carterrorMsgmob"></div>
+              {% endif %}
+              <button type="submit" name="checkout"  class="Cart__Checkout Button Button--primary Button--full clear" id="btnCheckout">{{ 'cart.general.checkout' | t }}</button>
+            </div>
+            {%- if settings.cart_enable_notes -%}
+            <div class="Cart__NoteContainer">
+              {%- comment -%}
+              <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
+              <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="4" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+              {%- endcomment -%}
+              <div class="cart-tools">
+                {% if section.settings.ena_made_order %}
+                <div class="cart-attribute__field eGift madeto_order">
+                  <label for="eGift_wrap_check ML20">{{ section.settings.made_title }}</label>
+                </div>
+                <br />
+                <div class="vGift summary">
+                  {{ section.settings.made_content }}
+                </div>
+                <br />
+                <br />
+                {% endif %}
+                <div class="cart-attribute__field giftwrap">
+                  <input type="hidden" name="attributes[Gift Wrap]" value="No">
+                  <input id="gift_wrap_check_mob" type="checkbox" name="attributes[Gift Wrap]" value="Yes"{% if cart.attributes["Gift Wrap"] == "Yes" %} checked{% endif %}>
+                  <label for="gift_wrap_check_mob">Gift wrap my order</label>
+                </div>
+                <br />
+                <div class="instructions summary ">
+                  Special Instructions / Gift Note
+                </div>
+                <textarea placeholder="{{ settings.cart-special-instructions }}" name="note">{{ cart.note }}</textarea>
+                <br />
+                <br />
+                {% if section.settings.ena_virtualgift %}
+                {% if section.settings.virtual_label_title != blank %}
+                <div class="cart-attribute__field eGift">
+                  <input type="hidden" name="attributes[eGift]" value="No">
+                  <input id="eGift_wrap_check_mob" type="checkbox" name="attributes[eGift]" value="Yes"{% if cart.attributes["eGift"] == "Yes" %} checked{% endif %}>
+                  <label for="eGift_wrap_check_mob">{{ section.settings.virtual_label_title }}</label>
+                </div>
+                {% endif  %}
+                <br />
+                <div class="vGift_btn summary">{{ section.settings.virtual_title }}</div>
+                <div class="vGift summary">
+                  {{ section.settings.virtual_desc }}
+                </div>
+                {% endif %}
+              </div>  
+            </div>
+            {%- endif -%}
+          </footer>
+        </form>
+        {%- if section.settings.show_shipping_estimator -%}
+        <div class="Section Section--spacingExtraLarge">
+          <div class="Panel">
+            <h2 class="Panel__Title Heading u-h2">{{ 'cart.shipping_estimator.title' | t }}</h2>
+            <div class="Panel__Content">
+              <div class="ShippingEstimator">
+                <div class="ShippingEstimator__Form">
+                  <div class="ShippingEstimator__Country Form__Select Select Select--primary">
+                    {%- render 'icon' with 'select-arrow' -%}
+                    <select name="country" title="{{ 'cart.shipping_estimator.country' | t }}" data-default="{% if customer %}{{ customer.default_address.country }}{% elsif section.settings.shipping_estimator_default_country != '' %}{{ section.settings.shipping_estimator_default_country }}{% endif %}">{{ all_country_option_tags }}</select>
+                  </div>
+                  <div class="ShippingEstimator__Province Form__Select Select Select--primary" style="display: none">
+                    {%- render 'icon' with 'select-arrow' -%}
+                    <select name="province" title="{{ 'cart.shipping_estimator.province' | t }}"></select>
+                  </div>
+                  <input type="text" class="ShippingEstimator__Zip Form__Input" name="zip" placeholder="{{ 'cart.shipping_estimator.zip_code' | t }}">
+                  <button type="button" class="ShippingEstimator__Submit Button Button--primary">{{ 'cart.shipping_estimator.estimate' | t }}</button>
+                </div>
+                <div class="ShippingEstimator__Error Alert Alert--error" style="display: none"></div>
+                <div class="ShippingEstimator__Results">
+                  <div class="ShippingEstimator__ResultsInner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+</section>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    jQuery('body').on('click', '[id="btnCheckout2"]', function() {
+      $('.carterrorMsgdesk').html('');
+      if (jQuery('#eterms_wrap_check_desk').is(':checked')) {
+        jQuery(this).submit();
+      }
+      else {
+        // console.log("testnopedesk");
+        $('#carterrorMsgdesk').html('You must accept the terms and conditions');
+        return false;
+      }
+    });
+    jQuery('body').on('click', '[id="btnCheckout"]', function() {
+      $('.carterrorMsgmob').html('');
+      if (jQuery('#eterms_wrap_check_mob').is(':checked')) {
+        jQuery(this).submit();
+      }
+      else {
+        console.log("testnopemob");
+        $('#carterrorMsgmob').html('You must accept the terms and conditions');
+        return false;
+      }
+    });
+  });
+</script>
+{% schema %}
+{
+"name": "Cart page",
+"class": "shopify-section--bordered",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_shipping_estimator",
+"label": "Show shipping rates calculator",
+"default": true
+},
+{
+"type": "text",
+"id": "shipping_estimator_default_country",
+"label": "Default country to use",
+"info": "If your customer is logged-in, the country in his default shipping address will be selected.",
+"default": "United States"
+},
+{
+"type":"checkbox",
+"id":"ena_accept_terms",
+"label":"Enable Accept Terms box"
+},
+{
+"type":"textarea",
+"id":"terms_text",
+"label":"terms text box"
+},
+{
+"type":"checkbox",
+"id":"ena_made_order",
+"label":"Enable Made Order"
+},
+{
+"type":"text",
+"id":"made_title",
+"label":"Heading"
+},
+{
+"type":"textarea",
+"id":"made_content",
+"label":"Description"
+},
+{
+"type":"checkbox",
+"id":"ena_virtualgift",
+"label":"Enable Virtual Gift"
+},
+{
+"type":"text",
+"id":"virtual_label_title",
+"label":"Virtual Lable Title"
+},
+{
+"type":"text",
+"id":"virtual_title",
+"label":"Heading"
+},
+{
+"type":"textarea",
+"id":"virtual_desc",
+"label":"Description"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,192 @@
+<!-- <div class="form-container">
+  <div class="bridal-form">
+    <h1>inquire now</h1>
+    {%- assign formId = 'ContactForm' -%}
+    {% form 'contact'%}
+    {% include 'form-status', form: form, form_id: formId %}
+    <div class="main-form">
+      <div class="bridal-grid">
+        <div>
+          <label for="bridal-name">Name<sup>*</sup></label>
+          <input type="text"
+                 name="contact[name]"
+                 id="bridal-name" required>
+        </div>
+        <div>
+          <label for="bridal-so-name">Significant other name<sup>*</sup> (For reference only)</label>
+          <input type="text"
+                 name="contact[so_name]"
+                 id="bridal-so-name" required>
+        </div>
+        <div>
+          <label for="bridal-email">Email<sup>*</sup></label>
+          <input type="email"
+                 name="contact[email]"
+                 id="bridal-email" required>
+        </div>
+        <div>
+          <label for="bridal-phone">Phone number<sup>*</sup></label>
+          <input type="phone"
+                 name="contact[phone]"
+                 id="bridal phone" required>
+        </div>
+      </div>
+      <div class="address">
+        <label for="bridal-address">Address<sup>*</sup></label>
+        <input type="text"
+               name="contact[address]"
+               id="bridal-address" required>
+      </div>
+      <div class="deadline">
+        <label for="bridal-deadline">Deadline</label>
+        <input type="date"
+               name="contact[deadline]"
+               id="bridal-deadline">
+      </div>
+    </div>
+    <div class="ring-type">   
+      <p class="main-label">What type of jewelry are you inquiring about?</p>
+      <div class="ring-type-grid"> 
+        <input id="type_engagement" type="radio" name="contact[ring_type]" value="Engagement Ring" />
+        <label for="type_engagement">Engagement Ring</label>
+        <input id="type_reset" type="radio" name="contact[ring_type]" value="Reset a Ring"/>
+        <label for="type_reset">Reset a Ring</label>
+      </div>
+    </div>
+    <div class="stone_sec">   
+      <div class="stone-shape"> 
+        <p style="margin-bottom: 0px;" class="main-label">Stone Shape</p>
+        <p class="sub-label">Choose as many as you want, the options are endless!</p>
+        <div class="stone-shape-grid">
+          <input id="shape_round" type="checkbox" name="contact[stone_shape]" value="Round" />
+          <label for="shape_round">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/round_f97baedb-381b-4d81-8a35-33a511d20731.png?v=1614888464"/>
+            <p>Round</p>
+          </label>
+          <input id="shape_oval" type="checkbox" name="contact[stone_shape]" value="Oval" />
+          <label for="shape_oval">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/oval_0591437d-88f8-4e7f-984d-b496e030f03c.png?v=1614888464"/>
+            <p>Oval</p>
+          </label>
+          <input id="shape_radiant" type="checkbox" name="contact[stone_shape]" value="Radiant" />
+          <label for="shape_radiant">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/radiant_4f054363-f1a8-4db7-890f-55d0b7afceeb.png?v=1614888464"/>
+            <p>Radiant</p>
+          </label>
+          <input id="shape_cushion" type="checkbox" name="contact[stone_shape]" value="Cushion" />
+          <label for="shape_cushion">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/cushion_dd6bfbcf-6bee-4398-9e1d-47dc12632b43.png?v=1614888464"/>
+            <p>Cushion</p>
+          </label>
+          <input id="shape_princess" type="checkbox" name="contact[stone_shape]" value="Princess" />
+          <label for="shape_princess">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Untitled-1_2.png?v=1614888464"/>
+            <p>Princess</p>
+          </label>
+          <input id="shape_asscher" type="checkbox" name="contact[stone_shape]" value="Asscher" />
+          <label for="shape_asscher">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/asscher_ca7807f4-702e-47d1-863d-a864b0616ddf.png?v=1614888464"/>
+            <p>Asscher</p>
+          </label>
+          <input id="shape_emerald" type="checkbox" name="contact[stone_shape]" value="Emerald" />
+          <label for="shape_emerald">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/emerald_4eb14f93-236c-4fa5-b2ad-164632ef43a7.png?v=1614888465"/>
+            <p>Emerald</p>
+          </label>
+          <input id="shape_pear" type="checkbox" name="contact[stone_shape]" value="Pear" />
+          <label for="shape_pear">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/pear_62a6f668-063b-49bb-9d2a-5cfd5a7d2f85.png?v=1614888465"/>
+            <p>Pear</p>
+          </label>
+          <input id="shape_marquis" type="checkbox" name="contact[stone_shape]" value="Marquis" />
+          <label for="shape_marquis">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/marquis_01c78e73-d606-453e-96a4-937a1a6679a0.png?v=1614888465"/>
+            <p>Marquis</p>
+          </label>
+          <input id="shape_heart" type="checkbox" name="contact[stone_shape]" value="Heart" />
+          <label for="shape_heart">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/heart_518317fe-246a-484f-81b6-8a1432012745.png?v=1614888464"/>
+            <p>Heart</p>
+          </label>
+        </div>
+      </div>
+      <div class="budget">
+        <p class="main-label">Budget?</p>
+        <div class="budget-grid">
+          <input id="budget-1" type="checkbox" name="contact[budget]" value="$5,000-$10,000" />
+          <label for="budget-1">$5,000-$10,000</label>
+          <input id="budget-2" type="checkbox" name="contact[budget]" value="$10,000-$20,000" />
+          <label for="budget-2">$10,000-$20,000</label>
+          <input id="budget-3" type="checkbox" name="contact[budget]" value="$20,000-$30,000" />
+          <label for="budget-3">$20,000-$30,000</label>
+          <input id="budget-4" type="checkbox" name="contact[budget]" value="$30,000-$50,000" />
+          <label for="budget-4">$30,000-$50,000</label>
+          <input id="budget-5" type="checkbox" name="contact[budget]" value="$50,000-$60,000" />
+          <label for="budget-5">$50,000-$60,000</label>
+          <input id="budget-6" type="checkbox" name="contact[budget]" value="$60,000-$70,000" />
+          <label for="budget-6">$60,000-$70,000</label>
+          <input id="budget-7" type="checkbox" name="contact[budget]" value="$70,000-$80,000" />
+          <label for="budget-7">$70,000-$80,000</label>
+          <input id="budget-8" type="checkbox" name="contact[budget]" value="Whatever baby wants!" />
+          <label for="budget-8">Whatever baby wants!</label>
+        </div>
+      </div>
+      <div class="setting">
+        <p class="main-label">Which Setting are you interested in?</p>
+        <div class="setting-flex">
+          <input id="setting_gloria" type="checkbox" name="contact[setting]" value="Gloria" />
+          <label for="setting_gloria">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Gloria_f4d5963a-49e0-4450-92bf-2da9066e6478.png?v=1619735847"/>
+            <p>Gloria</p>
+          </label>
+          <input id="setting_victoria" type="checkbox" name="contact[setting]" value="Victoria" />
+          <label for="setting_victoria">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Victoria_c950c956-53a0-4c3a-8b26-ec143b2e0e23.png?v=1619735847"/>
+            <p>Victoria</p>
+          </label>
+          <input id="setting_cookie" type="checkbox" name="contact[setting]" value="Cookie" />
+          <label for="setting_cookie">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Cookie_70508067-bfea-483e-9c33-9e4c5363f4bf.png?v=1619735847"/>
+            <p>Cookie</p>
+          </label>
+          <input id="setting_samantha" type="checkbox" name="contact[setting]" value="Samantha" />
+          <label for="setting_samantha">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Samantha_66f9580b-3c96-41d5-bb98-67c1e49f2861.png?v=1619735847"/>
+            <p>Samantha</p>
+          </label>
+          <input id="setting_monet" type="checkbox" name="contact[setting]" value="Monet" />
+          <label for="setting_monet">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Monet.png?v=1619735847"/>
+            <p>Monet</p>
+          </label>
+          <input id="setting_babs" type="checkbox" name="contact[setting]" value="Babs" />
+          <label for="setting_babs">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Babs_43dadc4f-3aa0-4237-a23a-3e5f101ed47c.png?v=1619735847"/>
+            <p>Babs</p>
+          </label>
+          <input id="setting_beth" type="checkbox" name="contact[setting]" value="Beth" />
+          <label for="setting_beth">
+            <img src="https://cdn.shopify.com/s/files/1/0250/1406/files/Rings-Beth_21da65dc-e6f1-466c-b364-0be4995e1045.png?v=1619735847"/>
+            <p>Beth</p>
+          </label>
+          <input id="setting_idk" type="checkbox" name="contact[setting]" value="IDK, Help Me" />
+          <label style="justify-content: center;" for="setting_idk">
+            <p style="margin-bottom: 0;">IDK, HELP ME</p>
+          </label>
+        </div>
+      </div>
+    </div>
+    <input class="Button bridal-button" type="submit" value="Let's Get Started" />
+  </div>
+</div>
+
+{% endform %} -->
+
+<div class="form-container">
+  <div class="bridal-form">
+    <h1>inquire now</h1>
+  </div>
+</div>
+
+<div style="margin:0 auto;" class="pxFormGenerator" id="RuoFwS0w3t_6j5-FSQwIgA"></div>
+

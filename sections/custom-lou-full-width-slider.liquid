@@ -1,0 +1,28 @@
+<div class="full-width-slider-custom-lou">  
+    {% for block in section.blocks %}
+    <div class="slider-image">
+      <img src="{{ block.settings.images | img_url: '800x' }}" />
+    </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Full Width Images",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "images",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
